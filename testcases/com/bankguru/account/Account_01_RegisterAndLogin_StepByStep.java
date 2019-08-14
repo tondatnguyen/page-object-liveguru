@@ -22,12 +22,13 @@ public class Account_01_RegisterAndLogin_StepByStep {
 	  driver.get("http://demo.guru99.com/v4/index.php");
 	  driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	  
+	  System.out.println("PRE-CONDITION - STEP_01: Get Login_Page url");
+	  loginPageUrl = driver.getCurrentUrl();
 	  email = "auto" + randomData() + "@test.com";
   }
 
   @Test
   public void TC_01_registerToSystem() {
-	  loginPageUrl = driver.getCurrentUrl();
 	  
 	  System.out.println("REGISTER - STEP_01: Click to 'HERE' link");
 	  driver.findElement(By.xpath("//a[text()='here']")).click();
