@@ -1,38 +1,58 @@
 package com.bankguru.account;
 
 import org.testng.annotations.Test;
+
+import pageFactory.HomePageFactory;
+import pageFactory.LoginPageFactory;
+import pageFactory.RegisterPageFactory;
+
 import org.testng.annotations.BeforeClass;
 
-import static org.junit.Assert.assertTrue;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Assert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
 import pageObjects.RegisterPageObject;
+import pageUIs.NewCustomerUI;
 import pageObjects.LoginPageObject;
+import pageObjects.NewCustomerPageObject;
 import pageObjects.HomePageObject;
 
-public class Account_02_RegisterAndLogin_AbstractPage_03_PageObjectPattern {
+public class Account_04_RegisterAndLogin_Selenium_PageFactory {
 	WebDriver driver;
-	String email, username, password, loginPageUrl, welcomeMessage;
-	RegisterPageObject registerPage;
-	LoginPageObject loginPage;
-	HomePageObject homePage;
+	RegisterPageFactory registerPage;
+	LoginPageFactory loginPage;
+	HomePageFactory homePage;
+	NewCustomerPageObject newCustomerPage;
+	String username, password, loginPageUrl;
+	String customerNameValue, genderMaleValue, dateOFBirthValue, addressValue, cityValue;
+	String stateValue, pinValue, phoneValue, emailValue, passwordValue;
 	
   @BeforeClass
   public void beforeClass() { 
 	  driver = new FirefoxDriver();
-	  email = "auto" + randomData() + "@test.com";
-	  registerPage = new RegisterPageObject(driver);
-	  loginPage = new LoginPageObject(driver);
-	  homePage = new HomePageObject(driver);
-	    
+	  registerPage = new RegisterPageFactory(driver);
+	  loginPage = new LoginPageFactory(driver);
+	  homePage = new HomePageFactory(driver);
+	  newCustomerPage = new NewCustomerPageObject(driver);
+	  customerNameValue = "Brian";
+	  genderMaleValue = "male";
+	  dateOFBirthValue = "1990-01-01";
+	  addressValue = "691 Loan Drive";
+	  cityValue = "Soan";
+	  stateValue = "Missisipi";
+	  pinValue = "323232";
+	  phoneValue = "1234512345";
+	  emailValue = "auto" + randomData() + "@test.com"; 
+	  passwordValue = "111222333";
+	  
 	  System.out.println("PRE-CONDITION - STEP_01: Open BANK GURU APPLICATION");
 	  driver.get("http://demo.guru99.com/v4/index.php");
 	  
@@ -41,13 +61,13 @@ public class Account_02_RegisterAndLogin_AbstractPage_03_PageObjectPattern {
   }
 
   @Test
-  public void TC_01_registerToSystem() {
+  public void TC_01_RegisterToSystem() {
 	  
 	  System.out.println("LOGIN PAGE - STEP_01: Click to 'HERE' link");
 	  loginPage.clickToHereLink();
 	  
 	  System.out.println("REGISTER PAGE - STEP_02: Input to Email_ID_textbox");
-	  registerPage.inputToEmailTextbox(email);
+	  registerPage.inputToEmailTextbox(emailValue);
 	  
 	  System.out.println("REGISTER PAGE - STEP_03: Click to 'SUBMIT' button");
 	  registerPage.clickToSubmitButton();
@@ -59,7 +79,7 @@ public class Account_02_RegisterAndLogin_AbstractPage_03_PageObjectPattern {
   }
 
   @Test
-  public void TC_02_loginToSystem() {
+  public void TC_02_LoginToSystem() {
 	  
 	  System.out.println("REGISTER PAGE - STEP_01: Open Login_Page");
 	  registerPage.openLoginPageUrl(loginPageUrl);

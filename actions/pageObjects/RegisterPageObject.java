@@ -3,6 +3,7 @@ package pageObjects;
 import org.openqa.selenium.WebDriver;
 
 import commons.AbstractPage;
+import commons.PageGeneratorManager;
 import pageUIs.RegisterPageUI;
 
 public class RegisterPageObject extends AbstractPage  {
@@ -32,8 +33,9 @@ public class RegisterPageObject extends AbstractPage  {
 		return getTextElement(driver, RegisterPageUI.PASSWORD_TEXT);
 	}
 
-	public void openLoginPageUrl(String loginPageUrl) {
+	public LoginPageObject openLoginPageUrl(String loginPageUrl) {
 		openUrl(driver, loginPageUrl);	
+		return PageGeneratorManager.getLoginPage(driver);
 	}
 
 }

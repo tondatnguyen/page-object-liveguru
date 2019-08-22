@@ -33,7 +33,7 @@ public class Account_02_RegisterAndLogin_AbstractPage_01_DeclareInit {
   }
 
   @Test
-  public void TC_01_registerToSystem() {
+  public void TC_01_RegisterToSystem() {
 	  
 	  System.out.println("REGISTER - STEP_01: Click to 'HERE' link");
 	  //driver.findElement(By.xpath("//a[text()='here']")).click();
@@ -56,7 +56,7 @@ public class Account_02_RegisterAndLogin_AbstractPage_01_DeclareInit {
   }
 
   @Test
-  public void TC_02_loginToSystem() {
+  public void TC_02_LoginToSystem() {
 	  
 	  System.out.println("LOGIN - STEP_01: Open Login_Page");
 	  //driver.get(loginPageUrl);
