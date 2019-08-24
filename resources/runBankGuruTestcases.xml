@@ -4,25 +4,25 @@
   <test name="Run on FIREFOX">
   	<parameter name="browser" value="firefox"></parameter>
     <classes>
-      <class name="com.bankguru.account.Account_06_RegisterAndLogin_MultiBrowser_Parallel_FactoryPattern"/>
+      <class name="com.bankguru.account.Account_07_RegisterAndLogin_ActionChain_WebDriverCycle"/>
     </classes>
   </test>
-  <test name="Run on CHROME">
-  	<parameter name="browser" value="chrome"></parameter>
-    <classes>
-      <class name="com.bankguru.account.Account_06_RegisterAndLogin_MultiBrowser_Parallel_FactoryPattern"/>
-    </classes>
-  </test>
-  <test name="Run on CHROME HEADLESS">
-  	<parameter name="browser" value="chromeheadless"></parameter>
-    <classes>
-      <class name="com.bankguru.account.Account_06_RegisterAndLogin_MultiBrowser_Parallel_FactoryPattern"/>
-    </classes>
-  </test>
-    <test name="Run on INTERNET EXPLORER">
-  	<parameter name="browser" value="internetexplorer"></parameter>
-    <classes>
-      <class name="com.bankguru.account.Account_06_RegisterAndLogin_MultiBrowser_Parallel_FactoryPattern"/>
-    </classes>
-  </test>
+<!--   <test name="Run on CHROME"> -->
+<!--   	<parameter name="browser" value="chrome"></parameter> -->
+<!--     <classes> -->
+<!--       <class name="com.bankguru.account.Account_06_RegisterAndLogin_MultiBrowser_Parallel_FactoryPattern"/> -->
+<!--     </classes> -->
+<!--   </test> -->
+<!--   <test name="Run on CHROME HEADLESS"> -->
+<!--   	<parameter name="browser" value="chromeheadless"></parameter> -->
+<!--     <classes> -->
+<!--       <class name="com.bankguru.account.Account_06_RegisterAndLogin_MultiBrowser_Parallel_FactoryPattern"/> -->
+<!--     </classes> -->
+<!--   </test> -->
+<!--     <test name="Run on INTERNET EXPLORER"> -->
+<!--   	<parameter name="browser" value="internetexplorer"></parameter> -->
+<!--     <classes> -->
+<!--       <class name="com.bankguru.account.Account_06_RegisterAndLogin_MultiBrowser_Parallel_FactoryPattern"/> -->
+<!--     </classes> -->
+<!--   </test> -->
 </suite>

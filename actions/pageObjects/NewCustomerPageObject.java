@@ -11,7 +11,7 @@ public class NewCustomerPageObject extends AbstractPage {
 	public NewCustomerPageObject(WebDriver mappingDriver) {
 		driver = mappingDriver;
 	}
-
+	
 	public boolean isNewCustomerPageDisplayed() {
 		waitForElementVisible(driver, NewCustomerUI.NEW_CUSTOMER_PAGE_HEADING);
 		return isControlDisplayed(driver, NewCustomerUI.NEW_CUSTOMER_PAGE_HEADING);
@@ -121,7 +121,5 @@ public class NewCustomerPageObject extends AbstractPage {
 		waitForElementVisible(driver, NewCustomerUI.EMAIL_VALUE_IN_TABLE);
 		return getTextElement(driver, NewCustomerUI.EMAIL_VALUE_IN_TABLE);
 	}
-
-
 
 }

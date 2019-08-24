@@ -150,7 +150,7 @@ public class Account_06_RegisterAndLogin_MultiBrowser_Parallel_FactoryPattern ex
   
   @AfterClass (alwaysRun = true)
   public void afterClass() { 
-	  driver.quit();
+	//  driver.quit();
   }
 
   public int randomData() {

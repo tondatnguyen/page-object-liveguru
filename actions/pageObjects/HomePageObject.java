@@ -28,8 +28,7 @@ public class HomePageObject extends AbstractPage {
 	public NewCustomerPageObject clickToNewCustomerPage() {
 		waitForElementVisible(driver, HomePageUI.NEW_CUSTOMER_LINK);
 		clickToElement(driver, HomePageUI.NEW_CUSTOMER_LINK);
-		return PageGeneratorManager.getNewCustomerPage(driver);
+		return new NewCustomerPageObject(driver);
 	}
-
-
+	
 }
