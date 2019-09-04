@@ -20,64 +20,126 @@ import pageObjects.RegisterPageObject;
 import pageObjects.WithdrawalPageObject;
 
 public class PageGeneratorManager {
-	public static RegisterPageObject getRegisterPage(WebDriver driver) {
-		return new RegisterPageObject(driver); 
+	
+	static RegisterPageObject registerPage;
+	static LoginPageObject loginPage;
+	static HomePageObject homePage;
+	static DepositPageObject depositPage;
+	static WithdrawalPageObject withdrawalPage;
+	static FundTransferPageObject fundTransferPage;
+	static ChangePasswordPageObject changePasswordPage;
+	static MiniStatementPageObject miniStatementPage;
+	static NewAccountPageObject newAccountPage;
+	static NewCustomerPageObject newCustomerPage;
+	static EditAccountPageObject editAccountPage;
+	static EditCustomerPageObject editCustomerPage;
+	static DeleteAccountPageObject deleteAccountPage;
+	static DeleteCustomerPageObject deleteCustomerPage;
+	static BalanceEnquiryPageObject balanceEnquiryPage;
+	  
+	public static RegisterPageObject getRegisterPage(WebDriver driver) {	
+		if(registerPage == null) {
+			registerPage = new RegisterPageObject(driver);
+		}
+		return registerPage;
 	}
 	
 	public static LoginPageObject getLoginPage(WebDriver driver) {
-		return new LoginPageObject(driver);
+		if(loginPage == null) {
+			loginPage = new LoginPageObject(driver);
+		}
+		return loginPage;
 	}
 
 	public static HomePageObject getHomePage(WebDriver driver) {
-		return new HomePageObject(driver); 
+		if(homePage == null) {
+			homePage = new HomePageObject(driver);
+		}
+		return homePage; 
 	}
 	
 	public static NewCustomerPageObject getNewCustomerPage(WebDriver driver) {
-		return new NewCustomerPageObject(driver); 
+		if(newCustomerPage == null) {
+			newCustomerPage = new NewCustomerPageObject(driver);
+		}
+		return newCustomerPage;
 	}
 	
 	public static EditCustomerPageObject getEditCustomerPage(WebDriver driver) {
-		return new EditCustomerPageObject(driver); 
+		if(editCustomerPage == null) {
+			editCustomerPage = new EditCustomerPageObject(driver);
+		}
+		return editCustomerPage;
 	}
 	
 	public static DeleteCustomerPageObject getDeleteCustomerPage(WebDriver driver) {
-		return new DeleteCustomerPageObject(driver); 
+		if(deleteCustomerPage == null) {
+			deleteCustomerPage = new DeleteCustomerPageObject(driver);
+		}
+		return deleteCustomerPage;
 	}
 	
 	public static NewAccountPageObject getNewAccountPage(WebDriver driver) {
-		return new NewAccountPageObject(driver); 
+		if(newAccountPage == null) {
+			newAccountPage = new NewAccountPageObject(driver);
+		}
+		return newAccountPage;
 	}
 
 	public static EditAccountPageObject getEditAccountPage(WebDriver driver) {
-		return new EditAccountPageObject(driver); 
+		if(editAccountPage == null) {
+			editAccountPage = new EditAccountPageObject(driver);
+		}
+		return editAccountPage;
 	}
 	
 	public static DeleteAccountPageObject getDeleteAccountPage(WebDriver driver) {
-		return new DeleteAccountPageObject(driver); 
+		if(deleteAccountPage == null) {
+			deleteAccountPage = new DeleteAccountPageObject(driver);
+		}
+		return deleteAccountPage;
 	}
 	
 	public static DepositPageObject getDepositPage(WebDriver driver) {
-		return new DepositPageObject(driver); 
+		if(depositPage == null) {
+			depositPage = new DepositPageObject(driver);
+		}
+		return depositPage;
 	}
 
 	public static WithdrawalPageObject getWithdrawalPage(WebDriver driver) {
-		return new WithdrawalPageObject(driver); 
+		if(withdrawalPage == null) {
+			withdrawalPage = new WithdrawalPageObject(driver);
+		}
+		return withdrawalPage;
 	}
 
 	public static FundTransferPageObject getFundTransferPage(WebDriver driver) {
-		return new FundTransferPageObject(driver); 
+		if(fundTransferPage == null) {
+			fundTransferPage = new FundTransferPageObject(driver);
+		}
+		return fundTransferPage;
 	}
 
 	public static ChangePasswordPageObject getChangePasswordPage(WebDriver driver) {
-		return new ChangePasswordPageObject(driver); 
+		if(changePasswordPage == null) {
+			changePasswordPage = new ChangePasswordPageObject(driver);
+		}
+		return changePasswordPage;
 	}
 
 	public static BalanceEnquiryPageObject getBalanceEnquiryPage(WebDriver driver) {
-		return new BalanceEnquiryPageObject(driver); 
+		if(balanceEnquiryPage == null) {
+			balanceEnquiryPage = new BalanceEnquiryPageObject(driver);
+		}
+		return balanceEnquiryPage;
 	}
 
 	public static MiniStatementPageObject getMiniStatementPage(WebDriver driver) {
-		return new MiniStatementPageObject(driver); 
+		if(miniStatementPage == null) {
+			miniStatementPage = new MiniStatementPageObject(driver);
+		}
+		return miniStatementPage;
 	}
 
 	public static CustomisedStatementPageObject getCustomisedStatementPage(WebDriver driver) {

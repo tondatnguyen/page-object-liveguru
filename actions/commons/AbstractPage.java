@@ -10,9 +10,12 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.sun.corba.se.impl.orbutil.closure.Constant;
 
 import pageUIs.AbstractPageUI;
 import commons.PageGeneratorManager;
@@ -86,11 +89,23 @@ public class AbstractPage {
 		element.click();
 	}
 
+	public void clickToElement(WebDriver driver, String locator, String... values) {
+		locator = String.format(locator, (Object[]) values);
+		element = driver.findElement(By.xpath(locator));
+		element.click();
+	}
+	
 	public void sendkeyToElement(WebDriver driver, String locator, String value) {
 		element = driver.findElement(By.xpath(locator));
 		element.sendKeys(value);
 	}
 
+	public void sendkeyToElement(WebDriver driver, String locator, String sendkeyValue, String... values) {
+		locator = String.format(locator, (Object[]) values);
+		element = driver.findElement(By.xpath(locator));
+		element.sendKeys(sendkeyValue);
+	}
+	
 	public void selectItemInDropdown(WebDriver driver, String locator, String itemText) {
 		element = driver.findElement(By.xpath(locator));
 		select = new Select(element);
@@ -164,6 +179,12 @@ public class AbstractPage {
 		return element.isDisplayed();
 	}
 
+	public boolean isControlDisplayed(WebDriver driver, String locator, String... values) {
+		locator = String.format(locator, (Object[]) values);
+		element = driver.findElement(By.xpath(locator));
+		return element.isDisplayed();
+	}
+	
 	public boolean isControlSelected(WebDriver driver, String locator) {
 		element = driver.findElement(By.xpath(locator));
 		return element.isSelected();
@@ -310,31 +331,46 @@ public class AbstractPage {
 
 	public void waitForElementPresence(WebDriver driver, String Locator) {
 		By byLocator = By.xpath(Locator);
-		explicitWait = new WebDriverWait(driver, 30);
+		explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.presenceOfElementLocated(byLocator));
 	}
 
 	public void waitForElementVisible(WebDriver driver, String Locator) {
 		By byLocator = By.xpath(Locator);
-		explicitWait = new WebDriverWait(driver, 30);
+		explicitWait = new WebDriverWait(driver, longTimeout);
+		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(byLocator));
+	}
+	
+	public void waitForElementVisible(WebDriver driver, String Locator, String... values) {
+		Locator = String.format(Locator, (Object[]) values);
+		By byLocator = By.xpath(Locator);
+		explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(byLocator));
 	}
 
 	public void waitForElementInvisible(WebDriver driver, String Locator) {
 		By byLocator = By.xpath(Locator);
-		explicitWait = new WebDriverWait(driver, 30);
+		explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(byLocator));
 	}
 
 	public void waitForElementClickable(WebDriver driver, String Locator) {
 		By byLocator = By.xpath(Locator);
-		explicitWait = new WebDriverWait(driver, 30);
+		explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(byLocator));
 	}
 
 	public void waitForAlertPresent(WebDriver driver) {
-		explicitWait = new WebDriverWait(driver, 30);
+		explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.alertIsPresent());
+	}
+
+	public void sleepInSecond(WebDriver driver, long timeInSecond) {
+		try {
+			Thread.sleep(timeInSecond*1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public HomePageObject openHomePage(WebDriver driver) {
@@ -429,12 +465,27 @@ public class AbstractPage {
 		return PageGeneratorManager.getLoginPage(driver);
 	}
 	
-	public void sleepInSecond(WebDriver driver, long timeInSecond) {
-		try {
-			Thread.sleep(timeInSecond*1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
+	// Số lượng pages ít: <=20 pages
+	public AbstractPage openMultiplePage(WebDriver driver, String pageName) {
+		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_MENU_LINK, pageName);
+		clickToElement(driver, AbstractPageUI.DYNAMIC_MENU_LINK, pageName);
+		
+		switch (pageName) {
+		case "Change Password":
+				return PageGeneratorManager.getChangePasswordPage(driver);
+		case "Mini Statement":
+				return PageGeneratorManager.getMiniStatementPage(driver);
+		case "Balance Enquiry":
+				return PageGeneratorManager.getBalanceEnquiryPage(driver);
+		default:
+				return PageGeneratorManager.getHomePage(driver);
 		}
+	}
+	
+	// Số lượng pages 100 -1000
+	public void openMultiplePages(WebDriver driver, String pageName) {
+		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_MENU_LINK, pageName);
+		clickToElement(driver, AbstractPageUI.DYNAMIC_MENU_LINK, pageName);
 	}
 	
 	private WebElement element, elementSource, elementTarget;
@@ -443,7 +494,7 @@ public class AbstractPage {
 	private JavascriptExecutor javascriptExecutor;
 	private WebDriverWait explicitWait;
 	long shortTimeout = 5;
-	long longTimeout = 30;
+	long longTimeout = Constants.LONG_TIMEOUT;
 	private Set<String> allWindows;
 	private Actions action;
 }

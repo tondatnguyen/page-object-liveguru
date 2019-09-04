@@ -10,7 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class AbstractTest {
 	private WebDriver driver;
 
-	public WebDriver openMultiBrowser(String browserName) {
+	public synchronized WebDriver openMultiBrowser(String browserName) {
 		
 		  String rootFolder = System.getProperty("user.dir");
 		  
@@ -23,15 +23,15 @@ public class AbstractTest {
 			  System.setProperty("webdriver.chrome.driver", rootFolder + "\\resources\\chromedriver.exe");
 			  ChromeOptions options = new ChromeOptions();
 			  options.addArguments("headless");
-			  options.addArguments("window-size=1600x900");
+			  options.addArguments("window-size=" + Constants.HEADLESS_RESOLUTION);
 			  driver = new ChromeDriver(options);
 		  } else {
 			  System.out.println("Please to choose your browser_name in TestNG file!!");
 		  }
 		  
 		  System.out.println("PRE-CONDITION - STEP_01: Open BANK GURU APPLICATION");
-		  driver.get("http://demo.guru99.com/v4/index.php");
-		  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		  driver.get(Constants.TEST_URL);
+		  driver.manage().timeouts().implicitlyWait(Constants.LONG_TIMEOUT, TimeUnit.SECONDS);
 		  
 		  return driver;
 	}
