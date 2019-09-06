@@ -4,7 +4,7 @@
   <test name="Run on FIREFOX">
   	<parameter name="browser" value="firefox"></parameter>
     <classes>
-      <class name="com.bankguru.account.Account_08_DynamicLocator_RestParameter"/>
+      <class name="com.bankguru.account.Account_09_ElementUndisplayed"/>
     </classes>
   </test>
 <!--   <test name="Run on CHROME"> -->
