@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="BANK GURU" parallel="tests" thread-count="3">
+
+<listeners>
+	<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+	<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
+	<listener class-name="commons.ExtentReportListener"></listener>
+</listeners>
   
   <test name="Run on FIREFOX">
   	<parameter name="browser" value="firefox"></parameter>
     <classes>
-      <class name="com.bankguru.account.Account_09_ElementUndisplayed"/>
+      <class name="com.bankguru.account.Account_10_Assert_Verify_Log_ReportHTML"/>
     </classes>
   </test>
-<!--   <test name="Run on CHROME"> -->
-<!--   	<parameter name="browser" value="chrome"></parameter> -->
-<!--     <classes> -->
-<!--       <class name="com.bankguru.account.Account_06_RegisterAndLogin_MultiBrowser_Parallel_FactoryPattern"/> -->
-<!--     </classes> -->
-<!--   </test> -->
-<!--   <test name="Run on CHROME HEADLESS"> -->
-<!--   	<parameter name="browser" value="chromeheadless"></parameter> -->
-<!--     <classes> -->
-<!--       <class name="com.bankguru.account.Account_06_RegisterAndLogin_MultiBrowser_Parallel_FactoryPattern"/> -->
-<!--     </classes> -->
-<!--   </test> -->
+  <test name="Run on CHROME">
+  	<parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="com.bankguru.account.Account_10_Assert_Verify_Log_ReportHTML"/>
+    </classes>
+  </test>
+  <test name="Run on CHROME HEADLESS">
+  	<parameter name="browser" value="chromeheadless"></parameter>
+    <classes>
+      <class name="com.bankguru.account.Account_10_Assert_Verify_Log_ReportHTML"/>
+    </classes>
+  </test>
 <!--     <test name="Run on INTERNET EXPLORER"> -->
 <!--   	<parameter name="browser" value="internetexplorer"></parameter> -->
 <!--     <classes> -->
