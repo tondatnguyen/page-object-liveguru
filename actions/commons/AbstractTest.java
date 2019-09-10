@@ -9,8 +9,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class AbstractTest {
 	private WebDriver driver;
@@ -23,19 +26,25 @@ public class AbstractTest {
 
 	public synchronized WebDriver openMultiBrowser(String browserName) {
 
-		String rootFolder = System.getProperty("user.dir");
+		//	String rootFolder = System.getProperty("user.dir");
 
 		if (browserName.equalsIgnoreCase("firefox")) {
+			WebDriverManager.firefoxdriver().arch64().setup();
 			driver = new FirefoxDriver();
 		} else if (browserName.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", rootFolder + "\\resources\\chromedriver.exe");
+			//	System.setProperty("webdriver.chrome.driver", rootFolder + "\\resources\\chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} else if (browserName.equalsIgnoreCase("chromeheadless")) {
-			System.setProperty("webdriver.chrome.driver", rootFolder + "\\resources\\chromedriver.exe");
+			//	System.setProperty("webdriver.chrome.driver", rootFolder + "\\resources\\chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("headless");
 			options.addArguments("window-size=" + Constants.HEADLESS_RESOLUTION);
 			driver = new ChromeDriver(options);
+		} else if (browserName.equalsIgnoreCase("internetexplorer")) {
+			WebDriverManager.iedriver().arch32().setup();
+			driver = new InternetExplorerDriver();
 		} else {
 			log.info("Please to choose your browser_name in TestNG file!!");
 		}
@@ -43,7 +52,6 @@ public class AbstractTest {
 		log.info("PRE-CONDITION - STEP_01: Open BANK GURU APPLICATION");
 		driver.get(Constants.TEST_URL);
 		driver.manage().timeouts().implicitlyWait(Constants.LONG_TIMEOUT, TimeUnit.SECONDS);
-
 		return driver;
 	}
 
@@ -126,4 +134,51 @@ public class AbstractTest {
 		  Random random = new Random();
 		  return random.nextInt(99999);
 	  }
+	
+	protected void closeBrowserAndDriver(WebDriver driver) {
+		try {
+			// get ra tên của OS và convert qua chữ thường
+			String osName = System.getProperty("os.name").toLowerCase();
+			log.info("OS name = " + osName);
+
+			// Khai báo 1 biến command line để thực thi
+			String cmd = "";
+			if (driver != null) {
+				driver.quit();
+			}
+
+			if (driver.toString().toLowerCase().contains("chrome")) {
+				if (osName.toLowerCase().contains("mac")) {
+					cmd = "pkill chromedriver";
+				} else if (osName.toLowerCase().contains("windows")) {
+					cmd = "taskkill /F /FI \"IMAGENAME eq chromedriver*\"";
+				}
+				Process process = Runtime.getRuntime().exec(cmd);
+				process.waitFor();
+			}
+
+			if (driver.toString().toLowerCase().contains("gecko")) {
+				if (osName.toLowerCase().contains("mac")) {
+					cmd = "pkill geckodriver";
+				} else if (osName.toLowerCase().contains("windows")) {
+					cmd = "taskkill /F /FI \"IMAGENAME eq geckodriver*\"";
+				}
+				Process process = Runtime.getRuntime().exec(cmd);
+				process.waitFor();
+			}
+			
+			if (driver.toString().toLowerCase().contains("internetexplorer")) {
+				if (osName.toLowerCase().contains("window")) {
+					cmd = "taskkill /F /FI \"IMAGENAME eq IEDriverServer*\"";
+					Process process = Runtime.getRuntime().exec(cmd);
+					process.waitFor();
+				}
+			}
+			log.info("---------- QUIT BROWSER SUCCESS ----------");
+		} catch (Exception e) {
+			log.info(e.getMessage());
+		}
+	}
+
+
 }

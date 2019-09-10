@@ -60,7 +60,7 @@ public class Account_11_DynamicLocator_ShareState extends AbstractTest {
   
   @AfterClass (alwaysRun = true)
   public void afterClass() { 
-	  driver.quit();
+	  closeBrowserAndDriver(driver);
   }
  
   LoginPageObject loginPage;
