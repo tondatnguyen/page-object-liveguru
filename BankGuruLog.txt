@@ -1,17 +1,9 @@
-2019-09-08 12:22:50,433 INFO  com.bankguru.account.Account_10_Assert_Verify_Log_ReportHTML - REGISTER - STEP_01: Verify Login_Page is display.
-2019-09-08 12:22:50,893 INFO  com.bankguru.account.Account_10_Assert_Verify_Log_ReportHTML - ===PASSED==
-2019-09-08 12:22:50,895 INFO  com.bankguru.account.Account_10_Assert_Verify_Log_ReportHTML - REGISTER - STEP_02: Verify Delete_Customer_Form is not displayed.
-2019-09-08 12:22:50,992 INFO  com.bankguru.account.Account_10_Assert_Verify_Log_ReportHTML - ===PASSED==
-2019-09-08 12:22:50,993 INFO  com.bankguru.account.Account_10_Assert_Verify_Log_ReportHTML - REGISTER - STEP_03: Click to Selenium Dropdown Toggle
-2019-09-08 12:22:51,192 INFO  com.bankguru.account.Account_10_Assert_Verify_Log_ReportHTML - REGISTER - STEP_01: Verify Login_Page is display.
-2019-09-08 12:22:51,222 INFO  com.bankguru.account.Account_10_Assert_Verify_Log_ReportHTML - REGISTER - STEP_04: Verify Delete_Customer_Form is displayed.
-2019-09-08 12:22:51,385 INFO  com.bankguru.account.Account_10_Assert_Verify_Log_ReportHTML - ===PASSED==
-2019-09-08 12:22:51,385 INFO  com.bankguru.account.Account_10_Assert_Verify_Log_ReportHTML - REGISTER - STEP_02: Verify Delete_Customer_Form is not displayed.
-2019-09-08 12:22:51,400 INFO  com.bankguru.account.Account_10_Assert_Verify_Log_ReportHTML - ===PASSED==
-2019-09-08 12:22:51,400 INFO  com.bankguru.account.Account_10_Assert_Verify_Log_ReportHTML - REGISTER - STEP_05: Verify Home_Page is not displayed
-2019-09-08 12:22:55,556 INFO  com.bankguru.account.Account_10_Assert_Verify_Log_ReportHTML - REGISTER - STEP_01: Verify Login_Page is display.
-2019-09-08 12:23:01,608 INFO  com.bankguru.account.Account_10_Assert_Verify_Log_ReportHTML - ===PASSED==
-2019-09-08 12:23:01,608 INFO  com.bankguru.account.Account_10_Assert_Verify_Log_ReportHTML - ===PASSED==
-2019-09-08 12:23:01,608 INFO  com.bankguru.account.Account_10_Assert_Verify_Log_ReportHTML - REGISTER - STEP_06: Verify Register_Page is not displayed
-2019-09-08 12:23:01,608 INFO  com.bankguru.account.Account_10_Assert_Verify_Log_ReportHTML - REGISTER - STEP_02: Verify Delete_Customer_Form is not displayed.
-2019-09-08 12:23:11,771 INFO  com.bankguru.account.Account_10_Assert_Verify_Log_ReportHTML - ===PASSED==
+2019-09-10 09:37:17,177 INFO  com.bankguru.commons.Common_01_RegisterToSystem - PRE-CONDITION - STEP_01: Open BANK GURU APPLICATION
+2019-09-10 09:37:19,861 INFO  com.bankguru.commons.Common_01_RegisterToSystem - REGISTER - STEP_01: Verify Login_Page is display.
+2019-09-10 09:37:20,278 INFO  com.bankguru.commons.Common_01_RegisterToSystem - ===PASSED==
+2019-09-10 09:37:20,282 INFO  com.bankguru.commons.Common_01_RegisterToSystem - REGISTER - STEP_02: Click to 'HERE' link
+2019-09-10 09:37:22,517 INFO  com.bankguru.commons.Common_01_RegisterToSystem - REGISTER - STEP_03: Input to Email_ID_textbox
+2019-09-10 09:37:22,627 INFO  com.bankguru.commons.Common_01_RegisterToSystem - REGISTER - STEP_04: Click to 'SUBMIT' button
+2019-09-10 09:37:24,876 INFO  com.bankguru.commons.Common_01_RegisterToSystem - REGISTER - STEP_05: Get username/password info
+2019-09-10 09:37:30,092 INFO  com.bankguru.account.Account_11_DynamicLocator_ShareState - PRE-CONDITION - STEP_01: Open BANK GURU APPLICATION
+2019-09-10 09:37:33,022 INFO  com.bankguru.account.Account_11_DynamicLocator_ShareState - Pre-Condition - STEP_01: Input to UserID/Password textbox

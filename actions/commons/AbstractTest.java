@@ -1,5 +1,6 @@
 package commons;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.logging.Log;
@@ -36,10 +37,10 @@ public class AbstractTest {
 			options.addArguments("window-size=" + Constants.HEADLESS_RESOLUTION);
 			driver = new ChromeDriver(options);
 		} else {
-			System.out.println("Please to choose your browser_name in TestNG file!!");
+			log.info("Please to choose your browser_name in TestNG file!!");
 		}
 
-		System.out.println("PRE-CONDITION - STEP_01: Open BANK GURU APPLICATION");
+		log.info("PRE-CONDITION - STEP_01: Open BANK GURU APPLICATION");
 		driver.get(Constants.TEST_URL);
 		driver.manage().timeouts().implicitlyWait(Constants.LONG_TIMEOUT, TimeUnit.SECONDS);
 
@@ -121,4 +122,8 @@ public class AbstractTest {
 		return checkEquals(actual, expected);
 	}
 
+	protected int randomData() {
+		  Random random = new Random();
+		  return random.nextInt(99999);
+	  }
 }

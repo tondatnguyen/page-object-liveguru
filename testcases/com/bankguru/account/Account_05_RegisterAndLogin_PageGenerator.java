@@ -32,6 +32,7 @@ public class Account_05_RegisterAndLogin_PageGenerator {
 	  String customerNameValue, genderMaleValue, dateOFBirthValue, addressValue, cityValue;
 	  String stateValue, pinValue, phoneValue, emailValue, passwordValue;
 
+  @Parameters("browser")	  
   @BeforeClass
   public void beforeClass(String browserName) { 
 	  
