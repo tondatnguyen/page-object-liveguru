@@ -29,7 +29,7 @@ import pageObjects.NewCustomerPageObject;
 import commons.AbstractTest;
 import commons.PageGeneratorManager;
 
-public class Account_10_Assert_Verify_Log_ReportHTML extends AbstractTest {
+public class Account_09_RegisterAndLogin_ElementUndisplayed extends AbstractTest {
   private WebDriver driver;
 	
   @Parameters("browser")
@@ -45,23 +45,23 @@ public class Account_10_Assert_Verify_Log_ReportHTML extends AbstractTest {
   @Test
   public void TC_01_RegisterToSystem() {
 	  
-	  log.info("REGISTER - STEP_01: Verify Login_Page is display.");
-	  verifyTrue(loginPage.isLoginPageDisplayed());
+	  System.out.println("REGISTER - STEP_1.1: Verify Login_Page is display.");
+	  Assert.assertTrue(loginPage.isLoginPageDisplayed());
 	  
-	  log.info("REGISTER - STEP_02: Verify Delete_Customer_Form is not displayed.");
-	  verifyTrue(loginPage.isDeleteCustomerFormLinkUndisplayed());
+	  System.out.println("REGISTER - STEP_1.2.1: Verify Delete_Customer_Form is not displayed.");
+	  Assert.assertTrue(loginPage.isDeleteCustomerFormLinkUndisplayed());
 	  
-	  log.info("REGISTER - STEP_03: Click to Selenium Dropdown Toggle");
+	  System.out.println("REGISTER - STEP_1.2.2: Click to Selenium Dropdown Toggle");
 	  loginPage.clickToSeleniumDropdownToggle();
 	  
-	  log.info("REGISTER - STEP_04: Verify Delete_Customer_Form is displayed.");
-	  verifyTrue(loginPage.isDeleteCustomerFormLinkDisplayed());
+	  System.out.println("REGISTER - STEP_1.2.3: Verify Delete_Customer_Form is displayed.");
+	  Assert.assertTrue(loginPage.isDeleteCustomerFormLinkDisplayed());
 	  
-	  log.info("REGISTER - STEP_05: Verify Home_Page is not displayed");
-	  verifyTrue(loginPage.isHomePageUndisplayed());
+	  System.out.println("REGISTER - STEP_1.3: Verify Home_Page is not displayed");
+	  Assert.assertTrue(loginPage.isHomePageUndisplayed());
 	  
-	  log.info("REGISTER - STEP_06: Verify Register_Page is not displayed");
-	  verifyTrue(loginPage.isRegisterPageUndisplayed());
+	  System.out.println("REGISTER - STEP_1.4: Verify Register_Page is not displayed");
+	  Assert.assertTrue(loginPage.isRegisterPageUndisplayed());
   }
   
   @AfterClass (alwaysRun = true)

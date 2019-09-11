@@ -1,25 +1,18 @@
 package commons;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.sun.corba.se.impl.orbutil.closure.Constant;
-
 import pageUIs.AbstractPageUI;
-import pageUIs.LoginPageUI;
 import commons.PageGeneratorManager;
 import pageObjects.BalanceEnquiryPageObject;
 import pageObjects.ChangePasswordPageObject;
@@ -152,7 +145,8 @@ public class AbstractPage {
 		return element.getAttribute(attributeName);
 	}
 
-	public String getTextElement(WebDriver driver, String locator) {
+	public String getTextElement(WebDriver driver, String locator, String... values) {
+		locator = String.format(locator, (Object[]) values);
 		element = driver.findElement(By.xpath(locator));
 		return element.getText();
 	}
@@ -304,7 +298,8 @@ public class AbstractPage {
 		action.dragAndDrop(elementSource, elementTarget).perform();
 	}
 
-	public void sendKeyboardToElement(WebDriver driver, String locator, Keys key) {
+	public void sendKeyboardToElement(WebDriver driver, String locator, Keys key, String... values) {
+		locator = String.format(locator, (Object[]) values);
 		element = driver.findElement(By.xpath(locator));
 		action = new Actions(driver);
 		action.sendKeys(element, key).perform();
@@ -385,7 +380,6 @@ public class AbstractPage {
 	}
 
 	public void waitForElementVisible(WebDriver driver, String Locator) {
-		Date date = new Date();
 		By byLocator = By.xpath(Locator);
 		explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(byLocator));
@@ -399,7 +393,6 @@ public class AbstractPage {
 	}
 
 	public void waitForElementInvisible(WebDriver driver, String Locator) {
-		Date date = new Date();
 		By byLocator = By.xpath(Locator);
 		explicitWait = new WebDriverWait(driver, shortTimeout);
 		
@@ -525,6 +518,8 @@ public class AbstractPage {
 		clickToElement(driver, AbstractPageUI.DYNAMIC_MENU_LINK, pageName);
 		
 		switch (pageName) {
+		case "New Customer":
+				return PageGeneratorManager.getNewCustomerPage(driver);
 		case "Change Password":
 				return PageGeneratorManager.getChangePasswordPage(driver);
 		case "Mini Statement":
@@ -540,6 +535,42 @@ public class AbstractPage {
 	public void openMultiplePages(WebDriver driver, String pageName) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_MENU_LINK, pageName);
 		clickToElement(driver, AbstractPageUI.DYNAMIC_MENU_LINK, pageName);
+	}
+	
+	public void inputToDynamicTextbox(WebDriver driver, String nameID, String value) {
+		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_TEXTBOX, nameID);
+		sendkeyToElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX, value, nameID);	
+	}
+
+	public void inputToDynamicTextArea(WebDriver driver, String nameID, String value) {
+		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_TEXTAREA, nameID);
+		sendkeyToElement(driver, AbstractPageUI.DYNAMIC_TEXTAREA, value, nameID);	
+	}
+	
+	public void clickToDynamicRadioButton(WebDriver driver, String attributeValue) {
+		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_RADIO_BUTTON, attributeValue);
+		clickToElement(driver, AbstractPageUI.DYNAMIC_RADIO_BUTTON, attributeValue);	
+	}
+
+	public void clickToDynamicButton(WebDriver driver, String attributeValue) {
+		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_BUTTON, attributeValue);
+		clickToElement(driver, AbstractPageUI.DYNAMIC_BUTTON, attributeValue);	
+	}
+
+	public void clickToDynamicMenuLink(WebDriver driver, String textValue) {
+		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_MENU_LINK, textValue);
+		clickToElement(driver, AbstractPageUI.DYNAMIC_MENU_LINK, textValue);	
+	}
+	
+	public String getErrorMessageOfDynamicField(WebDriver driver, String labelName) {
+		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_ERROR_MESSAGE, labelName);
+		return getTextElement(driver, AbstractPageUI.DYNAMIC_ERROR_MESSAGE, labelName);
+	}
+	
+	public void pressTabToDynamicTextbox(WebDriver driver, String nameID) {
+		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_TEXTBOX, nameID);
+		sendKeyboardToElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX, Keys.TAB, nameID);
+		
 	}
 	
 	private WebElement element, elementSource, elementTarget;

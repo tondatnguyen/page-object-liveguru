@@ -4,6 +4,8 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
+import static org.junit.Assert.assertTrue;
+
 import java.util.Random;
 
 import org.openqa.selenium.WebDriver;
@@ -27,7 +29,7 @@ import pageObjects.NewCustomerPageObject;
 import commons.AbstractTest;
 import commons.PageGeneratorManager;
 
-public class Account_08_DynamicLocator_RestParameter extends AbstractTest {
+public class Account_10_RegisterAndLogin_Assert_Verify_Log_ReportHTML extends AbstractTest {
   private WebDriver driver;
 	
   @Parameters("browser")
@@ -43,48 +45,23 @@ public class Account_08_DynamicLocator_RestParameter extends AbstractTest {
   @Test
   public void TC_01_RegisterToSystem() {
 	  
-	  System.out.println("LOGIN PAGE - STEP_01: Click to 'HERE' link");
-	  loginPageUrl = loginPage.getLoginPageUrl();
-	  registerPage = loginPage.clickToHereLink();
+	  log.info("REGISTER - STEP_01: Verify Login_Page is display.");
+	  verifyTrue(loginPage.isLoginPageDisplayed());
 	  
-	  System.out.println("REGISTER PAGE - STEP_02: Input to Email_ID_textbox");
-	  registerPage.inputToEmailTextbox(emailValue);
+	  log.info("REGISTER - STEP_02: Verify Delete_Customer_Form is not displayed.");
+	  verifyTrue(loginPage.isDeleteCustomerFormLinkUndisplayed());
 	  
-	  System.out.println("REGISTER PAGE - STEP_03: Click to 'SUBMIT' button");
-	  registerPage.clickToSubmitButton();
+	  log.info("REGISTER - STEP_03: Click to Selenium Dropdown Toggle");
+	  loginPage.clickToSeleniumDropdownToggle();
 	  
-	  System.out.println("REGISTER PAGE - STEP_04: Get username/password info");
-	  username = registerPage.getUsernameInfo();
-	  password = registerPage.getPasswordInfo();
+	  log.info("REGISTER - STEP_04: Verify Delete_Customer_Form is displayed.");
+	  verifyTrue(loginPage.isDeleteCustomerFormLinkDisplayed());
 	  
-	  System.out.println("");
-  }
-
-  @Test
-  public void TC_02_LoginToSystem() {
+	  log.info("REGISTER - STEP_05: Verify Home_Page is not displayed");
+	  verifyTrue(loginPage.isHomePageUndisplayed());
 	  
-	  System.out.println("REGISTER PAGE - STEP_01: Open Login_Page");
-	  registerPage.openLoginPageUrl(loginPageUrl);
-	  
-	  System.out.println("LOGIN PAGE - STEP_02: Input to UserID/Password textbox");
-	  loginPage.inputToUserIDTextbox(username);
-	  loginPage.inputToPasswordTextbox(password);
-	  
-	  System.out.println("LOGIN PAGE - STEP_03: Click to 'LOGIN' button");
-	  homePage = loginPage.clickToLoginButton();
-	
-	  System.out.println("");
-  }
-  
-  @Test
-  public void TC_03_CheckHomePage() {
-	  System.out.println("HOME PAGE - STEP_04: Verify Welcome Message displayed");
-	  Assert.assertTrue(homePage.isWelcomeMessageDisplayed("Welcome To Manager's Page of Guru99 Bank"));;
-	  
-	  System.out.println("HOME PAGE - STEP_05: Verify UserID displayed");
-	  Assert.assertTrue(homePage.isUserIDDisplayed(username));
-  
-	  System.out.println("");
+	  log.info("REGISTER - STEP_06: Verify Register_Page is not displayed");
+	  verifyTrue(loginPage.isRegisterPageUndisplayed());
   }
   
   @AfterClass (alwaysRun = true)

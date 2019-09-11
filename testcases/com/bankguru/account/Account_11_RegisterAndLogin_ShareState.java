@@ -1,6 +1,5 @@
 package com.bankguru.account;
 
-import org.testng.annotations.Test;
 import com.bankguru.commons.Common_01_RegisterToSystem;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -11,7 +10,7 @@ import pageObjects.HomePageObject;
 import commons.AbstractTest;
 import commons.PageGeneratorManager;
 
-public class Account_11_DynamicLocator_ShareState extends AbstractTest {
+public class Account_11_RegisterAndLogin_ShareState extends AbstractTest {
   WebDriver driver;
 	
   @Parameters("browser")
@@ -38,25 +37,25 @@ public class Account_11_DynamicLocator_ShareState extends AbstractTest {
 	  System.out.println("PASSWORD in Class Account_11_DynamicLocator_ShareState = " + Common_01_RegisterToSystem.PASSWORD);
   }
 
-  @Test
-  public void TC_01_CreateNewCustomer() {
-	 	  
-  }
-  
-  @Test
-  public void TC_02_EditCustomer() {
-	  
-  }
-  
-  @Test
-  public void TC_03_CreateNewAccount() {
-	  
-  }
-  
-  @Test
-  public void TC_04_DepositToOtherUser() {
-	  
-  }
+//  @Test
+//  public void TC_01_CreateNewCustomer() {
+//	 	  
+//  }
+//  
+//  @Test
+//  public void TC_02_EditCustomer() {
+//	  
+//  }
+//  
+//  @Test
+//  public void TC_03_CreateNewAccount() {
+//	  
+//  }
+//  
+//  @Test
+//  public void TC_04_DepositToOtherUser() {
+//	  
+//  }
   
   @AfterClass (alwaysRun = true)
   public void afterClass() { 

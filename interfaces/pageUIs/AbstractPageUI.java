@@ -1,6 +1,8 @@
 package pageUIs;
 
 public class AbstractPageUI {
+	
+	// 14 pages UI
 	public static final String HOME_PAGE_LINK = "//a[text()='Manager']";
 	public static final String NEW_CUSTOMER_LINK = "//a[text()='New Customer']";
 	public static final String EDIT_CUSTOMER_LINK = "//a[text()='Edit Customer']";
@@ -17,6 +19,7 @@ public class AbstractPageUI {
 	public static final String CUSTOMISED_STATEMENT_LINK = "//a[text()='Customised Statement']";
 	public static final String LOG_OUT_LINK = "//a[text()='Log out']";
 	
+	// 14 pages link_text
 	public static final String HOME_PAGE_TEXT = "Manager";
 	public static final String NEW_CUSTOMER_TEXT = "New Customer";
 	public static final String EDIT_CUSTOMER_TEXT = "Edit Customer";
@@ -33,5 +36,11 @@ public class AbstractPageUI {
 	public static final String CUSTOMISED_STATEMENT_TEXT = "Customised Statement";
 	public static final String LOG_OUT_TEXT = "Log out";
 	
+	// dynamic page elements
 	public static final String DYNAMIC_MENU_LINK = "//a[text()='%s']";
+	public static final String DYNAMIC_TEXTBOX = "//input[@name='%s']";
+	public static final String DYNAMIC_TEXTAREA = "//textarea[@name='%s']";
+	public static final String DYNAMIC_RADIO_BUTTON = "//input[@value='%s']";
+	public static final String DYNAMIC_BUTTON = "//input[@value='%s']";
+	public static final String DYNAMIC_ERROR_MESSAGE = "//td[text()='%s']/following-sibling::td/label";
 }

@@ -27,7 +27,6 @@ public class AbstractTest {
 	public synchronized WebDriver openMultiBrowser(String browserName) {
 
 		//	String rootFolder = System.getProperty("user.dir");
-
 		if (browserName.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().arch64().setup();
 			driver = new FirefoxDriver();
