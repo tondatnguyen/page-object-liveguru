@@ -1,5 +1,7 @@
 package commons;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -569,8 +571,149 @@ public class AbstractPage {
 	
 	public void pressTabToDynamicTextbox(WebDriver driver, String nameID) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_TEXTBOX, nameID);
-		sendKeyboardToElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX, Keys.TAB, nameID);
+		sendKeyboardToElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX, Keys.TAB, nameID);	
+	}
+	
+	// Sort Ascending STRING
+	public boolean isStringDataSortedAscending(WebDriver driver, String locator) {
+		// Declare an ArrayList
+		ArrayList<String> arrayList = new ArrayList<>();
 		
+		// Find all elements that match with condition (Name/Price/...)
+		List<WebElement> elementList = driver.findElements(By.xpath(locator));
+		
+		// Get text from elementList to add to arrayList
+		for(WebElement element : elementList) {
+			arrayList.add(element.getText());
+		}
+		
+		System.out.println("---------------------Dữ liệu trên UI:---------------------");
+		for(String name : arrayList) {
+			System.out.println(name);
+		}
+		
+		// Copy to an new array-list to SORT in code
+		ArrayList<String> sortedList = new ArrayList<>();
+		for(String child : arrayList) {
+			sortedList.add(child);
+		}
+		
+		// Execute SORT ASC
+		Collections.sort(sortedList);
+		
+		System.out.println("------------Dữ liệu đã SORT ASC trong code:---------------");
+		for(String child : sortedList)
+			System.out.println(child);
+		
+		// Verify 2 arrays to be equal. If not be equal => return FALSE  
+		return sortedList.equals(arrayList);
+	}
+
+	// Sort Descending STRING
+	public boolean isStringDataSortedDescending(WebDriver driver, String locator) {
+		// Declare an ArrayList
+		ArrayList<String> arrayList = new ArrayList<>();
+		
+		// Find all elements that match with condition (Name/Price/...)
+		List<WebElement> elementList = driver.findElements(By.xpath(locator));
+		
+		// Get text from elementList to add to arrayList
+		for(WebElement element : elementList) {
+			arrayList.add(element.getText());
+		}
+		
+		System.out.println("---------------------Dữ liệu trên UI:---------------------");
+		for(String name : arrayList) {
+			System.out.println(name);
+		}
+		
+		// Copy to an new array-list to SORT in code
+		ArrayList<String> sortedList = new ArrayList<>();
+		for(String child : arrayList) {
+			sortedList.add(child);
+		}
+		
+		// Execute SORT DESC
+		Collections.sort(sortedList); // Sort ASC
+		Collections.reverse(sortedList); // Or using: Collections.sort(sortedList, Collections.reverseOrder());
+		
+		System.out.println("------------Dữ liệu đã SORT DESC trong code:---------------");
+		for(String child : sortedList)
+			System.out.println(child);
+		
+		// Verify 2 arrays to be equal. If not be equal => return FALSE  
+		return sortedList.equals(arrayList);
+	}
+	
+	// Sort Ascending FLOAT
+	public boolean isFloatDataSortedAscending(WebDriver driver, String locator) {
+			// Declare an ArrayList
+			ArrayList<Float> arrayList = new ArrayList<Float>();
+			
+			// Find all elements that match with condition (Name/Price/...)
+			List<WebElement> elementList = driver.findElements(By.xpath(locator));
+			
+			// Get text from elementList to add to arrayList
+			for(WebElement element : elementList) {
+				arrayList.add(Float.parseFloat(element.getText().replace("$", "").trim()));
+			}
+			
+			System.out.println("---------------------Dữ liệu trên UI:---------------------");
+			for(Float number : arrayList) {
+				System.out.println(number);
+			}
+			
+			// Copy to an new array-list to SORT in code
+			ArrayList<Float> sortedList = new ArrayList<Float>();
+			for(Float child : arrayList) {
+				sortedList.add(child);
+			}
+			
+			// Execute SORT ASC
+			Collections.sort(sortedList);
+			
+			System.out.println("------------Dữ liệu đã SORT ASC trong code:---------------");
+			for(Float child : sortedList)
+				System.out.println(child);
+			
+			// Verify 2 arrays to be equal. If not be equal => return FALSE  
+			return sortedList.equals(arrayList);
+	}
+
+	// Sort Descending FLOAT
+	public boolean isFloatDataSortedDescending(WebDriver driver, String locator) {
+		// Declare an ArrayList
+		ArrayList<Float> arrayList = new ArrayList<Float>();
+		
+		// Find all elements that match with condition (Name/Price/...)
+		List<WebElement> elementList = driver.findElements(By.xpath(locator));
+		
+		// Get text from elementList to add to arrayList
+		for(WebElement element : elementList) {
+			arrayList.add(Float.parseFloat(element.getText().replace("$", "").trim()));
+		}
+		
+		System.out.println("---------------------Dữ liệu trên UI:---------------------");
+		for(Float number : arrayList) {
+			System.out.println(number);
+		}
+		
+		// Copy to an new array-list to SORT in code
+		ArrayList<Float> sortedList = new ArrayList<Float>();
+		for(Float child : arrayList) {
+			sortedList.add(child);
+		}
+		
+		// Execute SORT DESC
+		Collections.sort(sortedList); // Sort ASC
+		Collections.reverse(sortedList); // Or using: Collections.sort(sortedList, Collections.reverseOrder());
+		
+		System.out.println("------------Dữ liệu đã SORT DESC trong code:---------------");
+		for(Float child : sortedList)
+			System.out.println(child);
+		
+		// Verify 2 arrays to be equal. If not be equal => return FALSE  
+		return sortedList.equals(arrayList);
 	}
 	
 	private WebElement element, elementSource, elementTarget;

@@ -1,7 +1,1 @@
-2019-09-11 16:22:54,439 INFO  com.bankguru.commons.Common_01_RegisterToSystem - PRE-CONDITION - STEP_01: Open BANK GURU APPLICATION
-2019-09-11 16:22:57,840 INFO  com.bankguru.commons.Common_01_RegisterToSystem - REGISTER - STEP_01: Verify Login_Page is display.
-2019-09-11 16:22:57,933 INFO  com.bankguru.commons.Common_01_RegisterToSystem - ===PASSED==
-2019-09-11 16:22:57,935 INFO  com.bankguru.commons.Common_01_RegisterToSystem - REGISTER - STEP_02: Click to 'HERE' link
-2019-09-11 16:22:59,973 INFO  com.bankguru.commons.Common_01_RegisterToSystem - REGISTER - STEP_03: Input to Email_ID_textbox
-2019-09-11 16:23:00,403 INFO  com.bankguru.commons.Common_01_RegisterToSystem - REGISTER - STEP_04: Click to 'SUBMIT' button
-2019-09-11 16:23:02,400 INFO  com.bankguru.commons.Common_01_RegisterToSystem - REGISTER - STEP_05: Get username/password info
+2019-09-19 02:13:37,622 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - PRE-CONDITION - STEP_01: Open BANK GURU APPLICATION

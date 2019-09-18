@@ -1,0 +1,12 @@
+{
+	  "customerNameValue": "Brian",
+	  "genderMaleValue": "male",
+	  "dateOFBirthValue": "1990-01-01",
+	  "addressValue": "691 Loan Drive",
+	  "cityValue": "Soan",
+	  "stateValue": "Missisipi",
+	  "pinValue": "323232",
+	  "phoneValue": "1234512345",
+	  "emailValue": "auto", 
+	  "passwordValue": "111222333"
+}
