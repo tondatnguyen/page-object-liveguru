@@ -1,1 +1,41 @@
-2019-09-19 02:13:37,622 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - PRE-CONDITION - STEP_01: Open BANK GURU APPLICATION
+2019-09-20 01:38:17,435 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - PRE-CONDITION - STEP_01: Open BANK GURU APPLICATION
+2019-09-20 01:38:34,328 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED==
+2019-09-20 01:38:34,437 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED==
+2019-09-20 01:38:36,561 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED==
+2019-09-20 01:38:43,061 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED==
+2019-09-20 01:38:43,265 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Actual = Brian
+2019-09-20 01:38:43,266 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Expected = Brian
+2019-09-20 01:38:43,266 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Compare value = true
+2019-09-20 01:38:43,266 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED===
+2019-09-20 01:38:43,458 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Actual = male
+2019-09-20 01:38:43,459 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Expected = male
+2019-09-20 01:38:43,459 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Compare value = true
+2019-09-20 01:38:43,459 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED===
+2019-09-20 01:38:43,660 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Actual = 1990-01-01
+2019-09-20 01:38:43,661 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Expected = 1990-01-01
+2019-09-20 01:38:43,661 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Compare value = true
+2019-09-20 01:38:43,661 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED===
+2019-09-20 01:38:43,872 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Actual = 691 Loan Drive
+2019-09-20 01:38:43,872 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Expected = 691 Loan Drive
+2019-09-20 01:38:43,872 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Compare value = true
+2019-09-20 01:38:43,872 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED===
+2019-09-20 01:38:44,045 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Actual = Soan
+2019-09-20 01:38:44,046 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Expected = Soan
+2019-09-20 01:38:44,046 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Compare value = true
+2019-09-20 01:38:44,046 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED===
+2019-09-20 01:38:44,250 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Actual = Missisipi
+2019-09-20 01:38:44,251 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Expected = Missisipi
+2019-09-20 01:38:44,251 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Compare value = true
+2019-09-20 01:38:44,251 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED===
+2019-09-20 01:38:44,464 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Actual = 323232
+2019-09-20 01:38:44,464 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Expected = 323232
+2019-09-20 01:38:44,464 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Compare value = true
+2019-09-20 01:38:44,464 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED===
+2019-09-20 01:38:44,656 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Actual = 1234512345
+2019-09-20 01:38:44,657 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Expected = 1234512345
+2019-09-20 01:38:44,657 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Compare value = true
+2019-09-20 01:38:44,657 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED===
+2019-09-20 01:38:44,859 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Actual = auto5698@test.com
+2019-09-20 01:38:44,860 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Expected = auto5698@test.com
+2019-09-20 01:38:44,860 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Compare value = true
+2019-09-20 01:38:44,860 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED===

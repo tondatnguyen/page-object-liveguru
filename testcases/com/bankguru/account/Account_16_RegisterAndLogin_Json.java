@@ -99,10 +99,10 @@ public class Account_16_RegisterAndLogin_Json<DataJson> extends AbstractTest{
 	  loginPage.clickToLoginButton();
 
 	  System.out.println("HOME PAGE - STEP_04: Verify Welcome Message displayed");
-	  Assert.assertTrue(homePage.isWelcomeMessageDisplayed("Welcome To Manager's Page of Guru99 Bank"));;
+	  verifyTrue(homePage.isWelcomeMessageDisplayed("Welcome To Manager's Page of Guru99 Bank"));;
 	  
 	  System.out.println("HOME PAGE - STEP_05: Verify UserID displayed");
-	  Assert.assertTrue(homePage.isUserIDDisplayed(username));
+	  verifyTrue(homePage.isUserIDDisplayed(username));
 	
 	  System.out.println("");
   }
@@ -113,7 +113,7 @@ public class Account_16_RegisterAndLogin_Json<DataJson> extends AbstractTest{
 	  homePage.clickToNewCustomerPage();
 	  
 	  System.out.println("NEW_CUSTOMER PAGE - STEP: 2. Verify New_Customer page displayed");
-	  Assert.assertTrue(newCustomerPage.isNewCustomerPageDisplayed());
+	  verifyTrue(newCustomerPage.isNewCustomerPageDisplayed());
 	  
 	  System.out.println("NEW_CUSTOMER PAGE - STEP: 3. Input to Customer_Name textbox");
 	  newCustomerPage.inputToNewCustomerName(dataCustomer.getCustomerNameValue());
@@ -149,18 +149,18 @@ public class Account_16_RegisterAndLogin_Json<DataJson> extends AbstractTest{
 	  newCustomerPage.clickToSubmitButton();
 	  
 	  System.out.println("NEW_CUSTOMER PAGE - STEP: 14. Verify 'Customer Registered Successfully!!!' message displayed");
-	  Assert.assertTrue(newCustomerPage.isCustomerRegisteredSuccessMessageDisplayed());
+	  verifyTrue(newCustomerPage.isCustomerRegisteredSuccessMessageDisplayed());
 	  
 	  System.out.println("NEW_CUSTOMER PAGE - STEP: 15. Verify all information show correct");
-	  Assert.assertEquals(newCustomerPage.getCustomerNameValueInTable(), dataCustomer.getCustomerNameValue());
-	  Assert.assertEquals(newCustomerPage.getGenderValueInTable(), dataCustomer.getGenderMaleValue());
-	  Assert.assertEquals(newCustomerPage.getBirthdayValueInTable(), dataCustomer.getDateOFBirthValue());
-	  Assert.assertEquals(newCustomerPage.getAddressValueInTable(), dataCustomer.getAddressValue());
-	  Assert.assertEquals(newCustomerPage.getCityValueInTable(), dataCustomer.getCityValue());
-	  Assert.assertEquals(newCustomerPage.getStateValueInTable(), dataCustomer.getStateValue());
-	  Assert.assertEquals(newCustomerPage.getPinValueInTable(), dataCustomer.getPinValue());
-	  Assert.assertEquals(newCustomerPage.getPhoneValueInTable(), dataCustomer.getPhoneValue());
-	  Assert.assertEquals(newCustomerPage.getEmailValueInTable(), fullEmailValue);
+	  verifyEquals(newCustomerPage.getCustomerNameValueInTable(), dataCustomer.getCustomerNameValue());
+	  verifyEquals(newCustomerPage.getGenderValueInTable(), dataCustomer.getGenderMaleValue());
+	  verifyEquals(newCustomerPage.getBirthdayValueInTable(), dataCustomer.getDateOFBirthValue());
+	  verifyEquals(newCustomerPage.getAddressValueInTable(), dataCustomer.getAddressValue());
+	  verifyEquals(newCustomerPage.getCityValueInTable(), dataCustomer.getCityValue());
+	  verifyEquals(newCustomerPage.getStateValueInTable(), dataCustomer.getStateValue());
+	  verifyEquals(newCustomerPage.getPinValueInTable(), dataCustomer.getPinValue());
+	  verifyEquals(newCustomerPage.getPhoneValueInTable(), dataCustomer.getPhoneValue());
+	  verifyEquals(newCustomerPage.getEmailValueInTable(), fullEmailValue);
 	  
 	  System.out.println("");
   }

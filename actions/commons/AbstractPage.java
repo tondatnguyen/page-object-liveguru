@@ -83,13 +83,23 @@ public class AbstractPage {
 	/* Web Element */
 	public void clickToElement(WebDriver driver, String locator) {
 		element = driver.findElement(By.xpath(locator));
-		element.click();
+		if(driver.toString().contains("internetexplorer")) {
+			clickToElementByjavascriptExecutor(driver, locator);
+			sleepInSecond(driver, 5);
+		} else {
+			element.click();
+		}
 	}
 
 	public void clickToElement(WebDriver driver, String locator, String... values) {
 		locator = String.format(locator, (Object[]) values);
 		element = driver.findElement(By.xpath(locator));
-		element.click();
+		if(driver.toString().contains("internetexplorer")) {
+			clickToElementByjavascriptExecutor(driver, locator);
+			sleepInSecond(driver, 5);
+		} else {
+			element.click();
+		}
 	}
 	
 	public void sendkeyToElement(WebDriver driver, String locator, String value) {

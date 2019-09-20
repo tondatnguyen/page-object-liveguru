@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -18,6 +19,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class AbstractTest {
 	private WebDriver driver;
 	protected final Log log;
+	private final String workingDir = System.getProperty("user.dir");
 	
 	// Constructor
 	protected AbstractTest() {
@@ -29,13 +31,21 @@ public class AbstractTest {
 		//	String rootFolder = System.getProperty("user.dir");
 		if (browserName.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().arch64().setup();
+			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
+			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, workingDir + "\\FirefoxUILog.txt");
 			driver = new FirefoxDriver();
+		} else if (browserName.equalsIgnoreCase("firefoxheadless")) {
+			WebDriverManager.firefoxdriver().arch64().setup();
+			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
+			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, workingDir + "\\FirefoxHeadlessLog.txt");
+			FirefoxOptions options = new FirefoxOptions();
+			options.setHeadless(true);
+			driver = new FirefoxDriver(options);
 		} else if (browserName.equalsIgnoreCase("chrome")) {
 			//	System.setProperty("webdriver.chrome.driver", rootFolder + "\\resources\\chromedriver.exe");
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} else if (browserName.equalsIgnoreCase("chromeheadless")) {
-			//	System.setProperty("webdriver.chrome.driver", rootFolder + "\\resources\\chromedriver.exe");
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("headless");
@@ -143,6 +153,7 @@ public class AbstractTest {
 			// Khai báo 1 biến command line để thực thi
 			String cmd = "";
 			if (driver != null) {
+				driver.manage().deleteAllCookies();
 				driver.quit();
 			}
 
