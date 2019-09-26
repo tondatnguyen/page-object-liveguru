@@ -4,17 +4,13 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
-import static org.junit.Assert.assertTrue;
-
 import java.util.Random;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
 import pageObjects.RegisterPageObject;
 import pageObjects.WithdrawalPageObject;
-import pageUIs.AbstractPageUI;
 import pageObjects.LoginPageObject;
 import pageObjects.MiniStatementPageObject;
 import pageObjects.NewAccountPageObject;

@@ -1,41 +1,27 @@
-2019-09-20 01:38:17,435 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - PRE-CONDITION - STEP_01: Open BANK GURU APPLICATION
-2019-09-20 01:38:34,328 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED==
-2019-09-20 01:38:34,437 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED==
-2019-09-20 01:38:36,561 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED==
-2019-09-20 01:38:43,061 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED==
-2019-09-20 01:38:43,265 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Actual = Brian
-2019-09-20 01:38:43,266 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Expected = Brian
-2019-09-20 01:38:43,266 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Compare value = true
-2019-09-20 01:38:43,266 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED===
-2019-09-20 01:38:43,458 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Actual = male
-2019-09-20 01:38:43,459 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Expected = male
-2019-09-20 01:38:43,459 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Compare value = true
-2019-09-20 01:38:43,459 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED===
-2019-09-20 01:38:43,660 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Actual = 1990-01-01
-2019-09-20 01:38:43,661 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Expected = 1990-01-01
-2019-09-20 01:38:43,661 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Compare value = true
-2019-09-20 01:38:43,661 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED===
-2019-09-20 01:38:43,872 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Actual = 691 Loan Drive
-2019-09-20 01:38:43,872 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Expected = 691 Loan Drive
-2019-09-20 01:38:43,872 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Compare value = true
-2019-09-20 01:38:43,872 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED===
-2019-09-20 01:38:44,045 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Actual = Soan
-2019-09-20 01:38:44,046 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Expected = Soan
-2019-09-20 01:38:44,046 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Compare value = true
-2019-09-20 01:38:44,046 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED===
-2019-09-20 01:38:44,250 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Actual = Missisipi
-2019-09-20 01:38:44,251 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Expected = Missisipi
-2019-09-20 01:38:44,251 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Compare value = true
-2019-09-20 01:38:44,251 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED===
-2019-09-20 01:38:44,464 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Actual = 323232
-2019-09-20 01:38:44,464 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Expected = 323232
-2019-09-20 01:38:44,464 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Compare value = true
-2019-09-20 01:38:44,464 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED===
-2019-09-20 01:38:44,656 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Actual = 1234512345
-2019-09-20 01:38:44,657 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Expected = 1234512345
-2019-09-20 01:38:44,657 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Compare value = true
-2019-09-20 01:38:44,657 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED===
-2019-09-20 01:38:44,859 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Actual = auto5698@test.com
-2019-09-20 01:38:44,860 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Expected = auto5698@test.com
-2019-09-20 01:38:44,860 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - Compare value = true
-2019-09-20 01:38:44,860 INFO  com.bankguru.account.Account_16_RegisterAndLogin_Json - ===PASSED===
+2019-09-25 10:37:18,605 INFO  com.bankguru.account.Account_18_CaptureScreenshot - PRE-CONDITION - STEP_01: Open BANK GURU APPLICATION
+2019-09-25 10:37:21,427 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Pre-Condition - STEP_01: Input to UserID/Password textbox
+2019-09-25 10:37:24,057 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Pre-Condition - STEP_02: Click to 'LOGIN' button
+2019-09-25 10:37:25,384 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Pre-Condition - STEP_03: Verify Welcome Message displayed
+2019-09-25 10:37:27,245 INFO  com.bankguru.account.Account_18_CaptureScreenshot - ===PASSED==
+2019-09-25 10:37:30,865 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Actual = Customer name must not be blank
+2019-09-25 10:37:30,866 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Expected = Customer name must not be blank
+2019-09-25 10:37:30,866 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Compare value = true
+2019-09-25 10:37:30,867 INFO  com.bankguru.account.Account_18_CaptureScreenshot - ===PASSED===
+2019-09-25 10:37:31,470 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Actual = Date Field must not be blank
+2019-09-25 10:37:31,471 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Expected = Date Field must not be blank
+2019-09-25 10:37:31,471 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Compare value = true
+2019-09-25 10:37:31,471 INFO  com.bankguru.account.Account_18_CaptureScreenshot - ===PASSED===
+2019-09-25 10:37:32,073 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Actual = City Field must not be blank
+2019-09-25 10:37:32,073 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Expected = City Field must not be blank
+2019-09-25 10:37:32,074 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Compare value = true
+2019-09-25 10:37:32,074 INFO  com.bankguru.account.Account_18_CaptureScreenshot - ===PASSED===
+2019-09-25 10:37:32,667 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Actual = State must not be blank
+2019-09-25 10:37:32,668 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Expected = State must not be blank
+2019-09-25 10:37:32,668 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Compare value = true
+2019-09-25 10:37:32,668 INFO  com.bankguru.account.Account_18_CaptureScreenshot - ===PASSED===
+2019-09-25 10:37:33,264 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Actual = PIN Code must not be blank
+2019-09-25 10:37:33,264 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Expected = PIN Code must not be blankkkkkkkkkkkkkk
+2019-09-25 10:37:33,265 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Compare value = false
+2019-09-25 10:37:33,265 INFO  com.bankguru.account.Account_18_CaptureScreenshot - ===FAILED===
+2019-09-25 10:38:55,586 INFO  com.bankguru.account.Account_18_CaptureScreenshot - OS name = windows 7
+2019-09-25 10:38:56,108 INFO  com.bankguru.account.Account_18_CaptureScreenshot - ---------- QUIT BROWSER SUCCESS ----------

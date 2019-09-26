@@ -1,4 +1,4 @@
-package com.bankguru.customer;
+package com.bankguru.testdata;
 
 public class Customer {
 

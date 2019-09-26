@@ -2,7 +2,7 @@ package com.bankguru.account;
 
 import org.testng.annotations.Test;
 
-import com.bankguru.customer.GetCustomerDataJson;
+import com.bankguru.testdata.GetCustomerDataJson;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
@@ -13,17 +13,13 @@ import org.testng.annotations.Parameters;
 
 import java.io.IOException;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
+
 import org.testng.annotations.AfterClass;
 
 import pageObjects.RegisterPageObject;
-import pageUIs.NewCustomerUI;
+
 import pageObjects.LoginPageObject;
 import pageObjects.NewCustomerPageObject;
 import pageObjects.HomePageObject;

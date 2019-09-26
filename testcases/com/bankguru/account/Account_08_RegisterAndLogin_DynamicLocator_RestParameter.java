@@ -12,7 +12,6 @@ import org.testng.annotations.AfterClass;
 
 import pageObjects.RegisterPageObject;
 import pageObjects.WithdrawalPageObject;
-import pageUIs.AbstractPageUI;
 import pageObjects.LoginPageObject;
 import pageObjects.MiniStatementPageObject;
 import pageObjects.NewAccountPageObject;

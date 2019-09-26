@@ -82,6 +82,7 @@ public class AbstractPage {
 
 	/* Web Element */
 	public void clickToElement(WebDriver driver, String locator) {
+		highlightElement(driver, locator);
 		element = driver.findElement(By.xpath(locator));
 		if(driver.toString().contains("internetexplorer")) {
 			clickToElementByjavascriptExecutor(driver, locator);
@@ -93,6 +94,7 @@ public class AbstractPage {
 
 	public void clickToElement(WebDriver driver, String locator, String... values) {
 		locator = String.format(locator, (Object[]) values);
+		highlightElement(driver, locator);
 		element = driver.findElement(By.xpath(locator));
 		if(driver.toString().contains("internetexplorer")) {
 			clickToElementByjavascriptExecutor(driver, locator);
@@ -103,12 +105,14 @@ public class AbstractPage {
 	}
 	
 	public void sendkeyToElement(WebDriver driver, String locator, String value) {
+		highlightElement(driver, locator);
 		element = driver.findElement(By.xpath(locator));
 		element.sendKeys(value);
 	}
 
 	public void sendkeyToElement(WebDriver driver, String locator, String sendkeyValue, String... values) {
 		locator = String.format(locator, (Object[]) values);
+		highlightElement(driver, locator);
 		element = driver.findElement(By.xpath(locator));
 		element.sendKeys(sendkeyValue);
 	}
@@ -159,6 +163,7 @@ public class AbstractPage {
 
 	public String getTextElement(WebDriver driver, String locator, String... values) {
 		locator = String.format(locator, (Object[]) values);
+		highlightElement(driver, locator);
 		element = driver.findElement(By.xpath(locator));
 		return element.getText();
 	}
@@ -183,12 +188,12 @@ public class AbstractPage {
 	}
 
 	public boolean isControlDisplayed(WebDriver driver, String locator) {
+		highlightElement(driver, locator);
 		element = driver.findElement(By.xpath(locator));
 		return element.isDisplayed();
 	}
 	
-	public boolean isControlUndisplayed(WebDriver driver, String locator) {
-			
+	public boolean isControlUndisplayed(WebDriver driver, String locator) {	
 		// Set 5s
 		overrideGlobalTimeout(driver, Constants.SHORT_TIMEOUT);
 		List<WebElement> elements = driver.findElements(By.xpath(locator));
@@ -203,6 +208,7 @@ public class AbstractPage {
 			return true;
 		} else {
 			// Set 30s
+			highlightElement(driver, locator);	
 			overrideGlobalTimeout(driver, Constants.LONG_TIMEOUT);
 			return false;
 		}	
@@ -214,6 +220,7 @@ public class AbstractPage {
 
 	public boolean isControlDisplayed(WebDriver driver, String locator, String... values) {
 		locator = String.format(locator, (Object[]) values);
+		highlightElement(driver, locator);
 		element = driver.findElement(By.xpath(locator));
 		return element.isDisplayed();
 	}
@@ -235,6 +242,7 @@ public class AbstractPage {
 			return true;
 		} else {
 			// Set 30s
+			highlightElement(driver, locator);
 			overrideGlobalTimeout(driver, Constants.LONG_TIMEOUT);
 			return false;
 		}	
@@ -430,6 +438,21 @@ public class AbstractPage {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void highlightElement(WebDriver driver, String locator) {
+		javascriptExecutor  = (JavascriptExecutor) driver;
+		element = driver.findElement(By.xpath(locator));
+		String originalStyle = element.getAttribute("style");
+		System.out.println("Original style of element = " + originalStyle);
+		
+		javascriptExecutor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, "style", "border: 3px solid red; border-style: dashed;");
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		javascriptExecutor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, "style", originalStyle);
 	}
 
 	public HomePageObject openHomePage(WebDriver driver) {

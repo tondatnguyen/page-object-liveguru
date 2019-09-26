@@ -5,17 +5,12 @@ import org.testng.annotations.BeforeClass;
 
 
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
-
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
 import pageObjects.RegisterPageObject;
-import pageUIs.NewCustomerUI;
 import pageObjects.LoginPageObject;
 import pageObjects.NewCustomerPageObject;
 import pageObjects.HomePageObject;

@@ -1,4 +1,4 @@
-package com.bankguru.customer;
+package com.bankguru.testdata;
 
 import java.io.File;
 import java.io.IOException;
