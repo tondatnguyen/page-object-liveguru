@@ -1,27 +1,177 @@
-2019-09-25 10:37:18,605 INFO  com.bankguru.account.Account_18_CaptureScreenshot - PRE-CONDITION - STEP_01: Open BANK GURU APPLICATION
-2019-09-25 10:37:21,427 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Pre-Condition - STEP_01: Input to UserID/Password textbox
-2019-09-25 10:37:24,057 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Pre-Condition - STEP_02: Click to 'LOGIN' button
-2019-09-25 10:37:25,384 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Pre-Condition - STEP_03: Verify Welcome Message displayed
-2019-09-25 10:37:27,245 INFO  com.bankguru.account.Account_18_CaptureScreenshot - ===PASSED==
-2019-09-25 10:37:30,865 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Actual = Customer name must not be blank
-2019-09-25 10:37:30,866 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Expected = Customer name must not be blank
-2019-09-25 10:37:30,866 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Compare value = true
-2019-09-25 10:37:30,867 INFO  com.bankguru.account.Account_18_CaptureScreenshot - ===PASSED===
-2019-09-25 10:37:31,470 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Actual = Date Field must not be blank
-2019-09-25 10:37:31,471 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Expected = Date Field must not be blank
-2019-09-25 10:37:31,471 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Compare value = true
-2019-09-25 10:37:31,471 INFO  com.bankguru.account.Account_18_CaptureScreenshot - ===PASSED===
-2019-09-25 10:37:32,073 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Actual = City Field must not be blank
-2019-09-25 10:37:32,073 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Expected = City Field must not be blank
-2019-09-25 10:37:32,074 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Compare value = true
-2019-09-25 10:37:32,074 INFO  com.bankguru.account.Account_18_CaptureScreenshot - ===PASSED===
-2019-09-25 10:37:32,667 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Actual = State must not be blank
-2019-09-25 10:37:32,668 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Expected = State must not be blank
-2019-09-25 10:37:32,668 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Compare value = true
-2019-09-25 10:37:32,668 INFO  com.bankguru.account.Account_18_CaptureScreenshot - ===PASSED===
-2019-09-25 10:37:33,264 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Actual = PIN Code must not be blank
-2019-09-25 10:37:33,264 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Expected = PIN Code must not be blankkkkkkkkkkkkkk
-2019-09-25 10:37:33,265 INFO  com.bankguru.account.Account_18_CaptureScreenshot - Compare value = false
-2019-09-25 10:37:33,265 INFO  com.bankguru.account.Account_18_CaptureScreenshot - ===FAILED===
-2019-09-25 10:38:55,586 INFO  com.bankguru.account.Account_18_CaptureScreenshot - OS name = windows 7
-2019-09-25 10:38:56,108 INFO  com.bankguru.account.Account_18_CaptureScreenshot - ---------- QUIT BROWSER SUCCESS ----------
+2019-10-08 11:07:29,681 INFO  com.bankguru.account.Account_13_Payment_Flow - PRE-CONDITION - STEP_01: Open BANK GURU APPLICATION
+2019-10-08 11:07:37,775 INFO  com.bankguru.account.Account_13_Payment_Flow - Pre-Condition - STEP_01: Input to UserID/Password textbox
+2019-10-08 11:07:38,209 INFO  com.bankguru.account.Account_13_Payment_Flow - Pre-Condition - STEP_02: Click to 'LOGIN' button
+2019-10-08 11:07:39,067 INFO  com.bankguru.account.Account_13_Payment_Flow - Pre-Condition - STEP_03: Verify Welcome Message displayed
+2019-10-08 11:07:40,976 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:07:40,984 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_01 - Step 01. Open New Customer Page
+2019-10-08 11:07:42,620 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:07:42,620 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_01 - Step 02. Input valid data to all require fields
+2019-10-08 11:07:48,986 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_01 - Step 03. Click to SUBMIT button
+2019-10-08 11:07:55,424 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_01 - Step 04. Verify 'Customer Registered Successfully!!!' message displayed
+2019-10-08 11:07:56,167 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:07:56,167 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_01 - Step 05. Verify all info in table displayed
+2019-10-08 11:07:56,244 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:07:56,313 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:07:56,373 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:07:56,427 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:07:56,484 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:07:56,545 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:07:56,625 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:07:56,686 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:07:56,752 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:07:56,823 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_02 - Step 01. Open Edit Customer Page
+2019-10-08 11:08:03,349 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:03,349 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_02 - Step 02. Input to CustomerID textbox
+2019-10-08 11:08:03,443 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_02 - Step 03. Click to Submit button
+2019-10-08 11:08:10,845 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:10,845 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_02 - Step 04. Update data to editable fields
+2019-10-08 11:08:11,575 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_02 - Step 05. Click to Submit button
+2019-10-08 11:08:18,286 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_02 - Step 06. Verify 'Customer details updated Successfully!!!' message displayed
+2019-10-08 11:08:19,064 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:19,064 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_02 - Step 07. Verify all required fields updated successfully
+2019-10-08 11:08:19,126 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:19,178 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:19,228 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:19,280 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:19,335 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:19,419 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:19,473 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:19,549 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:19,603 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:19,604 INFO  com.bankguru.account.Account_13_Payment_Flow - ================ CREATE FIRST ACCOUNT ================
+2019-10-08 11:08:19,605 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_03 - Step 01. Open New Account Page
+2019-10-08 11:08:27,797 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:27,797 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_03 - Step 02. Input to CustomerID textbox
+2019-10-08 11:08:27,901 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_03 - Step 03. Select Savings value in Account Type dropdown
+2019-10-08 11:08:27,988 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_03 - Step 04. Input to Initial deposit textbox
+2019-10-08 11:08:28,074 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_03 - Step 05. Click to Submit button
+2019-10-08 11:08:35,424 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_03 - Step 06. Verify 'Account Generated Successfully!!!' message displayed
+2019-10-08 11:08:36,514 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:36,514 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_03 - Step 07. Verify account created successfully
+2019-10-08 11:08:36,577 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:36,634 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:36,690 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:36,741 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:36,841 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:37,003 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:37,124 INFO  com.bankguru.account.Account_13_Payment_Flow - ================ CREATE SECOND ACCOUNT ================
+2019-10-08 11:08:37,124 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_03 - Step 08. Open New Account Page
+2019-10-08 11:08:43,755 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:43,756 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_03 - Step 09. Input to CustomerID textbox
+2019-10-08 11:08:43,847 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_03 - Step 10. Select Current value in Account Type dropdown
+2019-10-08 11:08:44,019 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_03 - Step 11 Input to Initial deposit textbox
+2019-10-08 11:08:44,097 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_03 - Step 12. Click to Submit button
+2019-10-08 11:08:48,819 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_03 - Step 13. Verify 'Account Generated Successfully!!!' message displayed
+2019-10-08 11:08:49,498 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:49,498 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_03 - Step 14. Verify account created successfully
+2019-10-08 11:08:49,559 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:49,615 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:49,671 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:49,720 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:49,771 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:49,833 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:49,881 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_04 - Step 01. Open Edit Account Page
+2019-10-08 11:08:51,408 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:51,408 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_04 - Step 02. Input to Account No textbox
+2019-10-08 11:08:51,489 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_04 - Step 03. Click to Submit button
+2019-10-08 11:08:53,370 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:53,370 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_04 - Step 04. Change Type of Account to Current Value
+2019-10-08 11:08:56,911 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_04 - Step 05. Click to Submit button
+2019-10-08 11:08:57,222 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_04 - Step 06. Verify 'Account details updated Successfully!!!' message displayed
+2019-10-08 11:08:59,991 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:08:59,991 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_04 - Step 07. Verify First Account updated successfully
+2019-10-08 11:09:00,048 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:00,101 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:00,151 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:00,209 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:00,258 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:00,303 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:00,348 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:00,349 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_05 - Step 01. Open Deposit page
+2019-10-08 11:09:01,989 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:01,989 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_05 - Step 02. Input to Account No textbox
+2019-10-08 11:09:02,066 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_05 - Step 03. Input to Amount textbox
+2019-10-08 11:09:02,142 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_05 - Step 04. Input to Description textbox
+2019-10-08 11:09:02,234 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_05 - Step 05. Click to Submit button
+2019-10-08 11:09:02,333 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_05 - Step 06. Verify 'Transaction	details of Deposit for Account' message displayed
+2019-10-08 11:09:04,032 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:04,032 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_05 - Step 07. Verify Deposited successfully
+2019-10-08 11:09:04,083 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:04,129 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:04,174 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:04,220 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:04,264 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:04,266 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_06 - Step 01. Open Withdrawal page
+2019-10-08 11:09:06,428 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:06,428 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_06 - Step 02. Input to Account No textbox
+2019-10-08 11:09:06,520 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_06 - Step 03. Input to Amount textbox
+2019-10-08 11:09:06,603 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_06 - Step 04. Input to Description textbox
+2019-10-08 11:09:06,699 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_06 - Step 05. Click to Submit button
+2019-10-08 11:09:06,803 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_06 - Step 06. Verify 'Transaction	details of Withdrawal for Account' message displayed
+2019-10-08 11:09:08,661 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:08,661 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_06 - Step 07. Verify Withdrawal successfully
+2019-10-08 11:09:08,710 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:08,759 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:08,808 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:08,856 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:08,914 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:08,916 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_07 - Step 01. Open Fund Transfer page
+2019-10-08 11:09:11,197 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:11,197 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_07 - Step 02. Input to Payers account no textbox
+2019-10-08 11:09:11,413 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_07 - Step 03. Input to Payees account no textbox
+2019-10-08 11:09:11,496 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_07 - Step 04. Input to Amount textbox
+2019-10-08 11:09:11,595 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_07 - Step 05. Input to Description textbox
+2019-10-08 11:09:11,731 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_07 - Step 06. Click to Submit button
+2019-10-08 11:09:11,874 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_07 - Step 07. Verify 'Fund Transfer Details' message displayed
+2019-10-08 11:09:13,335 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:13,335 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_07 - Step 08. Verify Deposited successfully
+2019-10-08 11:09:13,393 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:13,445 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:13,497 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:13,551 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:13,553 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_08 - Step 01. Open Balance Enquiry page
+2019-10-08 11:09:15,173 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:15,173 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_08 - Step 02. Input to First Account No textbox
+2019-10-08 11:09:15,246 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_08 - Step 03. Click to Submit button
+2019-10-08 11:09:15,346 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_08 - Step 04. Verify 'Balance Details for Account 69957' message displayed
+2019-10-08 11:09:17,410 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:17,410 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_08 - Step 05. Verify Current Balance of First Account is correct
+2019-10-08 11:09:17,472 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:17,529 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:17,578 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:17,578 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_08 - Step 06. Open Balance Enquiry page again
+2019-10-08 11:09:18,874 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:18,874 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_08 - Step 07. Input to Second Account No textbox
+2019-10-08 11:09:18,958 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_08 - Step 08. Click to Submit button
+2019-10-08 11:09:19,057 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_08 - Step 09. Verify 'Balance Details for Account 69958' message displayed
+2019-10-08 11:09:20,810 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:20,810 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_08 - Step 10. Verify Current Balance of Second Account is correct
+2019-10-08 11:09:20,857 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:20,907 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:20,951 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================FAILED==================
+2019-10-08 11:09:20,955 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_09 - Step 01. Open Delete Account page
+2019-10-08 11:09:22,784 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:22,784 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_09 - Step 02. Input to First Account No textbox
+2019-10-08 11:09:22,858 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_09 - Step 03. Click to Submit button
+2019-10-08 11:09:22,975 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_09 - Step 04. Verify alert message 'Do you really want to delete this Account?' displayed
+2019-10-08 11:09:25,056 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:25,056 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_09 - Step 05. Verify alert message 'Account Deleted Sucessfully' displayed
+2019-10-08 11:09:27,135 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:27,135 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_09 - Step 06. Open Delete Account page again
+2019-10-08 11:09:28,842 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:28,843 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_09 - Step 07. Input to Second Account No textbox
+2019-10-08 11:09:28,927 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_09 - Step 08. Click to Submit button
+2019-10-08 11:09:29,047 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_09 - Step 09. Verify alert message 'Do you really want to delete this Account?' displayed
+2019-10-08 11:09:31,117 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:31,117 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_09 - Step 10. Verify alert message 'Account Deleted Sucessfully' displayed
+2019-10-08 11:09:33,222 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:33,227 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_10 - Step 01. Open Delete Customer page
+2019-10-08 11:09:35,266 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:35,266 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_10 - Step 02. Input to CustomerID textbox
+2019-10-08 11:09:35,345 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_10 - Step 03. Click to Submit button
+2019-10-08 11:09:35,480 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_10 - Step 04. Verify alert message 'Do you really want to delete this Customer?' displayed
+2019-10-08 11:09:37,558 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:37,558 INFO  com.bankguru.account.Account_13_Payment_Flow - Payment_10 - Step 05. Verify alert message 'Customer deleted Successfully' displayed
+2019-10-08 11:09:39,648 INFO  com.bankguru.account.Account_13_Payment_Flow - ==================PASSED==================
+2019-10-08 11:09:39,654 INFO  com.bankguru.account.Account_13_Payment_Flow - OS name = windows 7
+2019-10-08 11:09:40,137 INFO  com.bankguru.account.Account_13_Payment_Flow - ---------- QUIT BROWSER SUCCESS ----------

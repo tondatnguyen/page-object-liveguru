@@ -31,6 +31,7 @@ import pageObjects.MiniStatementPageObject;
 import pageObjects.NewAccountPageObject;
 import pageObjects.NewCustomerPageObject;
 import pageObjects.WithdrawalPageObject;
+
 public class AbstractPage {
 
 	/* Web Browser */
@@ -57,15 +58,20 @@ public class AbstractPage {
 
 	public void forwardToPage(WebDriver driver) {
 		driver.navigate().forward();
-		;
 	}
 
 	public void refreshToPage(WebDriver driver) {
 		driver.navigate().refresh();
 	}
-
+	
+	public void waitForAlertPresent(WebDriver driver) {
+		explicitWait = new WebDriverWait(driver, longTimeout);
+		explicitWait.until(ExpectedConditions.alertIsPresent());
+	}
+	
 	public void acceptAlert(WebDriver driver) {
 		driver.switchTo().alert().accept();
+		sleepInSecond(driver, 2);
 	}
 
 	public void cancelAlert(WebDriver driver) {
@@ -82,9 +88,9 @@ public class AbstractPage {
 
 	/* Web Element */
 	public void clickToElement(WebDriver driver, String locator) {
-		highlightElement(driver, locator);
+	//	highlightElement(driver, locator);
 		element = driver.findElement(By.xpath(locator));
-		if(driver.toString().contains("internetexplorer")) {
+		if (driver.toString().contains("internetexplorer")) {
 			clickToElementByjavascriptExecutor(driver, locator);
 			sleepInSecond(driver, 5);
 		} else {
@@ -94,35 +100,44 @@ public class AbstractPage {
 
 	public void clickToElement(WebDriver driver, String locator, String... values) {
 		locator = String.format(locator, (Object[]) values);
-		highlightElement(driver, locator);
+	//	highlightElement(driver, locator);
 		element = driver.findElement(By.xpath(locator));
-		if(driver.toString().contains("internetexplorer")) {
+		if (driver.toString().contains("internetexplorer")) {
 			clickToElementByjavascriptExecutor(driver, locator);
 			sleepInSecond(driver, 5);
 		} else {
 			element.click();
 		}
 	}
-	
+
 	public void sendkeyToElement(WebDriver driver, String locator, String value) {
-		highlightElement(driver, locator);
+	//	highlightElement(driver, locator);
 		element = driver.findElement(By.xpath(locator));
+		element.clear();
 		element.sendKeys(value);
 	}
 
 	public void sendkeyToElement(WebDriver driver, String locator, String sendkeyValue, String... values) {
 		locator = String.format(locator, (Object[]) values);
-		highlightElement(driver, locator);
+	//	highlightElement(driver, locator);
 		element = driver.findElement(By.xpath(locator));
+		element.clear();
 		element.sendKeys(sendkeyValue);
 	}
-	
+
 	public void selectItemInDropdown(WebDriver driver, String locator, String itemText) {
 		element = driver.findElement(By.xpath(locator));
 		select = new Select(element);
 		select.selectByVisibleText(itemText);
 	}
 
+	public void selectItemInDropdown(WebDriver driver, String locator, String itemText, String... values) {
+		locator = String.format(locator, (Object[]) values);
+		element = driver.findElement(By.xpath(locator));
+		select = new Select(element);
+		select.selectByVisibleText(itemText);
+	}
+	
 	public String getSelectedItemInDropdown(WebDriver driver, String locator) {
 		element = driver.findElement(By.xpath(locator));
 		select = new Select(element);
@@ -163,7 +178,7 @@ public class AbstractPage {
 
 	public String getTextElement(WebDriver driver, String locator, String... values) {
 		locator = String.format(locator, (Object[]) values);
-		highlightElement(driver, locator);
+	//	highlightElement(driver, locator);
 		element = driver.findElement(By.xpath(locator));
 		return element.getText();
 	}
@@ -192,28 +207,28 @@ public class AbstractPage {
 		element = driver.findElement(By.xpath(locator));
 		return element.isDisplayed();
 	}
-	
-	public boolean isControlUndisplayed(WebDriver driver, String locator) {	
+
+	public boolean isControlUndisplayed(WebDriver driver, String locator) {
 		// Set 5s
 		overrideGlobalTimeout(driver, Constants.SHORT_TIMEOUT);
 		List<WebElement> elements = driver.findElements(By.xpath(locator));
-		
-		if(elements.size()==0) {
+
+		if (elements.size() == 0) {
 			// Set 30s
 			overrideGlobalTimeout(driver, Constants.LONG_TIMEOUT);
 			return true;
-		} else if(elements.size()>0 && !elements.get(0).isDisplayed()) {
+		} else if (elements.size() > 0 && !elements.get(0).isDisplayed()) {
 			// Set 30s
 			overrideGlobalTimeout(driver, Constants.LONG_TIMEOUT);
 			return true;
 		} else {
 			// Set 30s
-			highlightElement(driver, locator);	
+			highlightElement(driver, locator);
 			overrideGlobalTimeout(driver, Constants.LONG_TIMEOUT);
 			return false;
-		}	
+		}
 	}
-	
+
 	public void overrideGlobalTimeout(WebDriver driver, int timeOut) {
 		driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
 	}
@@ -224,19 +239,19 @@ public class AbstractPage {
 		element = driver.findElement(By.xpath(locator));
 		return element.isDisplayed();
 	}
-	
+
 	public boolean isControlUndisplayed(WebDriver driver, String locator, String... values) {
 		locator = String.format(locator, (Object[]) values);
-		
+
 		// Set 5s
 		overrideGlobalTimeout(driver, Constants.SHORT_TIMEOUT);
 		List<WebElement> elements = driver.findElements(By.xpath(locator));
-		
-		if(elements.size()==0) {
+
+		if (elements.size() == 0) {
 			// Set 30s
 			overrideGlobalTimeout(driver, Constants.LONG_TIMEOUT);
 			return true;
-		} else if(elements.size()>0 && !elements.get(0).isDisplayed()) {
+		} else if (elements.size() > 0 && !elements.get(0).isDisplayed()) {
 			// Set 30s
 			overrideGlobalTimeout(driver, Constants.LONG_TIMEOUT);
 			return true;
@@ -245,9 +260,9 @@ public class AbstractPage {
 			highlightElement(driver, locator);
 			overrideGlobalTimeout(driver, Constants.LONG_TIMEOUT);
 			return false;
-		}	
+		}
 	}
-	
+
 	public boolean isControlSelected(WebDriver driver, String locator) {
 		element = driver.findElement(By.xpath(locator));
 		return element.isSelected();
@@ -404,7 +419,7 @@ public class AbstractPage {
 		explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(byLocator));
 	}
-	
+
 	public void waitForElementVisible(WebDriver driver, String Locator, String... values) {
 		Locator = String.format(Locator, (Object[]) values);
 		By byLocator = By.xpath(Locator);
@@ -415,7 +430,7 @@ public class AbstractPage {
 	public void waitForElementInvisible(WebDriver driver, String Locator) {
 		By byLocator = By.xpath(Locator);
 		explicitWait = new WebDriverWait(driver, shortTimeout);
-		
+
 		overrideGlobalTimeout(driver, Constants.SHORT_TIMEOUT);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(byLocator));
 		overrideGlobalTimeout(driver, Constants.LONG_TIMEOUT);
@@ -427,32 +442,28 @@ public class AbstractPage {
 		explicitWait.until(ExpectedConditions.elementToBeClickable(byLocator));
 	}
 
-	public void waitForAlertPresent(WebDriver driver) {
-		explicitWait = new WebDriverWait(driver, longTimeout);
-		explicitWait.until(ExpectedConditions.alertIsPresent());
-	}
-
 	public void sleepInSecond(WebDriver driver, long timeInSecond) {
 		try {
-			Thread.sleep(timeInSecond*1000);
+			Thread.sleep(timeInSecond * 1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void highlightElement(WebDriver driver, String locator) {
-		javascriptExecutor  = (JavascriptExecutor) driver;
+		javascriptExecutor = (JavascriptExecutor) driver;
 		element = driver.findElement(By.xpath(locator));
 		String originalStyle = element.getAttribute("style");
-		System.out.println("Original style of element = " + originalStyle);
-		
-		javascriptExecutor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, "style", "border: 3px solid red; border-style: dashed;");
+
+		javascriptExecutor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, "style",
+				"border: 3px solid red; border-style: dashed;");
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		javascriptExecutor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, "style", originalStyle);
+		javascriptExecutor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, "style",
+				originalStyle);
 	}
 
 	public HomePageObject openHomePage(WebDriver driver) {
@@ -546,99 +557,138 @@ public class AbstractPage {
 		sleepInSecond(driver, 3);
 		return PageGeneratorManager.getLoginPage(driver);
 	}
-	
+
 	// Số lượng pages ít: <=20 pages
 	public AbstractPage openMultiplePage(WebDriver driver, String pageName) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_MENU_LINK, pageName);
 		clickToElement(driver, AbstractPageUI.DYNAMIC_MENU_LINK, pageName);
-		
+
 		switch (pageName) {
 		case "New Customer":
-				return PageGeneratorManager.getNewCustomerPage(driver);
-		case "Change Password":
-				return PageGeneratorManager.getChangePasswordPage(driver);
-		case "Mini Statement":
-				return PageGeneratorManager.getMiniStatementPage(driver);
+			return PageGeneratorManager.getNewCustomerPage(driver);
+		case "Edit Customer":
+			return PageGeneratorManager.getEditCustomerPage(driver);
+		case "Delete Customer":
+			return PageGeneratorManager.getDeleteCustomerPage(driver);
+		case "New Account":
+			return PageGeneratorManager.getNewAccountPage(driver);
+		case "Edit Account":
+			return PageGeneratorManager.getEditAccountPage(driver);
+		case "Delete Account":
+			return PageGeneratorManager.getDeleteAccountPage(driver);
+		case "Deposit":
+			return PageGeneratorManager.getDepositPage(driver);
+		case "Withdrawal":
+			return PageGeneratorManager.getWithdrawalPage(driver);
+		case "Fund Transfer":
+			return PageGeneratorManager.getFundTransferPage(driver);
 		case "Balance Enquiry":
-				return PageGeneratorManager.getBalanceEnquiryPage(driver);
+			return PageGeneratorManager.getBalanceEnquiryPage(driver);
+		case "Change Password":
+			return PageGeneratorManager.getChangePasswordPage(driver);
+		case "Mini Statement":
+			return PageGeneratorManager.getMiniStatementPage(driver);
 		default:
-				return PageGeneratorManager.getHomePage(driver);
+			return PageGeneratorManager.getHomePage(driver);
 		}
 	}
-	
+
 	// Số lượng pages 100 -1000
 	public void openMultiplePages(WebDriver driver, String pageName) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_MENU_LINK, pageName);
 		clickToElement(driver, AbstractPageUI.DYNAMIC_MENU_LINK, pageName);
 	}
-	
+
 	public void inputToDynamicTextbox(WebDriver driver, String nameID, String value) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_TEXTBOX, nameID);
-		sendkeyToElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX, value, nameID);	
+		sendkeyToElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX, value, nameID);
 	}
 
 	public void inputToDynamicTextArea(WebDriver driver, String nameID, String value) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_TEXTAREA, nameID);
-		sendkeyToElement(driver, AbstractPageUI.DYNAMIC_TEXTAREA, value, nameID);	
+		sendkeyToElement(driver, AbstractPageUI.DYNAMIC_TEXTAREA, value, nameID);
 	}
-	
+
 	public void clickToDynamicRadioButton(WebDriver driver, String attributeValue) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_RADIO_BUTTON, attributeValue);
-		clickToElement(driver, AbstractPageUI.DYNAMIC_RADIO_BUTTON, attributeValue);	
+		clickToElement(driver, AbstractPageUI.DYNAMIC_RADIO_BUTTON, attributeValue);
 	}
 
 	public void clickToDynamicButton(WebDriver driver, String attributeValue) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_BUTTON, attributeValue);
-		clickToElement(driver, AbstractPageUI.DYNAMIC_BUTTON, attributeValue);	
+		clickToElement(driver, AbstractPageUI.DYNAMIC_BUTTON, attributeValue);
 	}
 
 	public void clickToDynamicMenuLink(WebDriver driver, String textValue) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_MENU_LINK, textValue);
-		clickToElement(driver, AbstractPageUI.DYNAMIC_MENU_LINK, textValue);	
+		clickToElement(driver, AbstractPageUI.DYNAMIC_MENU_LINK, textValue);
 	}
-	
+
 	public String getErrorMessageOfDynamicField(WebDriver driver, String labelName) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_ERROR_MESSAGE, labelName);
 		return getTextElement(driver, AbstractPageUI.DYNAMIC_ERROR_MESSAGE, labelName);
 	}
-	
+
 	public void pressTabToDynamicTextbox(WebDriver driver, String nameID) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_TEXTBOX, nameID);
-		sendKeyboardToElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX, Keys.TAB, nameID);	
+		sendKeyboardToElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX, Keys.TAB, nameID);
+	}
+
+	public boolean isDynamicPageNameOrTableHeaderMessageDisplayed(WebDriver driver, String message) {
+		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_PAGE_NAME_OR_TABLE_HEADER_MESSAGE, message);
+		return isControlDisplayed(driver, AbstractPageUI.DYNAMIC_PAGE_NAME_OR_TABLE_HEADER_MESSAGE, message);
+	}
+
+	public String getDynamicDataDisplayInTable(WebDriver driver, String rowName) {
+		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_DATA_IN_TABLE, rowName);
+		System.out.println("Data in [" + rowName + "] = " + getTextElement(driver, AbstractPageUI.DYNAMIC_DATA_IN_TABLE, rowName));
+		return getTextElement(driver, AbstractPageUI.DYNAMIC_DATA_IN_TABLE, rowName);
+	}
+
+	public void selectValueInDynamicDropdown(WebDriver driver, String dropdownID, String valueInDropdown) {
+		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_DROPDOWN, dropdownID);
+		selectItemInDropdown(driver, AbstractPageUI.DYNAMIC_DROPDOWN, valueInDropdown, dropdownID);
+	}
+	
+	public boolean isDynamicAlertMessageDisplayedAndAcceptAlert(WebDriver driver, String expectedAlertMessage) {
+		waitForAlertPresent(driver);
+		String actualAlertMessage = getTextAlert(driver);
+		acceptAlert(driver);
+		return actualAlertMessage.equals(expectedAlertMessage);
 	}
 	
 	// Sort Ascending STRING
 	public boolean isStringDataSortedAscending(WebDriver driver, String locator) {
 		// Declare an ArrayList
 		ArrayList<String> arrayList = new ArrayList<>();
-		
+
 		// Find all elements that match with condition (Name/Price/...)
 		List<WebElement> elementList = driver.findElements(By.xpath(locator));
-		
+
 		// Get text from elementList to add to arrayList
-		for(WebElement element : elementList) {
+		for (WebElement element : elementList) {
 			arrayList.add(element.getText());
 		}
-		
+
 		System.out.println("---------------------Dữ liệu trên UI:---------------------");
-		for(String name : arrayList) {
+		for (String name : arrayList) {
 			System.out.println(name);
 		}
-		
+
 		// Copy to an new array-list to SORT in code
 		ArrayList<String> sortedList = new ArrayList<>();
-		for(String child : arrayList) {
+		for (String child : arrayList) {
 			sortedList.add(child);
 		}
-		
+
 		// Execute SORT ASC
 		Collections.sort(sortedList);
-		
+
 		System.out.println("------------Dữ liệu đã SORT ASC trong code:---------------");
-		for(String child : sortedList)
+		for (String child : sortedList)
 			System.out.println(child);
-		
-		// Verify 2 arrays to be equal. If not be equal => return FALSE  
+
+		// Verify 2 arrays to be equal. If not be equal => return FALSE
 		return sortedList.equals(arrayList);
 	}
 
@@ -646,109 +696,109 @@ public class AbstractPage {
 	public boolean isStringDataSortedDescending(WebDriver driver, String locator) {
 		// Declare an ArrayList
 		ArrayList<String> arrayList = new ArrayList<>();
-		
+
 		// Find all elements that match with condition (Name/Price/...)
 		List<WebElement> elementList = driver.findElements(By.xpath(locator));
-		
+
 		// Get text from elementList to add to arrayList
-		for(WebElement element : elementList) {
+		for (WebElement element : elementList) {
 			arrayList.add(element.getText());
 		}
-		
+
 		System.out.println("---------------------Dữ liệu trên UI:---------------------");
-		for(String name : arrayList) {
+		for (String name : arrayList) {
 			System.out.println(name);
 		}
-		
+
 		// Copy to an new array-list to SORT in code
 		ArrayList<String> sortedList = new ArrayList<>();
-		for(String child : arrayList) {
+		for (String child : arrayList) {
 			sortedList.add(child);
 		}
-		
+
 		// Execute SORT DESC
 		Collections.sort(sortedList); // Sort ASC
 		Collections.reverse(sortedList); // Or using: Collections.sort(sortedList, Collections.reverseOrder());
-		
+
 		System.out.println("------------Dữ liệu đã SORT DESC trong code:---------------");
-		for(String child : sortedList)
+		for (String child : sortedList)
 			System.out.println(child);
-		
-		// Verify 2 arrays to be equal. If not be equal => return FALSE  
+
+		// Verify 2 arrays to be equal. If not be equal => return FALSE
 		return sortedList.equals(arrayList);
 	}
-	
+
 	// Sort Ascending FLOAT
 	public boolean isFloatDataSortedAscending(WebDriver driver, String locator) {
-			// Declare an ArrayList
-			ArrayList<Float> arrayList = new ArrayList<Float>();
-			
-			// Find all elements that match with condition (Name/Price/...)
-			List<WebElement> elementList = driver.findElements(By.xpath(locator));
-			
-			// Get text from elementList to add to arrayList
-			for(WebElement element : elementList) {
-				arrayList.add(Float.parseFloat(element.getText().replace("$", "").trim()));
-			}
-			
-			System.out.println("---------------------Dữ liệu trên UI:---------------------");
-			for(Float number : arrayList) {
-				System.out.println(number);
-			}
-			
-			// Copy to an new array-list to SORT in code
-			ArrayList<Float> sortedList = new ArrayList<Float>();
-			for(Float child : arrayList) {
-				sortedList.add(child);
-			}
-			
-			// Execute SORT ASC
-			Collections.sort(sortedList);
-			
-			System.out.println("------------Dữ liệu đã SORT ASC trong code:---------------");
-			for(Float child : sortedList)
-				System.out.println(child);
-			
-			// Verify 2 arrays to be equal. If not be equal => return FALSE  
-			return sortedList.equals(arrayList);
+		// Declare an ArrayList
+		ArrayList<Float> arrayList = new ArrayList<Float>();
+
+		// Find all elements that match with condition (Name/Price/...)
+		List<WebElement> elementList = driver.findElements(By.xpath(locator));
+
+		// Get text from elementList to add to arrayList
+		for (WebElement element : elementList) {
+			arrayList.add(Float.parseFloat(element.getText().replace("$", "").trim()));
+		}
+
+		System.out.println("---------------------Dữ liệu trên UI:---------------------");
+		for (Float number : arrayList) {
+			System.out.println(number);
+		}
+
+		// Copy to an new array-list to SORT in code
+		ArrayList<Float> sortedList = new ArrayList<Float>();
+		for (Float child : arrayList) {
+			sortedList.add(child);
+		}
+
+		// Execute SORT ASC
+		Collections.sort(sortedList);
+
+		System.out.println("------------Dữ liệu đã SORT ASC trong code:---------------");
+		for (Float child : sortedList)
+			System.out.println(child);
+
+		// Verify 2 arrays to be equal. If not be equal => return FALSE
+		return sortedList.equals(arrayList);
 	}
 
 	// Sort Descending FLOAT
 	public boolean isFloatDataSortedDescending(WebDriver driver, String locator) {
 		// Declare an ArrayList
 		ArrayList<Float> arrayList = new ArrayList<Float>();
-		
+
 		// Find all elements that match with condition (Name/Price/...)
 		List<WebElement> elementList = driver.findElements(By.xpath(locator));
-		
+
 		// Get text from elementList to add to arrayList
-		for(WebElement element : elementList) {
+		for (WebElement element : elementList) {
 			arrayList.add(Float.parseFloat(element.getText().replace("$", "").trim()));
 		}
-		
+
 		System.out.println("---------------------Dữ liệu trên UI:---------------------");
-		for(Float number : arrayList) {
+		for (Float number : arrayList) {
 			System.out.println(number);
 		}
-		
+
 		// Copy to an new array-list to SORT in code
 		ArrayList<Float> sortedList = new ArrayList<Float>();
-		for(Float child : arrayList) {
+		for (Float child : arrayList) {
 			sortedList.add(child);
 		}
-		
+
 		// Execute SORT DESC
 		Collections.sort(sortedList); // Sort ASC
 		Collections.reverse(sortedList); // Or using: Collections.sort(sortedList, Collections.reverseOrder());
-		
+
 		System.out.println("------------Dữ liệu đã SORT DESC trong code:---------------");
-		for(Float child : sortedList)
+		for (Float child : sortedList)
 			System.out.println(child);
-		
-		// Verify 2 arrays to be equal. If not be equal => return FALSE  
+
+		// Verify 2 arrays to be equal. If not be equal => return FALSE
 		return sortedList.equals(arrayList);
 	}
-	
+
 	private WebElement element, elementSource, elementTarget;
 	private List<WebElement> elements;
 	private Select select;
