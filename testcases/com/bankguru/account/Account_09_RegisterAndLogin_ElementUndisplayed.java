@@ -3,13 +3,9 @@ package com.bankguru.account;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
-
-import java.util.Random;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-
 import pageObjects.RegisterPageObject;
 import pageObjects.WithdrawalPageObject;
 import pageObjects.LoginPageObject;
@@ -64,11 +60,6 @@ public class Account_09_RegisterAndLogin_ElementUndisplayed extends AbstractTest
   @AfterClass (alwaysRun = true)
   public void afterClass() { 
 	  driver.quit();
-  }
-
-  public int randomData() {
-	  Random random = new Random();
-	  return random.nextInt(99999);
   }
   
   RegisterPageObject registerPage;

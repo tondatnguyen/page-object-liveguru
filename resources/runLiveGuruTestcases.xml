@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="BANK GURU" parallel="tests" thread-count="3">
+
+<listeners>
+	<listener class-name="org.uncommons.reportng.HTMLReporter" />
+	<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	<listener class-name="commons.ExtentReportListener" />
+<!-- 	<listener class-name="configReportHTML.ReportNGListener" /> -->
+<!-- 	<listener class-name="configReportHTML.ExtentTestListener" />	 -->
+<!-- 	<listener class-name="commons.RetryListener" /> -->
+</listeners>
+  
+  <test name="Run on CHROME">
+  	<parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="com.liveguru.frontend.FrontEndFunction"/>
+    </classes>
+  </test>
+
+</suite>
