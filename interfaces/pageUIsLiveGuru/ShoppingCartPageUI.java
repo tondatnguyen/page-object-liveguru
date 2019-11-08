@@ -7,6 +7,8 @@ public class ShoppingCartPageUI {
 	public static final String QTY_TEXTBOX = "//a[text()='%s']//ancestor::td[@class='product-cart-info']//following-sibling::td[@class='product-cart-actions']/input";
 	public static final String QTY_UPDATE_BUTTON = "//a[text()='%s']//ancestor::td[@class='product-cart-info']//following-sibling::td[@class='product-cart-actions']/button";
 	public static final String ERROR_MAX_500_QUANTITY_MESSAGE = "//p[contains(text(),'%s')]";
+	public static final String IFRAME = "//iframe[contains(@id,'%s')]";
+	public static final String IFRAME_CLOSE_BUTTON = "//div[@id='closeBtn']";
 	public static final String EMPTY_CART_MESSAGE = "//h1[text()='%s']";
 	public static final String NO_ITEM_MESSAGE = "//div[@class='cart-empty']/p[text()='%s']";
 	public static final String DISCOUNT_GURU50_TEXT = "//td[contains(text(),'%s')]";

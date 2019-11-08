@@ -488,6 +488,16 @@ public class AbstractPage {
 				originalStyle);
 	}
 	
+	public WebDriver switchToFrame(WebDriver driver, String locator, String... ID) {
+		locator = String.format(locator, (Object[]) ID);
+		IFrame = driver.findElement(By.xpath(locator));
+		return driver.switchTo().frame(IFrame);
+	}
+	
+	public WebDriver switchToMainWindow(WebDriver driver) {
+		return driver.switchTo().defaultContent();
+	}
+	
 	public AbstractPage openLiveGuru99(WebDriver driver) {
 		openUrl(driver, Constants.TEST_URL);	
 		return PageGeneratorManager.getHomePage(driver);
@@ -813,7 +823,7 @@ public class AbstractPage {
 		return sortedList.equals(arrayList);
 	}
 
-	private WebElement element, elementSource, elementTarget;
+	private WebElement element, elementSource, elementTarget, IFrame;
 	private List<WebElement> elements;
 	private Select select;
 	private JavascriptExecutor javascriptExecutor;

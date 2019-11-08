@@ -1,5 +1,6 @@
 package com.liveguru.frontend;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -95,7 +96,7 @@ public class FrontEndFunction extends AbstractTest {
 		verifyEquals(registerPage.getTextElement(driver, AbstractPageUI.SUCCESS_MESSAGE), DataUser.Register.REGISTERED_SUCCESS_MESSAGE);
 	}
 	
-	@Test
+	//@Test
 	public void FrontEndFunction_02_VerifyInfo() {
 		log.info("FrontEndFunction_02 - Step 01. Open LiveGuru99 site");
 		homePage = (HomePageObject) registerPage.openLiveGuru99(driver); 
@@ -117,7 +118,7 @@ public class FrontEndFunction extends AbstractTest {
 		verifyEquals(accountInfoPage.getAttributeValue(driver, AbstractPageUI.DYNAMIC_TEXTBOX, "value", "email"), email);
 	}
 	
-	@Test
+	//@Test
 	public void FrontEndFunction_03_VerifyCost() {
 		log.info("FrontEndFunction_03 - Step 01. Open LiveGuru99 site");
 		homePage = (HomePageObject) accountInfoPage.openLiveGuru99(driver); 
@@ -145,7 +146,7 @@ public class FrontEndFunction extends AbstractTest {
 	@Test
 	public void FrontEndFunction_04_DiscountCoupon() {
 		log.info("FrontEndFunction_04 - Step 01. Open LiveGuru99 site");
-		homePage = (HomePageObject) detailPage.openLiveGuru99(driver); 
+		homePage = (HomePageObject) registerPage.openLiveGuru99(driver); 
 		verifyEquals(homePage.getTextElement(driver, HomePageUI.HOMEPAGE_TITLE, DataUser.HomePage.HOMEPAGE_TITLE_LOCATOR), DataUser.HomePage.HOMEPAGE_TITLE);
 		verifyTrue(homePage.isContainedAttributeValue(driver, AbstractPageUI.DYNAMIC_IMAGE, "src", DataUser.HomePage.HOMEPAGE_IMG, DataUser.HomePage.HOMEPAGE_IMG_LOCATOR));
 		
@@ -193,17 +194,19 @@ public class FrontEndFunction extends AbstractTest {
 		log.info("FrontEndFunction_05 - Step 05. Verify '* The maximum quantity allowed for purchase is 500.' message is displayed!!");
 		verifyEquals(shoppingCartPage.getTextElement(driver, ShoppingCartPageUI.ERROR_MAX_500_QUANTITY_MESSAGE, DataUser.ShipCheckOut.ERROR_MAX_500_QUANTITY_MESSAGE_LOCATOR).trim(),  DataUser.ShipCheckOut.ERROR_MAX_500_QUANTITY_MESSAGE);
 		
-		log.info("FrontEndFunction_05 - Step 04b. Click EMPTY_CART link by JavaScript");
-		shoppingCartPage.clickToEmptyCartByJS(driver);
+		log.info("FrontEndFunction_05 - Step 06a. Close IFrame");
+		shoppingCartPage.closeIFrame(driver);
+		log.info("FrontEndFunction_05 - Step 06b. Click on EMPTY_CART link");
+		shoppingCartPage.clickOnDynamicLinkOrButton(driver, "Empty Cart");
 		
-		log.info("FrontEndFunction_05 - Step 05a. Verify 'SHOPPING CART IS EMPTY' title is displayed!!");
+		log.info("FrontEndFunction_05 - Step 07a. Verify 'SHOPPING CART IS EMPTY' title is displayed!!");
 		verifyEquals(shoppingCartPage.getTextElement(driver, ShoppingCartPageUI.EMPTY_CART_MESSAGE, DataUser.ShipCheckOut.EMPTY_CART_MESSAGE_LOCATOR), DataUser.ShipCheckOut.EMPTY_CART_MESSAGE);
 		
-		log.info("FrontEndFunction_05 - Step 05b. Verify 'You have no items in your shopping cart.' title is displayed!!");
+		log.info("FrontEndFunction_05 - Step 07b. Verify 'You have no items in your shopping cart.' title is displayed!!");
 		verifyEquals(shoppingCartPage.getTextElement(driver, ShoppingCartPageUI.NO_ITEM_MESSAGE, DataUser.ShipCheckOut.NO_ITEMS_MESSAGE_LOCATOR), DataUser.ShipCheckOut.NO_ITEMS_MESSAGE);		
 	}
 	
-	@Test
+	//@Test
 	public void FrontEndFunction_06_Comparison() {
 		log.info("FrontEndFunction_06 - Step 01. Open LiveGuru99 site");
 		homePage = (HomePageObject) shoppingCartPage.openLiveGuru99(driver); 
@@ -247,7 +250,7 @@ public class FrontEndFunction extends AbstractTest {
 		productPage = (ProductPageObject) popUpPage.closeAllWindowsWithoutParentByTitle(driver, parentWindowID, "Mobile");	
 	}
 	
-	@Test
+	//@Test
 	public void FrontEndFunction_07_ShareWishList() {
 		log.info("FrontEndFunction_07 - Step 01. Open LiveGuru99 site");
 		homePage = (HomePageObject) productPage.openLiveGuru99(driver);
@@ -280,7 +283,7 @@ public class FrontEndFunction extends AbstractTest {
 		
 	}
 	
-	@Test
+	//@Test
 	public void FrontEndFunction_08_AddReview() {
 		log.info("FrontEndFunction_08 - Step 01. Open LiveGuru99 site");
 		homePage = (HomePageObject) myWishListPage.openLiveGuru99(driver);
@@ -324,7 +327,7 @@ public class FrontEndFunction extends AbstractTest {
 		verifyEquals(reviewPage.getTextElement(driver, AbstractPageUI.SUCCESS_MESSAGE), DataUser.Review.SUCCESS_REVIEW_MESSAGE);
 	}
 	
-	@Test
+	//@Test
 	public void FrontEndFunction_09_PurchaseProduct() {
 		log.info("FrontEndFunction_09 - Step 01. Open LiveGuru99 site");
 		homePage = (HomePageObject) reviewPage.openLiveGuru99(driver);
@@ -400,7 +403,7 @@ public class FrontEndFunction extends AbstractTest {
 		successOrderPage.getTextElement(driver, SuccessOrderPageUI.ORDER_SERIAL_NUMBER);
 	}
 	
-	@Test
+	//@Test
 	public void FrontEndFunction_10_Search() {
 		log.info("FrontEndFunction_10 - Step 01. Open LiveGuru99 site");
 		homePage = (HomePageObject) successOrderPage.openLiveGuru99(driver);

@@ -1,179 +1,48 @@
-2019-11-05 17:13:57,927 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 01. Open LiveGuru99 site
-2019-11-05 17:14:02,110 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:02,171 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:02,171 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 02. Click on 'ACCOUNT' menu
-2019-11-05 17:14:02,299 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 03. Choose 'Register' link
-2019-11-05 17:14:03,339 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:03,340 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 04. Input all valid data to form
-2019-11-05 17:14:03,340 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 04a. Input Firstname
-2019-11-05 17:14:03,549 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 04b. Input Lastname
-2019-11-05 17:14:03,674 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 04c. Input Email
-2019-11-05 17:14:03,840 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 04d. Input Password
-2019-11-05 17:14:03,947 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 04e. Input Re-Password
-2019-11-05 17:14:04,057 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 05. Click 'REGISTER' button
-2019-11-05 17:14:06,229 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 06. Verify 'Thank you for registering with Main Website Store' message is displayed!!
-2019-11-05 17:14:06,264 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:06,266 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_02 - Step 01. Open LiveGuru99 site
-2019-11-05 17:14:07,098 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:07,138 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:07,138 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_02 - Step 02a. Click on 'ACCOUNT' menu
-2019-11-05 17:14:07,219 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_02 - Step 02b. Open 'MY ACCOUNT'/'DASHBOARD' page
-2019-11-05 17:14:08,828 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:08,828 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_02 - Step 03. Open 'ACCOUNT INFORMATION' page
-2019-11-05 17:14:09,772 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:09,787 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:09,802 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:09,821 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:09,822 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_03 - Step 01. Open LiveGuru99 site
-2019-11-05 17:14:11,271 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:11,307 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:11,307 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_03 - Step 02. Click on 'MOBILE' menu
-2019-11-05 17:14:13,275 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:13,276 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_03 - Step 03. Get cost of SONY XPERIA from MOBILE
-2019-11-05 17:14:13,324 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_03 - Step 04. Click on SONY XPERIA detail
-2019-11-05 17:14:16,639 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:16,640 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_03 - Step 05. Get cost of SONY XPERIA from DETAIL
-2019-11-05 17:14:16,689 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_03 - Step 06. Verify cost of SONY XPERIA from MOBILE_page & DETAIL_page
-2019-11-05 17:14:16,689 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:16,691 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_04 - Step 01. Open LiveGuru99 site
-2019-11-05 17:14:17,536 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:17,576 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:17,576 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_04 - Step 02a. Click on 'MOBILE' menu
-2019-11-05 17:14:19,163 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:19,163 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_04 - Step 02b. Add IPHONE to cart
-2019-11-05 17:14:20,590 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:20,590 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_04 - Step 03. Enter COUPON CODE
-2019-11-05 17:14:22,741 INFO  com.liveguru.frontend.FrontEndFunction - ==================FAILED==================
-2019-11-05 17:14:22,742 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_04 - Step 04. Verify the DISCOUNT generated
-2019-11-05 17:14:22,770 INFO  com.liveguru.frontend.FrontEndFunction - ==================FAILED==================
-2019-11-05 17:14:22,797 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:22,825 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:22,857 INFO  com.liveguru.frontend.FrontEndFunction - ==================FAILED==================
-2019-11-05 17:14:22,860 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 01. Open LiveGuru99 site
-2019-11-05 17:14:23,749 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:23,789 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:23,789 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 02. Click on 'MOBILE' menu
-2019-11-05 17:14:25,422 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:25,422 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 03. Add SONY XPERIA to cart
-2019-11-05 17:14:26,853 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:26,853 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 04a. Change QTY_value to 501
-2019-11-05 17:14:26,976 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 04b. Click UPDATE button
-2019-11-05 17:14:29,199 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 05. Verify '* The maximum quantity allowed for purchase is 500.' message is displayed!!
-2019-11-05 17:14:29,230 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:29,230 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 04b. Click EMPTY_CART link by JavaScript
-2019-11-05 17:14:30,401 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 05a. Verify 'SHOPPING CART IS EMPTY' title is displayed!!
-2019-11-05 17:14:30,432 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:30,432 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 05b. Verify 'You have no items in your shopping cart.' title is displayed!!
-2019-11-05 17:14:30,458 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:30,460 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_06 - Step 01. Open LiveGuru99 site
-2019-11-05 17:14:31,957 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:32,000 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:32,000 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_06 - Step 02. Click on 'MOBILE' menu
-2019-11-05 17:14:32,918 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:32,918 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_06 - Step 03a. Click 'Add to Compare' for IPHONE
-2019-11-05 17:14:34,852 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:34,852 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_06 - Step 03b. Click 'Add to Compare' for SONY XPERIA
-2019-11-05 17:14:36,199 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:36,199 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_06 - Step 04. Click on 'COMPARE' button to open POPUP window
-2019-11-05 17:14:37,694 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_06 - Step 05. Verify POPUP window
-2019-11-05 17:14:37,695 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_06 - Step 05a. Verify POPUP_BROWSER_PAGE_TITLE
-2019-11-05 17:14:37,709 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:37,709 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_06 - Step 05b. Verify POPUP_HEADER_PAGE_TITLE
-2019-11-05 17:14:37,742 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:37,742 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_06 - Step 05c. Verify POPUP's product_NAME
-2019-11-05 17:14:37,773 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:37,800 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:37,800 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_06 - Step 05d. Verify POPUP's product_PRICE
-2019-11-05 17:14:37,847 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:37,874 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:37,874 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_06 - Step 05d. Verify POPUP's product_IMAGE
-2019-11-05 17:14:37,912 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:37,948 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:37,948 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_06 - Step 05d. Verify POPUP's product_SKU
-2019-11-05 17:14:37,977 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:38,003 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:38,003 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_06 - Step 06. Close POPUP window
-2019-11-05 17:14:38,069 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_07 - Step 01. Open LiveGuru99 site
-2019-11-05 17:14:38,918 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:38,959 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:38,960 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_07 - Step 02. Click on 'TV' menu
-2019-11-05 17:14:40,720 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:40,720 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_07 - Step 03. Add 'LG-LCD' to Wishlist
-2019-11-05 17:14:42,082 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:42,082 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_07 - Step 04. Click on 'SHARE WISHLIST' button
-2019-11-05 17:14:43,983 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:43,983 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_07 - Step 05a. Enter Email address
-2019-11-05 17:14:44,109 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_07 - Step 05b. Enter Message
-2019-11-05 17:14:44,224 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_07 - Step 05c. Click on 'SHARE WISHLIST' button
-2019-11-05 17:14:45,464 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_07 - Step 06. Verify 'MY WISHLIST' page have 1 item
-2019-11-05 17:14:45,489 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:45,498 INFO  com.liveguru.frontend.FrontEndFunction - 'MY WISHLIST' page have 1 item
-2019-11-05 17:14:45,526 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_08 - Step 01. Open LiveGuru99 site
-2019-11-05 17:14:47,010 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:47,047 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:47,047 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_08 - Step 02. Click on 'TV' menu
-2019-11-05 17:14:47,993 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:47,993 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_08 - Step 03. Click on SAMSUNG LCD detail
-2019-11-05 17:14:49,578 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:49,578 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_08 - Step 04. Click on 'ADD YOUR REVIEW' link
-2019-11-05 17:14:50,582 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:50,582 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_08 - Step 05. Input empty_data to 3 fields
-2019-11-05 17:14:50,858 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_08 - Step 06a. Click 'SUBMIT REVIEW' button
-2019-11-05 17:14:50,965 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_08 - Step 06b. Verify ERROR message is displayed!!
-2019-11-05 17:14:51,003 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:51,031 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:51,059 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:51,059 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_08 - Step 07. Input valid_data to 3 fields
-2019-11-05 17:14:51,415 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_08 - Step 08a. Click 'SUBMIT REVIEW' button
-2019-11-05 17:14:53,323 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_08 - Step 08b. Verify ACCEPTED message is displayed!!
-2019-11-05 17:14:53,368 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:53,370 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 01. Open LiveGuru99 site
-2019-11-05 17:14:54,229 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:54,269 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:54,269 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 02. Click on 'MY WISHLIST' link in ACCOUNT menu
-2019-11-05 17:14:55,904 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 03. Click on 'ADD TO CART' button
-2019-11-05 17:14:57,330 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 04a. Choose COUNTRY to be United States
-2019-11-05 17:14:57,446 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 04b. Choose PROVINCE/STATE to be New York
-2019-11-05 17:14:57,536 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 04c. Input ZIP_CODE
-2019-11-05 17:14:57,659 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 05. Click on 'Estimate' link
-2019-11-05 17:14:59,587 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 06. Verify Shipping_cost is generated
-2019-11-05 17:14:59,619 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:14:59,619 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 07a. Select Shipping_cost(Fixed - $5.00)
-2019-11-05 17:14:59,695 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 07b. Click on 'UPDATE TOTAL' button
-2019-11-05 17:15:00,979 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 08. Verify Shipping_cost is add to GRAND TOTAL
-2019-11-05 17:15:01,007 INFO  com.liveguru.frontend.FrontEndFunction - ==================FAILED==================
-2019-11-05 17:15:01,007 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 09. Click on 'PROCEED TO CHECKOUT' button
-2019-11-05 17:15:03,170 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 10. Enter 'BILLING INFO'
-2019-11-05 17:15:03,171 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 10a. Scrolling to Address then input
-2019-11-05 17:15:03,309 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 10b. Input City
-2019-11-05 17:15:03,450 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 10c. Choose State
-2019-11-05 17:15:03,530 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 10d. Input Zip code
-2019-11-05 17:15:03,668 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 10e. Choose Country
-2019-11-05 17:15:03,717 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 10f. Input Telephone
-2019-11-05 17:15:03,865 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 10g. Click Continue
-2019-11-05 17:15:03,964 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 11. In 'SHIPPING METHOD', click 'Continue' button
-2019-11-05 17:15:05,138 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 12a. In 'PAYMENT INFO', select 'Check / Money Order'
-2019-11-05 17:15:05,773 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 12b. In 'PAYMENT INFO', click 'Continue' button
-2019-11-05 17:15:05,892 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 13. Click on 'PLACE ORDER' button
-2019-11-05 17:15:06,409 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 14a. Verify SUCCESS_ORDER PAGE
-2019-11-05 17:15:07,770 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:15:07,770 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 14b. Verify Order is generated
-2019-11-05 17:15:08,358 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:15:08,358 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_09 - Step 14c. Print the order's No.
-2019-11-05 17:15:08,388 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_10 - Step 01. Open LiveGuru99 site
-2019-11-05 17:15:09,256 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:15:09,294 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:15:09,294 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_10 - Step 02. Click on 'Advance Search' link
-2019-11-05 17:15:10,997 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:15:10,997 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_10 - Step 03a. Enter range 0-150 in Price field
-2019-11-05 17:15:11,200 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_10 - Step 03b. Scrolling then clink on SEARCH button
-2019-11-05 17:15:12,191 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:15:12,191 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_10 - Step 04. Print result of Product's name and price
-2019-11-05 17:15:12,360 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_10 - Step 05a. Scrolling then click on 'Advance Search' link
-2019-11-05 17:15:13,970 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:15:13,970 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_10 - Step 05b. Enter range 151-1000 in Price field
-2019-11-05 17:15:14,167 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_10 - Step 05c. Scrolling then clink on SEARCH button
-2019-11-05 17:15:15,453 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-05 17:15:15,453 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_10 - Step 06. Print result of Product's name and price
-2019-11-05 17:15:15,660 INFO  com.liveguru.frontend.FrontEndFunction - OS name = windows 7
-2019-11-05 17:15:16,876 INFO  com.liveguru.frontend.FrontEndFunction - ---------- QUIT BROWSER SUCCESS ----------
+2019-11-08 11:10:19,894 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 01. Open LiveGuru99 site
+2019-11-08 11:10:23,718 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
+2019-11-08 11:10:23,772 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
+2019-11-08 11:10:23,772 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 02. Click on 'ACCOUNT' menu
+2019-11-08 11:10:23,881 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 03. Choose 'Register' link
+2019-11-08 11:10:24,820 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
+2019-11-08 11:10:24,820 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 04. Input all valid data to form
+2019-11-08 11:10:24,820 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 04a. Input Firstname
+2019-11-08 11:10:24,919 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 04b. Input Lastname
+2019-11-08 11:10:25,025 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 04c. Input Email
+2019-11-08 11:10:25,195 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 04d. Input Password
+2019-11-08 11:10:25,306 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 04e. Input Re-Password
+2019-11-08 11:10:25,421 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 05. Click 'REGISTER' button
+2019-11-08 11:10:27,537 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_01 - Step 06. Verify 'Thank you for registering with Main Website Store' message is displayed!!
+2019-11-08 11:10:27,584 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
+2019-11-08 11:10:27,587 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_04 - Step 01. Open LiveGuru99 site
+2019-11-08 11:10:28,361 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
+2019-11-08 11:10:28,405 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
+2019-11-08 11:10:28,405 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_04 - Step 02a. Click on 'MOBILE' menu
+2019-11-08 11:10:30,142 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
+2019-11-08 11:10:30,143 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_04 - Step 02b. Add IPHONE to cart
+2019-11-08 11:10:31,544 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
+2019-11-08 11:10:31,544 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_04 - Step 03. Enter COUPON CODE
+2019-11-08 11:10:33,600 INFO  com.liveguru.frontend.FrontEndFunction - ==================FAILED==================
+2019-11-08 11:10:33,601 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_04 - Step 04. Verify the DISCOUNT generated
+2019-11-08 11:10:33,645 INFO  com.liveguru.frontend.FrontEndFunction - ==================FAILED==================
+2019-11-08 11:10:33,675 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
+2019-11-08 11:10:33,702 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
+2019-11-08 11:10:33,732 INFO  com.liveguru.frontend.FrontEndFunction - ==================FAILED==================
+2019-11-08 11:10:33,736 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 01. Open LiveGuru99 site
+2019-11-08 11:10:34,538 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
+2019-11-08 11:10:34,576 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
+2019-11-08 11:10:34,576 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 02. Click on 'MOBILE' menu
+2019-11-08 11:10:36,064 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
+2019-11-08 11:10:36,064 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 03. Add SONY XPERIA to cart
+2019-11-08 11:10:37,561 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
+2019-11-08 11:10:37,561 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 04a. Change QTY_value to 501
+2019-11-08 11:10:37,727 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 04b. Click UPDATE button
+2019-11-08 11:10:40,130 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 05. Verify '* The maximum quantity allowed for purchase is 500.' message is displayed!!
+2019-11-08 11:10:40,165 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
+2019-11-08 11:10:40,165 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 06a. Close IFrame
+2019-11-08 11:10:42,623 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 06b. Click on EMPTY_CART link
+2019-11-08 11:10:43,860 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 07a. Verify 'SHOPPING CART IS EMPTY' title is displayed!!
+2019-11-08 11:10:43,901 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
+2019-11-08 11:10:43,901 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 07b. Verify 'You have no items in your shopping cart.' title is displayed!!
+2019-11-08 11:10:43,937 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
+2019-11-08 11:10:43,938 INFO  com.liveguru.frontend.FrontEndFunction - OS name = windows 7
+2019-11-08 11:10:44,901 INFO  com.liveguru.frontend.FrontEndFunction - ---------- QUIT BROWSER SUCCESS ----------

@@ -1,6 +1,8 @@
 package pageObjectsLiveGuru;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import commonsLiveGuru.AbstractPage;
 import pageUIsLiveGuru.ShoppingCartPageUI;
@@ -24,5 +26,14 @@ public class ShoppingCartPageObject extends AbstractPage{
 	
 	public void clickToEmptyCartByJS(WebDriver driver) {
 		clickToElementByjavascriptExecutor(driver, "//button[@title='Empty Cart']");
+	}
+	
+	public WebDriver closeIFrame(WebDriver driver) {
+		waitForElementVisible(driver, ShoppingCartPageUI.IFRAME, "primis");
+		switchToFrame(driver, ShoppingCartPageUI.IFRAME, "primis");
+		switchToFrame(driver, ShoppingCartPageUI.IFRAME, "Video-iFrame");
+		clickToElement(driver, ShoppingCartPageUI.IFRAME_CLOSE_BUTTON);
+		switchToMainWindow(driver);
+		return driver;
 	}
 }
