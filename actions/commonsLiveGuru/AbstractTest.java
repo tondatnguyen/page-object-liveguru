@@ -40,8 +40,7 @@ public class AbstractTest {
 			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
 			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, workingDir + "\\FirefoxUILog.txt");
 			driver = new FirefoxDriver();
-		} 
-		else if (browserName.equalsIgnoreCase("chrome")) {
+		} else if (browserName.equalsIgnoreCase("chrome")) {
 			//	System.setProperty("webdriver.chrome.driver", rootFolder + "\\resources\\chromedriver.exe");
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();

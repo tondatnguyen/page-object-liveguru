@@ -6,7 +6,10 @@ import pageObjectsLiveGuru.AdvancedSearchPageObject;
 import pageObjectsLiveGuru.AdvancedSearchResultPageObject;
 import pageObjectsLiveGuru.CheckOutPageObject;
 import pageObjectsLiveGuru.DetailPageObject;
+import pageObjectsLiveGuru.EditReviewPageObject;
+import pageObjectsLiveGuru.HomePageBackEndObject;
 import pageObjectsLiveGuru.HomePageObject;
+import pageObjectsLiveGuru.InvoicesPageObject;
 import pageObjectsLiveGuru.LoginPageObject;
 import pageObjectsLiveGuru.ProductPageObject;
 import pageObjectsLiveGuru.MyDashboardPageObject;
@@ -16,6 +19,8 @@ import pageObjectsLiveGuru.ReviewPageObject;
 import pageObjectsLiveGuru.ShoppingCartPageObject;
 import pageObjectsLiveGuru.SuccessOrderPageObject;
 import pageObjectsLiveGuru.MyWishListPageObject;
+import pageObjectsLiveGuru.OrdersPageObject;
+import pageObjectsLiveGuru.PendingReviewsPageObject;
 import pageObjectsLiveGuru.WishListSharingPageObject;
 
 public class PageGeneratorManager {
@@ -36,7 +41,47 @@ public class PageGeneratorManager {
 	static MyWishListPageObject myWishListPage;
 	static WishListSharingPageObject wishListSharingPage;
 	static PopUpPageObject popUpWindowsPage;
+	static HomePageBackEndObject homePageBackEnd;
+	static OrdersPageObject ordersPage;
+	static PendingReviewsPageObject pendingReviewsPage;
+	static EditReviewPageObject editReviewPage;
+	static InvoicesPageObject invoicesPage;
 	  
+	public static HomePageBackEndObject getHomePageBackEnd(WebDriver driver) {	
+		if(homePageBackEnd == null) {
+			homePageBackEnd = new HomePageBackEndObject(driver);
+		}
+		return homePageBackEnd;
+	}
+
+	public static OrdersPageObject getOrdersPage(WebDriver driver) {	
+		if(ordersPage == null) {
+			ordersPage = new OrdersPageObject(driver);
+		}
+		return ordersPage;
+	}
+	
+	public static PendingReviewsPageObject getPendingReviewsPage(WebDriver driver) {	
+		if(pendingReviewsPage == null) {
+			pendingReviewsPage = new PendingReviewsPageObject(driver);
+		}
+		return pendingReviewsPage;
+	}
+	
+	public static EditReviewPageObject getEditReviewPage(WebDriver driver) {	
+		if(editReviewPage == null) {
+			editReviewPage = new EditReviewPageObject(driver);
+		}
+		return editReviewPage;
+	}
+	
+	public static InvoicesPageObject getInvoicesPage(WebDriver driver) {	
+		if(invoicesPage == null) {
+			invoicesPage = new InvoicesPageObject(driver);
+		}
+		return invoicesPage;
+	}
+	
 	public static RegisterPageObject getRegisterPage(WebDriver driver) {	
 		if(registerPage == null) {
 			registerPage = new RegisterPageObject(driver);

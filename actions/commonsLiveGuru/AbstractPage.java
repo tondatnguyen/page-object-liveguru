@@ -488,10 +488,10 @@ public class AbstractPage {
 				originalStyle);
 	}
 	
-	public WebDriver switchToFrame(WebDriver driver, String locator, String... ID) {
+	public void switchToFrame(WebDriver driver, String locator, String... ID) {
 		locator = String.format(locator, (Object[]) ID);
 		IFrame = driver.findElement(By.xpath(locator));
-		return driver.switchTo().frame(IFrame);
+		driver.switchTo().frame(IFrame);
 	}
 	
 	public WebDriver switchToMainWindow(WebDriver driver) {
@@ -499,7 +499,7 @@ public class AbstractPage {
 	}
 	
 	public AbstractPage openLiveGuru99(WebDriver driver) {
-		openUrl(driver, Constants.TEST_URL);	
+		openUrl(driver, Constants.FE_HOMEPAGE_URL);	
 		return PageGeneratorManager.getHomePage(driver);
 	}
 	

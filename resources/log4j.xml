@@ -53,6 +53,12 @@
 		<appender-ref ref="testng" />
 	</category>
 	
+	<category name="com.liveguru.backend">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="testng" />
+	</category>
 
 	<root>
 		<priority value="warn" />
