@@ -131,14 +131,20 @@ package com.liveguru.testdata;
 		public class Review {
 			public static final String REVIEW_PAGE_TITLE = "PRODUCT REVIEWS";
 			public static final String SUCCESS_REVIEW_MESSAGE = "Your review has been accepted for moderation.";
+			public static final String NICKCNAME = "Nickname_" + Register.EMAIL;
+			
+			// XPERIA
+			public static final String THOUGHTS_XPERIA = "THOUGHTS XPERIA";
+			public static final String SUMMARY_XPERIA = "SUMMARY XPERIA";
+			
+			
 			//SAMSUNG LCD
 			public static final String SAMSUNG_NAME = "SAMSUNG LCD";
 			public static final String SAMSUNG_NAME_LOCATOR = "Samsung LCD";
 			public static final String EMPTY_MESSAGE = "";
 			public static final String ERROR_MESSAGE = "THIS IS A REQUIRED FIELD.";
-			public static final String THOUGHS_MESSAGE = "THOUGHS Samsung LCD";
-			public static final String REVIEW_MESSAGE = "REVIEW Samsung LCD";
-			public static final String NICKNAME = "Nickname_" + Register.EMAIL;
+			public static final String THOUGHS_SAMSUNG = "THOUGHS SAMSUNG LCD";
+			public static final String SUMMARY_SAMSUNG = "SUMMARY SAMSUNG";
 		}
 		
 		public class AdvanceSearch {

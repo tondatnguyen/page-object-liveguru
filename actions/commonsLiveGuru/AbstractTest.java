@@ -1,6 +1,8 @@
 package commonsLiveGuru;
 
 import java.io.File;
+import java.util.Hashtable;
+import java.util.Map;
 import java.util.Random;
 
 import org.apache.commons.logging.Log;
@@ -11,7 +13,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
@@ -19,11 +24,12 @@ import org.testng.annotations.BeforeSuite;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class AbstractTest {
-	private WebDriver driver; 
+	private WebDriver driver;
 	protected final Log log;
 	private final String workingDir = System.getProperty("user.dir");
-	//	String rootFolder = System.getProperty("user.dir");
-	
+	private final String downloadFilesPath = workingDir + "\\downloadFiles";
+	// String rootFolder = System.getProperty("user.dir");
+
 	// Constructor
 	protected AbstractTest() {
 		log = LogFactory.getLog(getClass());
@@ -33,26 +39,78 @@ public class AbstractTest {
 		return driver;
 	}
 
-	public synchronized WebDriver openMultiBrowser(String browserName) {
-	
+	public synchronized WebDriver openMultiBrowserBackEnd(String browserName, String fileType) {
+
 		if (browserName.equalsIgnoreCase("firefox")) {
-			// Disable log 
+			// Disable log
 			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
 			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, workingDir + "\\FirefoxUILog.txt");
-			driver = new FirefoxDriver();
+			
+			// Create a new FireFox Profile instance
+			FirefoxProfile profile = new FirefoxProfile();
+
+			// Set file save to directory
+			profile.setPreference("browser.download.dir", downloadFilesPath);
+			profile.setPreference("browser.download.folderList", 2);
+			
+			switch(fileType) {
+			case ".pdf":
+				profile.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/pdf;");
+				break;
+			case ".txt":
+				profile.setPreference("browser.helperApps.neverAsk.saveToDisk", "text/plain;");
+				break;
+			case ".csv":
+				profile.setPreference("browser.helperApps.neverAsk.saveToDisk", "text/csv");
+				break;
+			case ".xlsx":
+				profile.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;");
+				break;
+			case ".docx":
+				profile.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+				break;
+			}
+			
+			// Set file mime type which do not show save to popup dialog
+			profile.setPreference("browser.download.manager.showWhenStarting", false);
+			profile.setPreference("pdfjs.disabled", true);
+
+			// Create Firefox browser based on the profile just created.
+			driver = new FirefoxDriver(profile);
+			
 		} else if (browserName.equalsIgnoreCase("chrome")) {
-			//	System.setProperty("webdriver.chrome.driver", rootFolder + "\\resources\\chromedriver.exe");
+			
+			// Way_01: System.setProperty("webdriver.chrome.driver", rootFolder + "\\resources\\chromedriver.exe");
+			// Way_02
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			
+			/* Set file save to directory. */
+			Map<String, Object> chromePreferences = new Hashtable<String, Object>();		
+			chromePreferences.put("download.default_directory", downloadFilesPath);
+
+			ChromeOptions chromeOptions = new ChromeOptions();
+			chromeOptions.setExperimentalOption("prefs", chromePreferences);
+
+			DesiredCapabilities cap = DesiredCapabilities.chrome();
+			cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+			cap.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+			  
+			//Initiate ChromeDriver
+			driver = new ChromeDriver(cap);
+			
 		} else if (browserName.equalsIgnoreCase("chromeheadless")) {
+			
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("headless");
 			options.addArguments("window-size=" + Constants.HEADLESS_RESOLUTION);
 			driver = new ChromeDriver(options);
+			
 		} else if (browserName.equalsIgnoreCase("internetexplorer")) {
+			
 			WebDriverManager.iedriver().arch32().setup();
 			driver = new InternetExplorerDriver();
+			
 		} else {
 			log.info("Please to choose your browser_name in TestNG file!!");
 		}
@@ -60,6 +118,44 @@ public class AbstractTest {
 		return driver;
 	}
 
+	public synchronized WebDriver openMultiBrowserFrontEnd(String browserName) {
+
+		if (browserName.equalsIgnoreCase("firefox")) {
+			// Disable log
+			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
+			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, workingDir + "\\FirefoxUILog.txt");
+
+			// Create Firefox browser based on the profile just created.
+			driver = new FirefoxDriver();
+			
+		} else if (browserName.equalsIgnoreCase("chrome")) {
+			
+			// Way_01: System.setProperty("webdriver.chrome.driver", rootFolder + "\\resources\\chromedriver.exe");
+			// Way_02
+			WebDriverManager.chromedriver().setup();
+			  
+			driver = new ChromeDriver();
+			
+		} else if (browserName.equalsIgnoreCase("chromeheadless")) {
+			
+			WebDriverManager.chromedriver().setup();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("headless");
+			options.addArguments("window-size=" + Constants.HEADLESS_RESOLUTION);
+			driver = new ChromeDriver(options);
+			
+		} else if (browserName.equalsIgnoreCase("internetexplorer")) {
+			
+			WebDriverManager.iedriver().arch32().setup();
+			driver = new InternetExplorerDriver();
+			
+		} else {
+			log.info("Please to choose your browser_name in TestNG file!!");
+		}
+
+		return driver;
+	}
+	
 	private boolean checkPassed(boolean condition) {
 		boolean pass = true;
 		try {
@@ -132,10 +228,10 @@ public class AbstractTest {
 	}
 
 	protected int randomData() {
-		  Random random = new Random();
-		  return random.nextInt(999999);
-	  }
-	
+		Random random = new Random();
+		return random.nextInt(999999);
+	}
+
 	protected void closeBrowserAndDriver(WebDriver driver) {
 		try {
 			String osName = System.getProperty("os.name").toLowerCase();
@@ -166,7 +262,7 @@ public class AbstractTest {
 				Process process = Runtime.getRuntime().exec(cmd);
 				process.waitFor();
 			}
-			
+
 			if (driver.toString().toLowerCase().contains("internetexplorer")) {
 				if (osName.toLowerCase().contains("window")) {
 					cmd = "taskkill /F /FI \"IMAGENAME eq IEDriverServer*\"";
@@ -189,7 +285,7 @@ public class AbstractTest {
 		}
 		return day + "";
 	}
-	
+
 	protected String getCurrentMonth() {
 		DateTime now = new DateTime(DateTimeZone.UTC);
 		int month = now.getMonthOfYear();
@@ -199,36 +295,36 @@ public class AbstractTest {
 		}
 		return month + "";
 	}
-	
+
 	protected String getCurrentYear() {
 		DateTime now = new DateTime(DateTimeZone.UTC);
 		return now.getYear() + "";
 	}
-	
-	protected String getToday() {
-		return getCurrentYear() + "-" + getCurrentMonth() + "-" + getCurrentDay(); 
-	}
-	
-	@BeforeSuite
-		public void deleteAllFilesInReportNGScreenshot() {
-			System.out.println("----------START: Delete file in folder----------");
-			deleteAllFilesInFolder();
-			System.out.println("----------END: Delete file in folder----------");
-		}
 
-		public void deleteAllFilesInFolder() {
-			try {
-				String pathFolderDownload = workingDir + "\\reportNGScreenshots";
-				File file = new File(pathFolderDownload);
-				File[] listOfFiles = file.listFiles();
-				for(int i=0; i < listOfFiles.length; i++) {
-					if(listOfFiles[i].isFile()) {
-						System.out.println(listOfFiles[i].getName());
-						new File(listOfFiles[i].toString()).delete();
-					}
+	protected String getToday() {
+		return getCurrentYear() + "-" + getCurrentMonth() + "-" + getCurrentDay();
+	}
+
+	@BeforeSuite
+	public void deleteAllFilesInReportNGScreenshot() {
+		System.out.println("----------START: Delete file in folder----------");
+		deleteAllFilesInFolder();
+		System.out.println("----------END: Delete file in folder----------");
+	}
+
+	public void deleteAllFilesInFolder() {
+		try {
+			String pathFolderDownload = workingDir + "\\reportNGScreenshots";
+			File file = new File(pathFolderDownload);
+			File[] listOfFiles = file.listFiles();
+			for (int i = 0; i < listOfFiles.length; i++) {
+				if (listOfFiles[i].isFile()) {
+					System.out.println(listOfFiles[i].getName());
+					new File(listOfFiles[i].toString()).delete();
 				}
-			} catch (Exception e) {
-				System.out.println(e.getMessage());
 			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
 		}
+	}
 }

@@ -7,7 +7,8 @@ import pageObjectsLiveGuru.AdvancedSearchResultPageObject;
 import pageObjectsLiveGuru.CheckOutPageObject;
 import pageObjectsLiveGuru.DetailPageObject;
 import pageObjectsLiveGuru.EditReviewPageObject;
-import pageObjectsLiveGuru.HomePageBackEndObject;
+import pageObjectsLiveGuru.BackEndHomePageObject;
+import pageObjectsLiveGuru.BackEndLoginPageObject;
 import pageObjectsLiveGuru.HomePageObject;
 import pageObjectsLiveGuru.InvoicesPageObject;
 import pageObjectsLiveGuru.LoginPageObject;
@@ -19,7 +20,7 @@ import pageObjectsLiveGuru.ReviewPageObject;
 import pageObjectsLiveGuru.ShoppingCartPageObject;
 import pageObjectsLiveGuru.SuccessOrderPageObject;
 import pageObjectsLiveGuru.MyWishListPageObject;
-import pageObjectsLiveGuru.OrdersPageObject;
+import pageObjectsLiveGuru.BackEndOrdersPageObject;
 import pageObjectsLiveGuru.PendingReviewsPageObject;
 import pageObjectsLiveGuru.WishListSharingPageObject;
 
@@ -41,22 +42,30 @@ public class PageGeneratorManager {
 	static MyWishListPageObject myWishListPage;
 	static WishListSharingPageObject wishListSharingPage;
 	static PopUpPageObject popUpWindowsPage;
-	static HomePageBackEndObject homePageBackEnd;
-	static OrdersPageObject ordersPage;
+	static BackEndLoginPageObject backEndLoginPage;
+	static BackEndHomePageObject backEndHomePage;
+	static BackEndOrdersPageObject ordersPage;
 	static PendingReviewsPageObject pendingReviewsPage;
 	static EditReviewPageObject editReviewPage;
 	static InvoicesPageObject invoicesPage;
-	  
-	public static HomePageBackEndObject getHomePageBackEnd(WebDriver driver) {	
-		if(homePageBackEnd == null) {
-			homePageBackEnd = new HomePageBackEndObject(driver);
+	
+	public static BackEndLoginPageObject getBackEndLoginPage(WebDriver driver) {	
+		if(backEndLoginPage == null) {
+			backEndLoginPage = new BackEndLoginPageObject(driver);
 		}
-		return homePageBackEnd;
+		return backEndLoginPage;
+	}
+	
+	public static BackEndHomePageObject getBackEndHomePage(WebDriver driver) {	
+		if(backEndHomePage == null) {
+			backEndHomePage = new BackEndHomePageObject(driver);
+		}
+		return backEndHomePage;
 	}
 
-	public static OrdersPageObject getOrdersPage(WebDriver driver) {	
+	public static BackEndOrdersPageObject getOrdersPage(WebDriver driver) {	
 		if(ordersPage == null) {
-			ordersPage = new OrdersPageObject(driver);
+			ordersPage = new BackEndOrdersPageObject(driver);
 		}
 		return ordersPage;
 	}

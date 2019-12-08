@@ -659,7 +659,7 @@ public class AbstractPage {
 	
 	// Sort Ascending STRING
 	public boolean isStringDataSortedAscending(WebDriver driver, String locator) {
-		// Declare an ArrayList
+
 		ArrayList<String> arrayList = new ArrayList<>();
 
 		// Find all elements that match with condition (Name/Price/...)
@@ -694,7 +694,7 @@ public class AbstractPage {
 
 	// Sort Descending STRING
 	public boolean isStringDataSortedDescending(WebDriver driver, String locator) {
-		// Declare an ArrayList
+
 		ArrayList<String> arrayList = new ArrayList<>();
 
 		// Find all elements that match with condition (Name/Price/...)
@@ -730,7 +730,7 @@ public class AbstractPage {
 
 	// Sort Ascending FLOAT
 	public boolean isFloatDataSortedAscending(WebDriver driver, String locator) {
-		// Declare an ArrayList
+		
 		ArrayList<Float> arrayList = new ArrayList<Float>();
 
 		// Find all elements that match with condition (Name/Price/...)
@@ -765,7 +765,7 @@ public class AbstractPage {
 
 	// Sort Descending FLOAT
 	public boolean isFloatDataSortedDescending(WebDriver driver, String locator) {
-		// Declare an ArrayList
+		
 		ArrayList<Float> arrayList = new ArrayList<Float>();
 
 		// Find all elements that match with condition (Name/Price/...)

@@ -1,33 +1,33 @@
-2019-11-12 18:57:28,483 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_04 - Step 01. Open LiveGuru99 site
-2019-11-12 18:57:32,366 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-12 18:57:32,416 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-12 18:57:32,416 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_04 - Step 02a. Click on 'MOBILE' menu
-2019-11-12 18:57:33,745 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-12 18:57:33,746 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_04 - Step 02b. Add IPHONE to cart
-2019-11-12 18:57:35,930 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-12 18:57:35,930 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_04 - Step 03. Enter COUPON CODE
-2019-11-12 18:57:37,632 INFO  com.liveguru.frontend.FrontEndFunction - ==================FAILED==================
-2019-11-12 18:57:37,633 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_04 - Step 04. Verify the DISCOUNT generated
-2019-11-12 18:57:37,663 INFO  com.liveguru.frontend.FrontEndFunction - ==================FAILED==================
-2019-11-12 18:57:37,691 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-12 18:57:37,719 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-12 18:57:37,749 INFO  com.liveguru.frontend.FrontEndFunction - ==================FAILED==================
-2019-11-12 18:57:37,762 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 01. Open LiveGuru99 site
-2019-11-12 18:57:39,261 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-12 18:57:39,311 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-12 18:57:39,311 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 02. Click on 'MOBILE' menu
-2019-11-12 18:57:40,273 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-12 18:57:40,273 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 03. Add SONY XPERIA to cart
-2019-11-12 18:57:42,287 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-12 18:57:42,287 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 04a. Change QTY_value to 501
-2019-11-12 18:57:42,429 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 04b. Click UPDATE button
-2019-11-12 18:57:43,729 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 05. Verify '* The maximum quantity allowed for purchase is 500.' message is displayed!!
-2019-11-12 18:57:43,766 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-12 18:57:43,766 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 06a. Close IFrame
-2019-11-12 18:57:46,823 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 06b. Click on EMPTY_CART link
-2019-11-12 18:57:48,073 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 07a. Verify 'SHOPPING CART IS EMPTY' title is displayed!!
-2019-11-12 18:57:48,105 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-12 18:57:48,105 INFO  com.liveguru.frontend.FrontEndFunction - FrontEndFunction_05 - Step 07b. Verify 'You have no items in your shopping cart.' title is displayed!!
-2019-11-12 18:57:48,132 INFO  com.liveguru.frontend.FrontEndFunction - ==================PASSED==================
-2019-11-12 18:57:48,134 INFO  com.liveguru.frontend.FrontEndFunction - OS name = windows 7
-2019-11-12 18:57:49,539 INFO  com.liveguru.frontend.FrontEndFunction - ---------- QUIT BROWSER SUCCESS ----------
+2019-12-08 12:41:29,785 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_01: Go to BackEnd_URL
+2019-12-08 12:41:31,852 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2019-12-08 12:41:31,854 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_02: Login BackEnd
+2019-12-08 12:41:36,658 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2019-12-08 12:41:36,659 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_03: Open Orders page
+2019-12-08 12:41:37,603 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_04a: In the Status field, select 'Cancel'
+2019-12-08 12:41:37,728 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_04b: Click Search
+2019-12-08 12:41:42,759 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_05: Select the checkbox that's next to first order
+2019-12-08 12:41:42,888 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_06a: In the Action field, select 'Print Invoices'
+2019-12-08 12:41:43,001 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_06b: Click Submit
+2019-12-08 12:41:44,203 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_07: Verify the Error message
+2019-12-08 12:41:44,245 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2019-12-08 12:41:44,246 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_08a: In the Status field, select 'Complete'
+2019-12-08 12:41:44,328 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_08b: Click Search
+2019-12-08 12:41:49,349 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_09: Select the checkbox that's next to first order
+2019-12-08 12:41:49,464 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_10a: In the Action field, select 'Print Invoices'
+2019-12-08 12:41:49,583 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_10b: Click Submit
+2019-12-08 12:41:50,147 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_11: Verify Invoice is downloaded
+2019-12-08 12:41:53,158 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_02 - STEP_01: Go to FrontEnd_URL
+2019-12-08 12:41:57,370 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2019-12-08 12:41:57,411 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2019-12-08 12:41:57,411 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_02 - STEP_02: Open XPeria review link
+2019-12-08 12:41:59,770 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2019-12-08 12:41:59,770 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_02 - STEP_03a: Fill the required review
+2019-12-08 12:42:00,233 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_02 - STEP_03b: Submit
+2019-12-08 12:42:01,668 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2019-12-08 12:42:01,668 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_02 - STEP_04: Go to BackEnd_URL
+2019-12-08 12:42:34,092 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_01: Go to BackEnd_URL
+2019-12-08 12:42:34,095 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_04 - STEP_01: Go to BackEnd_URL
+2019-12-08 12:43:07,003 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_05 - STEP_01: Go to BackEnd_URL
+2019-12-08 12:43:39,836 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_06 - STEP_01: Go to BackEnd_URL
+2019-12-08 12:44:12,986 INFO  com.liveguru.backend.BackEndFunction - OS name = windows 7
+2019-12-08 12:44:14,173 INFO  com.liveguru.backend.BackEndFunction - ---------- QUIT BROWSER SUCCESS ----------

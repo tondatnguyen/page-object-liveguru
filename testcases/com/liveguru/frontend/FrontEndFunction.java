@@ -47,9 +47,9 @@ public class FrontEndFunction extends AbstractTest {
 	
 	@Parameters("browser")
 	@BeforeClass 
-	public void beforeClass(String browserName) {
+	public void initData(String browserName) {
 		
-		driver = openMultiBrowser(browserName);
+		driver = openMultiBrowserFrontEnd(browserName);
 		driver.manage().window().maximize();
 		parentWindowID = driver.getWindowHandle();
 		amountOfProducts = Integer.parseInt(DataUser.WishList.AMOUNT_PRODUCTS);
@@ -314,9 +314,9 @@ public class FrontEndFunction extends AbstractTest {
 		verifyEquals(reviewPage.getTextElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX_ERROR_MESSAGE, "nickname_field"), DataUser.Review.ERROR_MESSAGE);
 		
 		log.info("FrontEndFunction_08 - Step 07. Input valid_data to 3 fields");
-		reviewPage.inputToDynamicTextArea(driver, "review_field", DataUser.Review.THOUGHS_MESSAGE);
-		reviewPage.inputToDynamicTextbox(driver, "summary_field", DataUser.Review.REVIEW_MESSAGE);
-		reviewPage.inputToDynamicTextbox(driver, "nickname_field", DataUser.Review.NICKNAME);
+		reviewPage.inputToDynamicTextArea(driver, "review_field", DataUser.Review.THOUGHS_SAMSUNG);
+		reviewPage.inputToDynamicTextbox(driver, "summary_field", DataUser.Review.SUMMARY_SAMSUNG);
+		reviewPage.inputToDynamicTextbox(driver, "nickname_field", DataUser.Review.NICKCNAME);
 		
 		log.info("FrontEndFunction_08 - Step 08a. Click 'SUBMIT REVIEW' button");
 		reviewPage.clickOnDynamicLinkOrButton(driver, "Submit Review");
@@ -443,7 +443,7 @@ public class FrontEndFunction extends AbstractTest {
 	}
 	
 	@AfterClass(alwaysRun = true)
-	public void afterClass() {
+	public void cleanData() {
 		closeBrowserAndDriver(driver);
 	}
 	
