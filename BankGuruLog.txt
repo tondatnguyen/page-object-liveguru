@@ -1,33 +1,20 @@
-2019-12-08 12:41:29,785 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_01: Go to BackEnd_URL
-2019-12-08 12:41:31,852 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2019-12-08 12:41:31,854 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_02: Login BackEnd
-2019-12-08 12:41:36,658 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2019-12-08 12:41:36,659 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_03: Open Orders page
-2019-12-08 12:41:37,603 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_04a: In the Status field, select 'Cancel'
-2019-12-08 12:41:37,728 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_04b: Click Search
-2019-12-08 12:41:42,759 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_05: Select the checkbox that's next to first order
-2019-12-08 12:41:42,888 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_06a: In the Action field, select 'Print Invoices'
-2019-12-08 12:41:43,001 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_06b: Click Submit
-2019-12-08 12:41:44,203 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_07: Verify the Error message
-2019-12-08 12:41:44,245 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2019-12-08 12:41:44,246 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_08a: In the Status field, select 'Complete'
-2019-12-08 12:41:44,328 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_08b: Click Search
-2019-12-08 12:41:49,349 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_09: Select the checkbox that's next to first order
-2019-12-08 12:41:49,464 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_10a: In the Action field, select 'Print Invoices'
-2019-12-08 12:41:49,583 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_10b: Click Submit
-2019-12-08 12:41:50,147 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_11: Verify Invoice is downloaded
-2019-12-08 12:41:53,158 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_02 - STEP_01: Go to FrontEnd_URL
-2019-12-08 12:41:57,370 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2019-12-08 12:41:57,411 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2019-12-08 12:41:57,411 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_02 - STEP_02: Open XPeria review link
-2019-12-08 12:41:59,770 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2019-12-08 12:41:59,770 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_02 - STEP_03a: Fill the required review
-2019-12-08 12:42:00,233 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_02 - STEP_03b: Submit
-2019-12-08 12:42:01,668 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2019-12-08 12:42:01,668 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_02 - STEP_04: Go to BackEnd_URL
-2019-12-08 12:42:34,092 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_01: Go to BackEnd_URL
-2019-12-08 12:42:34,095 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_04 - STEP_01: Go to BackEnd_URL
-2019-12-08 12:43:07,003 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_05 - STEP_01: Go to BackEnd_URL
-2019-12-08 12:43:39,836 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_06 - STEP_01: Go to BackEnd_URL
-2019-12-08 12:44:12,986 INFO  com.liveguru.backend.BackEndFunction - OS name = windows 7
-2019-12-08 12:44:14,173 INFO  com.liveguru.backend.BackEndFunction - ---------- QUIT BROWSER SUCCESS ----------
+2019-12-11 10:43:46,671 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_05 - STEP_01: Go to BackEnd_URL
+2019-12-11 10:43:49,617 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2019-12-11 10:43:49,618 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_05 - STEP_02: Login BackEnd
+2019-12-11 10:43:55,625 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2019-12-11 10:43:55,625 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_05 - STEP_03: Open Manage Customers page
+2019-12-11 10:43:56,756 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2019-12-11 10:43:56,756 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_05 - STEP_04a: Search data with ID
+2019-12-11 10:43:58,554 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2019-12-11 10:43:58,554 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_05 - STEP_04b: Search data with Name
+2019-12-11 10:44:00,593 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2019-12-11 10:44:00,593 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_05 - STEP_04c: Search data with Email
+2019-12-11 10:44:01,634 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2019-12-11 10:44:01,634 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_05 - STEP_04d: Search data with Telephone
+2019-12-11 10:44:02,614 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2019-12-11 10:44:02,614 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_05 - STEP_04e: Search data with Zip
+2019-12-11 10:44:03,522 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2019-12-11 10:44:03,522 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_05 - STEP_04f: Search data with Country
+2019-12-11 10:44:25,366 INFO  com.liveguru.backend.BackEndFunction - ==================FAILED==================
+2019-12-11 10:44:25,366 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_05 - STEP_04g: Search data with State/Province
+2019-12-11 10:44:26,424 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================

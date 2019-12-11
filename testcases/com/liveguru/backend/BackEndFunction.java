@@ -24,7 +24,6 @@ import pageObjectsLiveGuru.PendingReviewsPageObject;
 import pageObjectsLiveGuru.ProductPageObject;
 import pageObjectsLiveGuru.ReviewPageObject;
 import pageUIsLiveGuru.AbstractPageUI;
-import pageUIsLiveGuru.BackEndLoginPageUI;
 import pageUIsLiveGuru.BackEndOrdersPageUI;
 import pageUIsLiveGuru.HomePageUI;
 import pageUIsLiveGuru.ProductPageUI;
@@ -38,16 +37,13 @@ public class BackEndFunction extends AbstractTest {
 		driver = openMultiBrowserBackEnd(browserName, DataAdmin.TYPEOF_FILE);
 		driver.manage().window().maximize();
 		backEndLoginPage = PageGeneratorManager.getBackEndLoginPage(driver);
-		homePage = PageGeneratorManager.getHomePage(driver);
 	}
 
 	@Test
 	public void BackEndFunction_01_VerifyPrintedInvoice() throws Exception {
-
 		log.info("BackEndFunction_01 - STEP_01: Go to BackEnd_URL");
 		backEndLoginPage.openLiveGuru99BackEnd(driver);
-		verifyEquals(backEndLoginPage.getTextElement(driver, BackEndLoginPageUI.PAGE_TITLE),
-				DataAdmin.BackEndLoginPage.PAGE_TITLE);
+		verifyEquals(backEndLoginPage.getBackEndLoginPageTitle(driver), DataAdmin.BackEndLoginPage.PAGE_TITLE);
 
 		log.info("BackEndFunction_01 - STEP_02: Login BackEnd");
 		backEndHomePage = backEndLoginPage.openBackEndHomePageByLogin(driver);
@@ -98,18 +94,12 @@ public class BackEndFunction extends AbstractTest {
 
 		log.info("BackEndFunction_01 - STEP_11: Verify Invoice is downloaded");
 		AbstractPage.DownloadAndDeleteFileContainName(driver, DataAdmin.TYPEOF_FILE);
-
-		log.info("BackEndFunction_01 - FINAL STEP: Log out BackEnd");
-		backEndLoginPage = (BackEndLoginPageObject) ordersPage.openLiveGuru99BackEndByLogout(driver);
-		verifyEquals(backEndLoginPage.getTextElement(driver, BackEndLoginPageUI.PAGE_TITLE),
-				DataAdmin.BackEndLoginPage.PAGE_TITLE);
 	}
 
 	@Test
 	public void BackEndFunction_02_VerifyProductReviewMechanism() {
 		log.info("BackEndFunction_02 - STEP_01: Go to FrontEnd_URL");
-		homePage = (HomePageObject) backEndLoginPage.openLiveGuru99(driver);
-		homePage.openLiveGuru99(driver);
+		homePage = (HomePageObject) ordersPage.openLiveGuru99(driver);
 		verifyEquals(
 				homePage.getTextElement(driver, HomePageUI.HOMEPAGE_TITLE, DataUser.HomePage.HOMEPAGE_TITLE_LOCATOR),
 				DataUser.HomePage.HOMEPAGE_TITLE);
@@ -131,20 +121,18 @@ public class BackEndFunction extends AbstractTest {
 		verifyEquals(reviewPage.getTextElement(driver, AbstractPageUI.SUCCESS_MESSAGE),
 				DataUser.Review.SUCCESS_REVIEW_MESSAGE);
 
-		log.info("BackEndFunction_02 - STEP_04: Go to BackEnd_URL");
-		backEndLoginPage = (BackEndLoginPageObject) reviewPage.openLiveGuru99BackEnd(driver);
-		verifyEquals(backEndLoginPage.getTextElement(driver, BackEndLoginPageUI.PAGE_TITLE),
-				DataAdmin.BackEndLoginPage.PAGE_TITLE);
+		log.info("BackEndFunction_02 - STEP_04: Go to BackEnd_URL by Logout");
+		backEndLoginPage = (BackEndLoginPageObject) reviewPage.openLiveGuru99BackEndByLogout(driver);
+		verifyEquals(backEndLoginPage.getBackEndLoginPageTitle(driver), DataAdmin.BackEndLoginPage.PAGE_TITLE);
 
 		log.info("BackEndFunction_02 - STEP_05: Login BackEnd");
 		backEndHomePage = backEndLoginPage.openBackEndHomePageByLogin(driver);
 		backEndHomePage.closePopUp(driver);
-		verifyEquals(backEndHomePage.getBackEndPageTitle(driver), DataAdmin.BackEndHomePage.PAGE_TITLE);
+		verifyEquals(backEndHomePage.getBackEndPageTitle(driver), DataAdmin.BackEndHomePage.PAGE_TITLE); 
 
 		log.info("BackEndFunction_02 - STEP_06: Open Pending Reviews page");
 		pendingReviewsPage = (PendingReviewsPageObject) backEndHomePage.openPendingReviewsPage(driver);
-		verifyEquals(pendingReviewsPage.getTextElement(driver, AbstractPageUI.PAGE_TITLE),
-				DataAdmin.PendingReviewwsPage.PAGE_TITLE);
+		verifyEquals(pendingReviewsPage.getBackEndPageTitle(driver), DataAdmin.PendingReviewwsPage.PAGE_TITLE);
 
 		log.info("BackEndFunction_02 - STEP_07: Click on 'Edit' link");
 		editReviewPage = pendingReviewsPage.openEditReviewPage(driver);
@@ -157,11 +145,8 @@ public class BackEndFunction extends AbstractTest {
 		pendingReviewsPage = editReviewPage.openPendingReviewsPageBySaveReviewButton(driver);
 		verifyEquals(pendingReviewsPage.getSuccessMessage(driver), DataAdmin.PendingReviewwsPage.SUCCESS_MESSAGE);
 
-		log.info("BackEndFunction_01 - BACKEND LOGOUT STEP: Log out BackEnd");
-		backEndLoginPage = (BackEndLoginPageObject) pendingReviewsPage.openLiveGuru99BackEndByLogout(driver);
-
 		log.info("BackEndFunction_02 - STEP_09a: Go to FrontEnd_URL");
-		homePage = (HomePageObject) backEndLoginPage.openLiveGuru99(driver);
+		homePage = (HomePageObject) pendingReviewsPage.openLiveGuru99(driver);
 
 		log.info("BackEndFunction_02 - STEP_09b: Click 'MOBILE' menu");
 		productPage = (ProductPageObject) homePage.openDynamicProductPage(driver, "Mobile");
@@ -181,7 +166,7 @@ public class BackEndFunction extends AbstractTest {
 	@Test
 	public void BackEndFunction_03_VerifySortIsWorkingCorrectly() {
 		log.info("BackEndFunction_03 - STEP_01: Go to BackEnd_URL");
-		backEndLoginPage = (BackEndLoginPageObject) detailPage.openLiveGuru99BackEnd(driver);
+		backEndLoginPage = (BackEndLoginPageObject) detailPage.openLiveGuru99BackEndByLogout(driver);
 		verifyEquals(backEndLoginPage.getBackEndLoginPageTitle(driver), DataAdmin.BackEndLoginPage.PAGE_TITLE);
 
 		log.info("BackEndFunction_03 - STEP_02: Login BackEnd");
@@ -240,16 +225,12 @@ public class BackEndFunction extends AbstractTest {
 		log.info("BackEndFunction_03 - STEP_15: Sort 'Amount' in DESC");
 		invoicesPage.clickToColumnTitle(driver, "Amount");
 		verifyTrue(invoicesPage.isAmountSortDESC());
-
-		log.info("BackEndFunction_03 - BACKEND LOGOUT STEP: Log out BackEnd");
-		backEndLoginPage = (BackEndLoginPageObject) invoicesPage.openLiveGuru99BackEndByLogout(driver);
-		verifyEquals(backEndLoginPage.getBackEndLoginPageTitle(driver), DataAdmin.BackEndLoginPage.PAGE_TITLE);
 	}
 
 	@Test
 	public void BackEndFunction_04_VerifyPaginationFunctionality() {
 		log.info("BackEndFunction_04 - STEP_01: Go to BackEnd_URL");
-		backEndLoginPage.openLiveGuru99BackEnd(driver);
+		backEndLoginPage.openLiveGuru99BackEndByLogout(driver);
 		verifyEquals(backEndLoginPage.getBackEndLoginPageTitle(driver), DataAdmin.BackEndLoginPage.PAGE_TITLE);
 
 		log.info("BackEndFunction_04 - STEP_02: Login BackEnd");
@@ -280,16 +261,12 @@ public class BackEndFunction extends AbstractTest {
 		log.info("BackEndFunction_04 - STEP_04: Select View per page option with 200");
 		ordersPage.clickToViewDropdownListOfOrdersPage(driver, "200");
 		verifyEquals(ordersPage.getPaginationSize(driver), 200);
-	
-		log.info("BackEndFunction_04 - BACKEND LOGOUT STEP: Log out BackEnd");
-		backEndLoginPage = (BackEndLoginPageObject) ordersPage.openLiveGuru99BackEndByLogout(driver);
-		verifyEquals(backEndLoginPage.getBackEndLoginPageTitle(driver), DataAdmin.BackEndLoginPage.PAGE_TITLE);
 	}
 
 	@Test
 	public void BackEndFunction_05_VerifySearchFunctionality() {
 		log.info("BackEndFunction_05 - STEP_01: Go to BackEnd_URL");
-		backEndLoginPage.openLiveGuru99BackEnd(driver);
+		backEndLoginPage.openLiveGuru99BackEndByLogout(driver);
 		verifyEquals(backEndLoginPage.getBackEndLoginPageTitle(driver), DataAdmin.BackEndLoginPage.PAGE_TITLE);
 
 		log.info("BackEndFunction_05 - STEP_02: Login BackEnd");
@@ -321,16 +298,12 @@ public class BackEndFunction extends AbstractTest {
 		
 		log.info("BackEndFunction_05 - STEP_04g: Search data with State/Province");
 		verifyTrue(backEndHomePage.isStateProvinceListResult(driver));
-		
-		log.info("BackEndFunction_05 - BACKEND LOGOUT STEP: Log out BackEnd");
-		backEndLoginPage = (BackEndLoginPageObject) backEndHomePage.openLiveGuru99BackEndByLogout(driver);
-		verifyEquals(backEndLoginPage.getBackEndLoginPageTitle(driver), DataAdmin.BackEndLoginPage.PAGE_TITLE);
 	}
 	
 	@Test
 	public void BackEndFunction_06_VerifySelectCheckboxFunctionality() {
 		log.info("BackEndFunction_06 - STEP_01: Go to BackEnd_URL");
-		backEndLoginPage.openLiveGuru99BackEnd(driver);
+		backEndLoginPage.openLiveGuru99BackEndByLogout(driver);
 		verifyEquals(backEndLoginPage.getBackEndLoginPageTitle(driver), DataAdmin.BackEndLoginPage.PAGE_TITLE);
 
 		log.info("BackEndFunction_06 - STEP_02: Login BackEnd");
@@ -353,15 +326,11 @@ public class BackEndFunction extends AbstractTest {
 		log.info("BackEndFunction_06 - STEP_045 Click 'Unselect Visible' link");
 		ordersPage.clickToUnSelectVisible(driver);
 		verifyTrue(ordersPage.isAllCheckboxUnSelected(driver));
-		
-		log.info("BackEndFunction_06 - BACKEND LOGOUT STEP: Log out BackEnd");
-		backEndLoginPage = (BackEndLoginPageObject) ordersPage.openLiveGuru99BackEndByLogout(driver);
-		verifyEquals(backEndLoginPage.getBackEndLoginPageTitle(driver), DataAdmin.BackEndLoginPage.PAGE_TITLE);
 	}
 
-	@AfterClass(alwaysRun = true)
+	@AfterClass (alwaysRun = true)
 	public void cleanData() {
-		closeBrowserAndDriver(driver);
+		//closeBrowserAndDriver(driver);
 	}
 
 	WebDriver driver;

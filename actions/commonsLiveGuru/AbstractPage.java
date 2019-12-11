@@ -1,8 +1,5 @@
 package commonsLiveGuru;
 
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -616,7 +613,6 @@ public class AbstractPage {
 
 	public static void waitForPartFileTypeInvisible(String partFileType) throws Exception {
 		int i = 0;
-		// Thread.sleep(1000);
 		while (i < DataAdmin.downloadFileTime) {
 			boolean exist = isFileContainPartFileType(partFileType);
 			if (exist == false) {
@@ -642,8 +638,8 @@ public class AbstractPage {
 			return flag;
 		} catch (Exception e) {
 			System.out.print(e.getMessage());
-			return false;
 		}
+		return false;
 	}
 
 	public static String getFileExtension(File file) {
@@ -702,16 +698,13 @@ public class AbstractPage {
 	public static void DownloadAndDeleteFileContainName(WebDriver driver, String fileType) throws Exception {
 		deleteAllFileInFolder();
 
-		if (driver.toString().toLowerCase().contains("chrome")
-				|| driver.toString().toLowerCase().contains("chromeheadless")) {
+		if (driver.toString().toLowerCase().contains("chrome") || driver.toString().toLowerCase().contains("chromeheadless")) {
 			waitForPartFileTypeInvisible(DataAdmin.CHROME_DOWNLOAD);
-			//closeDownloadPopup();
 		} else
 			waitForPartFileTypeInvisible(DataAdmin.FIREFOX_DOWNLOAD);
 
 		int countFileAfterDownload = countFilesInDirectory();
-		System.out.println("AMOUNT OF FILES AFTER DOWNLOAD (BEFORE DELETE): " + countFileAfterDownload + "\n"
-				+ "Files in Folder: " + getPathContainDownload());
+		System.out.println("AMOUNT OF FILES AFTER DOWNLOAD (BEFORE DELETE): " + countFileAfterDownload + "\n" + "FILES IN FOLDER: " + getPathContainDownload());
 		Assert.assertEquals(countFileAfterDownload, 1);
 
 		// Xóa file đã tải về
@@ -720,23 +713,6 @@ public class AbstractPage {
 		int countFileAfterDelete = countFilesInDirectory();
 		System.out.println("AFTER DELETE: " + countFileAfterDelete);
 		Assert.assertEquals(countFileAfterDelete, 0);
-	}
-
-	public static void closeDownloadPopup() throws Exception {
-		Robot bot = new Robot();
-		Thread.sleep(1000);
-		bot.keyPress(KeyEvent.VK_CONTROL);
-		bot.keyPress(KeyEvent.VK_T);
-		bot.keyRelease(KeyEvent.VK_CONTROL);
-		bot.keyRelease(KeyEvent.VK_T);
-		bot.keyPress(KeyEvent.VK_CONTROL);
-		bot.keyPress(KeyEvent.VK_J);
-		bot.keyRelease(KeyEvent.VK_CONTROL);
-		bot.keyRelease(KeyEvent.VK_J);
-		bot.keyPress(KeyEvent.VK_CONTROL);
-		bot.keyPress(KeyEvent.VK_W);
-		bot.keyRelease(KeyEvent.VK_CONTROL);
-		bot.keyRelease(KeyEvent.VK_W);
 	}
 
 	public void DownloadAndDeleteFileFullName(String fileName) throws Exception {
@@ -763,6 +739,7 @@ public class AbstractPage {
 	}
 
 	public AbstractPage openLiveGuru99BackEndByLogout(WebDriver driver) {
+		openUrl(driver, Constants.BE_HOMEPAGE_URL);
 		waitForElementVisible(driver, AbstractPageUI.LOGOUT);
 		clickToElement(driver, AbstractPageUI.LOGOUT);
 		waitForElementInvisible(driver, AbstractPageUI.LOADING_ICON);

@@ -220,7 +220,6 @@ public class BackEndHomePageObject extends AbstractPage {
 		String country = DataAdmin.BackEndHomePage.COUNTRY;
 
 		selectCountryDropdownList(driver, DataAdmin.BackEndHomePage.COUNTRY);
-
 		int pages = getPages(driver);
 		int totalRecords = getTotalRecords(driver, BackEndHomePageUI.RECORD);
 		for (int page = 1; page <= pages; page++) {
@@ -232,18 +231,26 @@ public class BackEndHomePageObject extends AbstractPage {
 			}
 			if (page > 1 && page < pages) {
 				clickToNextArrow(driver);
+				refreshToPage(driver);
+				sleepInSecond(driver, 5);
 			}
 		}
 
-		selectCountryDropdownList(driver, "All Countries");
+		selectAllCountryOptionInDropdownList(driver);
 		return isCountRecordsPassed(countRecords, totalRecords);
 	}
 	
+
 	public void selectCountryDropdownList(WebDriver driver, String countryName) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_DROPDOWN, "customerGrid_filter_billing_country_id");
 		selectItemInDropdown(driver, AbstractPageUI.DYNAMIC_DROPDOWN, countryName, "customerGrid_filter_billing_country_id");
 		clickOnDynamicLinkOrButton(driver, "Search");
 		waitForElementInvisible(driver, AbstractPageUI.LOADING_ICON);
+	}
+	
+	public void selectAllCountryOptionInDropdownList(WebDriver driver) {
+		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_DROPDOWN, "customerGrid_filter_billing_country_id");
+		selectItemInDropdown(driver, AbstractPageUI.DYNAMIC_DROPDOWN, "All Countries", "customerGrid_filter_billing_country_id");
 	}
 	
 	public boolean isStateProvinceListResult(WebDriver driver) {
@@ -266,7 +273,6 @@ public class BackEndHomePageObject extends AbstractPage {
 			}
 		}
 
-		clearElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX, "customerGrid_filter_billing_region");
 		return isCountRecordsPassed(countRecords, totalRecords);
 	}
 	
