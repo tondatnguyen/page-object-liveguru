@@ -463,7 +463,7 @@ public class AbstractPage {
 
 	public void waitForElementVisible(WebDriver driver, String Locator) {
 		By byLocator = By.xpath(Locator);
-		explicitWait = new WebDriverWait(driver, longTimeout);
+		explicitWait = new WebDriverWait(driver, Constants.SHORT_TIMEOUT);
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(byLocator));
 	}
 
@@ -476,7 +476,7 @@ public class AbstractPage {
 
 	public void waitForElementInvisible(WebDriver driver, String Locator) {
 		By byLocator = By.xpath(Locator);
-		explicitWait = new WebDriverWait(driver, shortTimeout);
+		explicitWait = new WebDriverWait(driver, Constants.SHORT_TIMEOUT);
 
 		overrideGlobalTimeout(driver, Constants.SHORT_TIMEOUT);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(byLocator));
@@ -698,11 +698,13 @@ public class AbstractPage {
 	public static void DownloadAndDeleteFileContainName(WebDriver driver, String fileType) throws Exception {
 		deleteAllFileInFolder();
 
-		if (driver.toString().toLowerCase().contains("chrome") || driver.toString().toLowerCase().contains("chromeheadless")) {
-			waitForPartFileTypeInvisible(DataAdmin.CHROME_DOWNLOAD);
-		} else
-			waitForPartFileTypeInvisible(DataAdmin.FIREFOX_DOWNLOAD);
+//		if (driver.toString().toLowerCase().contains("chrome") || driver.toString().toLowerCase().contains("chromeheadless")) {
+//			waitForPartFileTypeInvisible(DataAdmin.CHROME_DOWNLOAD);
+//		} else
+//			waitForPartFileTypeInvisible(DataAdmin.FIREFOX_DOWNLOAD);
 
+		Thread.sleep(15000);
+		
 		int countFileAfterDownload = countFilesInDirectory();
 		System.out.println("AMOUNT OF FILES AFTER DOWNLOAD (BEFORE DELETE): " + countFileAfterDownload + "\n" + "FILES IN FOLDER: " + getPathContainDownload());
 		Assert.assertEquals(countFileAfterDownload, 1);
@@ -1172,7 +1174,7 @@ public class AbstractPage {
 	private Select select;
 	private JavascriptExecutor javascriptExecutor;
 	private WebDriverWait explicitWait;
-	long shortTimeout = 5;
+	//long shortTimeout = 10;
 	long longTimeout = Constants.LONG_TIMEOUT;
 	private Set<String> allWindows;
 	private Actions action;

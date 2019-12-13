@@ -1,167 +1,138 @@
-1575987103775	addons.manager	DEBUG	Application has been upgraded
-1575987103931	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/XPIProvider.jsm: ["XPIProvider"]
-1575987103935	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/LightweightThemeManager.jsm: ["LightweightThemeManager"]
-1575987103942	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/GMPProvider.jsm
-1575987103944	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/PluginProvider.jsm
-1575987103946	addons.manager	DEBUG	Starting provider: XPIProvider
-1575987103946	addons.xpi	DEBUG	startup
-1575987103948	addons.xpi	INFO	Mapping fxdriver@googlecode.com to C:\Users\TVC\AppData\Local\Temp\anonymous1974346581883645963webdriver-profile\extensions\fxdriver@googlecode.com
-1575987103948	addons.xpi	DEBUG	Ignoring file entry whose name is not a valid add-on ID: C:\Users\TVC\AppData\Local\Temp\anonymous1974346581883645963webdriver-profile\extensions\webdriver-staging
-1575987103949	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
-1575987103950	addons.xpi	INFO	Mapping e10srollout@mozilla.org to C:\Program Files\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
-1575987103951	addons.xpi	INFO	Mapping firefox@getpocket.com to C:\Program Files\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
-1575987103951	addons.xpi	INFO	Mapping loop@mozilla.org to C:\Program Files\Mozilla Firefox\browser\features\loop@mozilla.org.xpi
-1575987103951	addons.xpi	INFO	Mapping websensehelper@mozilla.org to C:\Program Files\Mozilla Firefox\browser\features\websensehelper@mozilla.org.xpi
-1575987103953	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
-1575987103954	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
-1575987103954	addons.xpi	DEBUG	Skipping unavailable install location app-system-local
-1575987103955	addons.xpi	DEBUG	checkForChanges
-1575987103956	addons.xpi	DEBUG	Loaded add-on state from prefs: {}
-1575987103957	addons.xpi	DEBUG	New add-on fxdriver@googlecode.com in app-profile
-1575987103959	addons.xpi	DEBUG	getModTime: Recursive scan of fxdriver@googlecode.com
-1575987103966	addons.xpi	DEBUG	New add-on e10srollout@mozilla.org in app-system-defaults
-1575987103966	addons.xpi	DEBUG	getModTime: Recursive scan of e10srollout@mozilla.org
-1575987103967	addons.xpi	DEBUG	New add-on firefox@getpocket.com in app-system-defaults
-1575987103967	addons.xpi	DEBUG	getModTime: Recursive scan of firefox@getpocket.com
-1575987103967	addons.xpi	DEBUG	New add-on loop@mozilla.org in app-system-defaults
-1575987103967	addons.xpi	DEBUG	getModTime: Recursive scan of loop@mozilla.org
-1575987103968	addons.xpi	DEBUG	New add-on websensehelper@mozilla.org in app-system-defaults
-1575987103968	addons.xpi	DEBUG	getModTime: Recursive scan of websensehelper@mozilla.org
-1575987103968	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
-1575987103969	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
-1575987103969	addons.xpi	DEBUG	getInstallState changed: true, state: {"app-profile":{"fxdriver@googlecode.com":{"d":"C:\\Users\\TVC\\AppData\\Local\\Temp\\anonymous1974346581883645963webdriver-profile\\extensions\\fxdriver@googlecode.com","st":1575987103118,"mt":1575987103115}},"app-system-defaults":{"e10srollout@mozilla.org":{"d":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\e10srollout@mozilla.org.xpi","st":1477959393000},"firefox@getpocket.com":{"d":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\firefox@getpocket.com.xpi","st":1477959393000},"loop@mozilla.org":{"d":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\loop@mozilla.org.xpi","st":1477959393000},"websensehelper@mozilla.org":{"d":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\websensehelper@mozilla.org.xpi","st":1477959393000}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"C:\\Program Files\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","st":1477959393000}}}
-1575987103976	addons.xpi-utils	DEBUG	Opening XPI database C:\Users\TVC\AppData\Local\Temp\anonymous1974346581883645963webdriver-profile\extensions.json
-1575987103978	addons.xpi-utils	DEBUG	New add-on fxdriver@googlecode.com installed in app-profile
+1576207132202	addons.manager	DEBUG	Application has been upgraded
+1576207132364	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/XPIProvider.jsm: ["XPIProvider"]
+1576207132368	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/LightweightThemeManager.jsm: ["LightweightThemeManager"]
+1576207132377	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/GMPProvider.jsm
+1576207132379	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/PluginProvider.jsm
+1576207132380	addons.manager	DEBUG	Starting provider: XPIProvider
+1576207132381	addons.xpi	DEBUG	startup
+1576207132382	addons.xpi	INFO	Mapping fxdriver@googlecode.com to C:\Users\TVC\AppData\Local\Temp\anonymous4296806830155958216webdriver-profile\extensions\fxdriver@googlecode.com
+1576207132382	addons.xpi	DEBUG	Ignoring file entry whose name is not a valid add-on ID: C:\Users\TVC\AppData\Local\Temp\anonymous4296806830155958216webdriver-profile\extensions\webdriver-staging
+1576207132382	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
+1576207132383	addons.xpi	INFO	Mapping e10srollout@mozilla.org to C:\Program Files\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1576207132384	addons.xpi	INFO	Mapping firefox@getpocket.com to C:\Program Files\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1576207132384	addons.xpi	INFO	Mapping loop@mozilla.org to C:\Program Files\Mozilla Firefox\browser\features\loop@mozilla.org.xpi
+1576207132384	addons.xpi	INFO	Mapping websensehelper@mozilla.org to C:\Program Files\Mozilla Firefox\browser\features\websensehelper@mozilla.org.xpi
+1576207132387	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
+1576207132387	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
+1576207132387	addons.xpi	DEBUG	Skipping unavailable install location app-system-local
+1576207132388	addons.xpi	DEBUG	checkForChanges
+1576207132388	addons.xpi	DEBUG	Loaded add-on state from prefs: {}
+1576207132389	addons.xpi	DEBUG	New add-on fxdriver@googlecode.com in app-profile
+1576207132390	addons.xpi	DEBUG	getModTime: Recursive scan of fxdriver@googlecode.com
+1576207132395	addons.xpi	DEBUG	New add-on e10srollout@mozilla.org in app-system-defaults
+1576207132395	addons.xpi	DEBUG	getModTime: Recursive scan of e10srollout@mozilla.org
+1576207132396	addons.xpi	DEBUG	New add-on firefox@getpocket.com in app-system-defaults
+1576207132396	addons.xpi	DEBUG	getModTime: Recursive scan of firefox@getpocket.com
+1576207132397	addons.xpi	DEBUG	New add-on loop@mozilla.org in app-system-defaults
+1576207132397	addons.xpi	DEBUG	getModTime: Recursive scan of loop@mozilla.org
+1576207132397	addons.xpi	DEBUG	New add-on websensehelper@mozilla.org in app-system-defaults
+1576207132397	addons.xpi	DEBUG	getModTime: Recursive scan of websensehelper@mozilla.org
+1576207132398	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+1576207132398	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1576207132399	addons.xpi	DEBUG	getInstallState changed: true, state: {"app-profile":{"fxdriver@googlecode.com":{"d":"C:\\Users\\TVC\\AppData\\Local\\Temp\\anonymous4296806830155958216webdriver-profile\\extensions\\fxdriver@googlecode.com","st":1576207131355,"mt":1576207131351}},"app-system-defaults":{"e10srollout@mozilla.org":{"d":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\e10srollout@mozilla.org.xpi","st":1477959393000},"firefox@getpocket.com":{"d":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\firefox@getpocket.com.xpi","st":1477959393000},"loop@mozilla.org":{"d":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\loop@mozilla.org.xpi","st":1477959393000},"websensehelper@mozilla.org":{"d":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\websensehelper@mozilla.org.xpi","st":1477959393000}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"C:\\Program Files\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","st":1477959393000}}}
+1576207132410	addons.xpi-utils	DEBUG	Opening XPI database C:\Users\TVC\AppData\Local\Temp\anonymous4296806830155958216webdriver-profile\extensions.json
+1576207132411	addons.xpi-utils	DEBUG	New add-on fxdriver@googlecode.com installed in app-profile
 *** Blocklist::_loadBlocklistFromFile: blocklist is disabled
-1575987103991	DeferredSave.extensions.json	DEBUG	Save changes
-1575987103991	addons.xpi-utils	DEBUG	New add-on e10srollout@mozilla.org installed in app-system-defaults
-1575987103993	DeferredSave.extensions.json	DEBUG	Starting timer
-1575987103995	DeferredSave.extensions.json	DEBUG	Save changes
-1575987103995	addons.xpi-utils	DEBUG	New add-on firefox@getpocket.com installed in app-system-defaults
-1575987103999	DeferredSave.extensions.json	DEBUG	Save changes
-1575987104000	addons.xpi-utils	DEBUG	New add-on loop@mozilla.org installed in app-system-defaults
-1575987104007	DeferredSave.extensions.json	DEBUG	Save changes
-1575987104007	addons.xpi-utils	DEBUG	New add-on websensehelper@mozilla.org installed in app-system-defaults
-1575987104010	DeferredSave.extensions.json	DEBUG	Save changes
-1575987104012	addons.xpi-utils	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
-1575987104016	DeferredSave.extensions.json	DEBUG	Save changes
-1575987104016	addons.xpi-utils	INFO	Hiding the updated system add-ons.
-1575987104016	addons.manager	DEBUG	Registering startup change 'installed' for fxdriver@googlecode.com
-1575987104016	addons.xpi-utils	DEBUG	Make addon app-profile:fxdriver@googlecode.com visible
-1575987104017	DeferredSave.extensions.json	DEBUG	Save changes
-1575987104022	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
-1575987104031	addons.xpi	DEBUG	Calling bootstrap method install on e10srollout@mozilla.org version 1.0
-1575987104032	addons.xpi-utils	DEBUG	Make addon app-system-defaults:e10srollout@mozilla.org visible
-1575987104032	DeferredSave.extensions.json	DEBUG	Save changes
-1575987104032	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
-1575987104036	addons.xpi	DEBUG	Calling bootstrap method install on firefox@getpocket.com version 1.0.2
-1575987104036	addons.xpi-utils	DEBUG	Make addon app-system-defaults:firefox@getpocket.com visible
-1575987104036	DeferredSave.extensions.json	DEBUG	Save changes
-1575987104037	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files\Mozilla Firefox\browser\features\loop@mozilla.org.xpi
-1575987104042	addons.xpi	DEBUG	Calling bootstrap method install on loop@mozilla.org version 1.3.2
-1575987104042	addons.xpi-utils	DEBUG	Make addon app-system-defaults:loop@mozilla.org visible
-1575987104042	DeferredSave.extensions.json	DEBUG	Save changes
-1575987104043	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files\Mozilla Firefox\browser\features\websensehelper@mozilla.org.xpi
-1575987104045	addons.xpi	DEBUG	Calling bootstrap method install on websensehelper@mozilla.org version 1.0
-1575987104045	addons.xpi-utils	DEBUG	Make addon app-system-defaults:websensehelper@mozilla.org visible
-1575987104046	DeferredSave.extensions.json	DEBUG	Save changes
-1575987104046	addons.xpi-utils	DEBUG	Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
-1575987104046	DeferredSave.extensions.json	DEBUG	Save changes
-1575987104046	addons.xpi	DEBUG	Updating XPIState for {"id":"fxdriver@googlecode.com","syncGUID":"Jzb4SEZUXDDx","location":"app-profile","version":"2.53.1","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Firefox WebDriver","description":"WebDriver implementation for Firefox","creator":"Simon Stewart","homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Users\\TVC\\AppData\\Local\\Temp\\anonymous1974346581883645963webdriver-profile\\extensions\\fxdriver@googlecode.com","installDate":1575987103118,"updateDate":1575987103118,"applyBackgroundUpdates":1,"bootstrap":false,"skinnable":false,"size":3249525,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":true,"hasBinaryComponents":true,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"3.0","maxVersion":"48.0"}],"targetPlatforms":[{"os":"Darwin","abi":null},{"os":"SunOS","abi":null},{"os":"FreeBSD","abi":null},{"os":"OpenBSD","abi":null},{"os":"WINNT","abi":null},{"os":"Linux","abi":null}],"multiprocessCompatible":false,"signedState":0,"seen":true}
-1575987104047	addons.xpi	DEBUG	getModTime: Recursive scan of fxdriver@googlecode.com
-1575987104050	addons.xpi	DEBUG	Updating XPIState for {"id":"e10srollout@mozilla.org","syncGUID":"43vF9V_gOfrP","location":"app-system-defaults","version":"1.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Multi-process staged rollout","description":"Staged rollout of Firefox multi-process feature.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\e10srollout@mozilla.org.xpi","installDate":1477959393000,"updateDate":1477959393000,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":4584,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"47.0.2","maxVersion":"47.0.2"}],"targetPlatforms":[],"multiprocessCompatible":false,"seen":true}
-1575987104050	addons.xpi	DEBUG	getModTime: Recursive scan of e10srollout@mozilla.org
-1575987104050	addons.xpi	DEBUG	Updating XPIState for {"id":"firefox@getpocket.com","syncGUID":"-RdrXsMUIqZx","location":"app-system-defaults","version":"1.0.2","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Pocket","description":"When you find something you want to view later, put it in Pocket.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\firefox@getpocket.com.xpi","installDate":1477959393000,"updateDate":1477959393000,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":894477,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"47.0.2","maxVersion":"47.0.2"}],"targetPlatforms":[],"multiprocessCompatible":false,"seen":true}
-1575987104050	addons.xpi	DEBUG	getModTime: Recursive scan of firefox@getpocket.com
-1575987104051	addons.xpi	DEBUG	Updating XPIState for {"id":"loop@mozilla.org","syncGUID":"Hgs-fu80snZJ","location":"app-system-defaults","version":"1.3.2","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Firefox Hello","description":"Web sharing for Firefox","creator":"Mozilla","homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\loop@mozilla.org.xpi","installDate":1477959393000,"updateDate":1477959393000,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":4239168,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"46.0a1","maxVersion":"47.*"},{"id":"xpcshell@tests.mozilla.org","minVersion":"0","maxVersion":"10"}],"targetPlatforms":[],"multiprocessCompatible":false,"seen":true}
-1575987104051	addons.xpi	DEBUG	getModTime: Recursive scan of loop@mozilla.org
-1575987104052	addons.xpi	DEBUG	Updating XPIState for {"id":"websensehelper@mozilla.org","syncGUID":"_XeYQt9krTUr","location":"app-system-defaults","version":"1.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Websense Helper","description":"Checks for the non-presence of Websense to allow updates to happen.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\websensehelper@mozilla.org.xpi","installDate":1477959393000,"updateDate":1477959393000,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":3110,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"47.0.2","maxVersion":"47.*"}],"targetPlatforms":[],"multiprocessCompatible":false,"seen":true}
-1575987104052	addons.xpi	DEBUG	getModTime: Recursive scan of websensehelper@mozilla.org
-1575987104052	addons.xpi	DEBUG	Updating XPIState for {"id":"{972ce4c6-7e08-4474-a285-3208198ce6fd}","syncGUID":"I6tK3EQhEbDn","location":"app-global","version":"47.0.2","type":"theme","internalName":"classic/1.0","updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{"32":"icon.png","48":"icon.png"},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Default","description":"The default theme.","creator":"Mozilla","homepageURL":null,"contributors":["Mozilla Contributors"]},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","installDate":1477959393000,"updateDate":1477959393000,"applyBackgroundUpdates":1,"skinnable":true,"size":22012,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":true,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"47.0.2","maxVersion":"47.0.2"}],"targetPlatforms":[],"seen":true}
-1575987104054	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
-1575987104055	DeferredSave.extensions.json	DEBUG	Save changes
-1575987104055	addons.xpi	DEBUG	Updating database with changes to installed add-ons
-1575987104055	addons.xpi-utils	DEBUG	Updating add-on states
-1575987104057	addons.xpi-utils	DEBUG	Writing add-ons list
-1575987104060	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
-1575987104061	addons.xpi	DEBUG	Calling bootstrap method startup on e10srollout@mozilla.org version 1.0
-1575987104061	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
-1575987104062	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0.2
-1575987104063	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox\browser\features\loop@mozilla.org.xpi
-1575987104063	addons.xpi	DEBUG	Calling bootstrap method startup on loop@mozilla.org version 1.3.2
-1575987104080	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox\browser\features\websensehelper@mozilla.org.xpi
-1575987104080	addons.xpi	DEBUG	Calling bootstrap method startup on websensehelper@mozilla.org version 1.0
-1575987104083	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
-1575987104083	addons.manager	DEBUG	Provider finished startup: XPIProvider
-1575987104083	addons.manager	DEBUG	Starting provider: LightweightThemeManager
-1575987104084	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
-1575987104084	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
-1575987104084	addons.manager	DEBUG	Starting provider: GMPProvider
-1575987104089	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
-1575987104090	addons.manager	DEBUG	Provider finished startup: GMPProvider
-1575987104090	addons.manager	DEBUG	Starting provider: PluginProvider
-1575987104090	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
-1575987104090	addons.manager	DEBUG	Provider finished startup: PluginProvider
-1575987104091	addons.manager	DEBUG	Completed startup sequence
-1575987105997	DeferredSave.extensions.json	DEBUG	Starting write
-1575987106003	addons.manager	DEBUG	Starting provider: <unnamed-provider>
-1575987106003	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
-1575987106003	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
-1575987106318	addons.repository	DEBUG	No addons.json found.
-1575987106319	DeferredSave.addons.json	DEBUG	Save changes
-1575987106322	DeferredSave.addons.json	DEBUG	Starting timer
-1575987106344	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
-1575987106345	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
-1575987106345	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
-1575987106347	DeferredSave.extensions.json	DEBUG	Write succeeded
-1575987106347	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 17
-1575987106375	DeferredSave.addons.json	DEBUG	Starting write
-1575987106517	DeferredSave.addons.json	DEBUG	Write succeeded
+1576207132423	DeferredSave.extensions.json	DEBUG	Save changes
+1576207132424	addons.xpi-utils	DEBUG	New add-on e10srollout@mozilla.org installed in app-system-defaults
+1576207132426	DeferredSave.extensions.json	DEBUG	Starting timer
+1576207132427	DeferredSave.extensions.json	DEBUG	Save changes
+1576207132428	addons.xpi-utils	DEBUG	New add-on firefox@getpocket.com installed in app-system-defaults
+1576207132432	DeferredSave.extensions.json	DEBUG	Save changes
+1576207132433	addons.xpi-utils	DEBUG	New add-on loop@mozilla.org installed in app-system-defaults
+1576207132439	DeferredSave.extensions.json	DEBUG	Save changes
+1576207132439	addons.xpi-utils	DEBUG	New add-on websensehelper@mozilla.org installed in app-system-defaults
+1576207132441	DeferredSave.extensions.json	DEBUG	Save changes
+1576207132443	addons.xpi-utils	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+1576207132447	DeferredSave.extensions.json	DEBUG	Save changes
+1576207132447	addons.xpi-utils	INFO	Hiding the updated system add-ons.
+1576207132448	addons.manager	DEBUG	Registering startup change 'installed' for fxdriver@googlecode.com
+1576207132448	addons.xpi-utils	DEBUG	Make addon app-profile:fxdriver@googlecode.com visible
+1576207132448	DeferredSave.extensions.json	DEBUG	Save changes
+1576207132453	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1576207132462	addons.xpi	DEBUG	Calling bootstrap method install on e10srollout@mozilla.org version 1.0
+1576207132463	addons.xpi-utils	DEBUG	Make addon app-system-defaults:e10srollout@mozilla.org visible
+1576207132463	DeferredSave.extensions.json	DEBUG	Save changes
+1576207132464	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1576207132468	addons.xpi	DEBUG	Calling bootstrap method install on firefox@getpocket.com version 1.0.2
+1576207132468	addons.xpi-utils	DEBUG	Make addon app-system-defaults:firefox@getpocket.com visible
+1576207132469	DeferredSave.extensions.json	DEBUG	Save changes
+1576207132469	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files\Mozilla Firefox\browser\features\loop@mozilla.org.xpi
+1576207132474	addons.xpi	DEBUG	Calling bootstrap method install on loop@mozilla.org version 1.3.2
+1576207132474	addons.xpi-utils	DEBUG	Make addon app-system-defaults:loop@mozilla.org visible
+1576207132474	DeferredSave.extensions.json	DEBUG	Save changes
+1576207132475	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files\Mozilla Firefox\browser\features\websensehelper@mozilla.org.xpi
+1576207132477	addons.xpi	DEBUG	Calling bootstrap method install on websensehelper@mozilla.org version 1.0
+1576207132477	addons.xpi-utils	DEBUG	Make addon app-system-defaults:websensehelper@mozilla.org visible
+1576207132477	DeferredSave.extensions.json	DEBUG	Save changes
+1576207132477	addons.xpi-utils	DEBUG	Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+1576207132477	DeferredSave.extensions.json	DEBUG	Save changes
+1576207132478	addons.xpi	DEBUG	Updating XPIState for {"id":"fxdriver@googlecode.com","syncGUID":"tSXoobO16X7A","location":"app-profile","version":"2.53.1","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Firefox WebDriver","description":"WebDriver implementation for Firefox","creator":"Simon Stewart","homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Users\\TVC\\AppData\\Local\\Temp\\anonymous4296806830155958216webdriver-profile\\extensions\\fxdriver@googlecode.com","installDate":1576207131355,"updateDate":1576207131355,"applyBackgroundUpdates":1,"bootstrap":false,"skinnable":false,"size":3249525,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":true,"hasBinaryComponents":true,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"3.0","maxVersion":"48.0"}],"targetPlatforms":[{"os":"Darwin","abi":null},{"os":"SunOS","abi":null},{"os":"FreeBSD","abi":null},{"os":"OpenBSD","abi":null},{"os":"WINNT","abi":null},{"os":"Linux","abi":null}],"multiprocessCompatible":false,"signedState":0,"seen":true}
+1576207132478	addons.xpi	DEBUG	getModTime: Recursive scan of fxdriver@googlecode.com
+1576207132481	addons.xpi	DEBUG	Updating XPIState for {"id":"e10srollout@mozilla.org","syncGUID":"lqTa2tzknmi-","location":"app-system-defaults","version":"1.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Multi-process staged rollout","description":"Staged rollout of Firefox multi-process feature.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\e10srollout@mozilla.org.xpi","installDate":1477959393000,"updateDate":1477959393000,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":4584,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"47.0.2","maxVersion":"47.0.2"}],"targetPlatforms":[],"multiprocessCompatible":false,"seen":true}
+1576207132481	addons.xpi	DEBUG	getModTime: Recursive scan of e10srollout@mozilla.org
+1576207132482	addons.xpi	DEBUG	Updating XPIState for {"id":"firefox@getpocket.com","syncGUID":"qMgIIQr5mXSr","location":"app-system-defaults","version":"1.0.2","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Pocket","description":"When you find something you want to view later, put it in Pocket.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\firefox@getpocket.com.xpi","installDate":1477959393000,"updateDate":1477959393000,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":894477,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"47.0.2","maxVersion":"47.0.2"}],"targetPlatforms":[],"multiprocessCompatible":false,"seen":true}
+1576207132482	addons.xpi	DEBUG	getModTime: Recursive scan of firefox@getpocket.com
+1576207132482	addons.xpi	DEBUG	Updating XPIState for {"id":"loop@mozilla.org","syncGUID":"16rylcHC2fc0","location":"app-system-defaults","version":"1.3.2","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Firefox Hello","description":"Web sharing for Firefox","creator":"Mozilla","homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\loop@mozilla.org.xpi","installDate":1477959393000,"updateDate":1477959393000,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":4239168,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"46.0a1","maxVersion":"47.*"},{"id":"xpcshell@tests.mozilla.org","minVersion":"0","maxVersion":"10"}],"targetPlatforms":[],"multiprocessCompatible":false,"seen":true}
+1576207132482	addons.xpi	DEBUG	getModTime: Recursive scan of loop@mozilla.org
+1576207132483	addons.xpi	DEBUG	Updating XPIState for {"id":"websensehelper@mozilla.org","syncGUID":"NKpGzENqMijB","location":"app-system-defaults","version":"1.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Websense Helper","description":"Checks for the non-presence of Websense to allow updates to happen.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\websensehelper@mozilla.org.xpi","installDate":1477959393000,"updateDate":1477959393000,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":3110,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"47.0.2","maxVersion":"47.*"}],"targetPlatforms":[],"multiprocessCompatible":false,"seen":true}
+1576207132483	addons.xpi	DEBUG	getModTime: Recursive scan of websensehelper@mozilla.org
+1576207132483	addons.xpi	DEBUG	Updating XPIState for {"id":"{972ce4c6-7e08-4474-a285-3208198ce6fd}","syncGUID":"YkYh4uI_GLlh","location":"app-global","version":"47.0.2","type":"theme","internalName":"classic/1.0","updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{"32":"icon.png","48":"icon.png"},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Default","description":"The default theme.","creator":"Mozilla","homepageURL":null,"contributors":["Mozilla Contributors"]},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","installDate":1477959393000,"updateDate":1477959393000,"applyBackgroundUpdates":1,"skinnable":true,"size":22012,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":true,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"47.0.2","maxVersion":"47.0.2"}],"targetPlatforms":[],"seen":true}
+1576207132484	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1576207132484	DeferredSave.extensions.json	DEBUG	Save changes
+1576207132484	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1576207132485	addons.xpi-utils	DEBUG	Updating add-on states
+1576207132485	addons.xpi-utils	DEBUG	Writing add-ons list
+1576207132487	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1576207132487	addons.xpi	DEBUG	Calling bootstrap method startup on e10srollout@mozilla.org version 1.0
+1576207132488	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1576207132488	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0.2
+1576207132489	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox\browser\features\loop@mozilla.org.xpi
+1576207132489	addons.xpi	DEBUG	Calling bootstrap method startup on loop@mozilla.org version 1.3.2
+1576207132508	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox\browser\features\websensehelper@mozilla.org.xpi
+1576207132508	addons.xpi	DEBUG	Calling bootstrap method startup on websensehelper@mozilla.org version 1.0
+1576207132511	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1576207132511	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1576207132511	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1576207132511	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1576207132512	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1576207132512	addons.manager	DEBUG	Starting provider: GMPProvider
+1576207132517	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1576207132517	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1576207132518	addons.manager	DEBUG	Starting provider: PluginProvider
+1576207132518	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1576207132518	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1576207132518	addons.manager	DEBUG	Completed startup sequence
+1576207134898	DeferredSave.extensions.json	DEBUG	Starting write
+1576207134904	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1576207134904	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1576207134904	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1576207135202	addons.repository	DEBUG	No addons.json found.
+1576207135203	DeferredSave.addons.json	DEBUG	Save changes
+1576207135205	DeferredSave.addons.json	DEBUG	Starting timer
+1576207135222	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1576207135222	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1576207135222	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1576207135224	DeferredSave.extensions.json	DEBUG	Write succeeded
+1576207135225	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 17
+1576207135259	DeferredSave.addons.json	DEBUG	Starting write
+1576207135485	DeferredSave.addons.json	DEBUG	Write succeeded
 JavaScript warning: http://live.demoguru99.com/js/calendar/calendar.js, line 138: unreachable code after return statement
 JavaScript warning: http://live.demoguru99.com/js/calendar/calendar.js, line 138: unreachable code after return statement
 JavaScript warning: http://live.demoguru99.com/js/calendar/calendar.js, line 138: unreachable code after return statement
 JavaScript warning: http://live.demoguru99.com/js/calendar/calendar.js, line 138: unreachable code after return statement
 JavaScript warning: http://live.demoguru99.com/js/calendar/calendar.js, line 138: unreachable code after return statement
 JavaScript warning: http://live.demoguru99.com/js/calendar/calendar.js, line 138: unreachable code after return statement
-JavaScript warning: https://live.sekindo.com/live/liveVideo.php?vpaidManager=sekindo&s=58057&ri=6C69766553746174737C736B317B54307D7B64323031392D31322D31305F31367D7B7331313233373533347D7B433238347D7B5362476C325A53356B5A5731765A33567964546B354C6D4E7662513D3D7D7B6266697265666F787D7B716465736B746F707D7B6F77696E646F77737D7B583330307D7B593235307D7B66317D7B7256305A51636D6C764C6A4575556D566E4D673D3D7D7B4C363435337DFEFE&userIpAddr=171.243.113.145&userUA=Mozilla%2F5.0+%28Windows+NT+6.1%3B+Win64%3B+x64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0&playerVersion=3.0.0&fpl=-1&debugInformation=WFPrio.1.Reg2&isWePassGdpr=1&csuuid=5defa7c018d6a&debugInfo=11237534_WFPrio.1.Reg2&sta=11237534&showLogo=0&clkUrl=&plMult=-1&schedule=eyJwcmVfcm9sbCI6MSwibWlkX3JvbGwiOltdLCJnYXAiOiJhdXRvIn0%3D&content=plembed12b3ytonphis&secondaryContent=&x=300&y=250&pubUrl=http%3A%2F%2Flive.demoguru99.com%2F&contentNum=1&flow_closeBtn=1&flowCloseTimeout=0&flow_direction=bl&flow_horizontalOffset=10&flow_bottomOffset=10&impGap=2&flow_width=315&flow_height=243&videoType=flow&gdpr=0&gdprConsent=&contentFeedId=&geoLati=11.899999618530273&geoLong=109.1500015258789&vpTemplate=6453&flowMode=both&isRealPreroll=0&playerApiId=&isApp=, line 129: unreachable code after return statement
-JavaScript warning: https://live.sekindo.com/live/liveVideo.php?vpaidManager=sekindo&s=58057&ri=6C69766553746174737C736B317B54307D7B64323031392D31322D31305F31367D7B7331313233373533347D7B433238347D7B5362476C325A53356B5A5731765A33567964546B354C6D4E7662513D3D7D7B6266697265666F787D7B716465736B746F707D7B6F77696E646F77737D7B583330307D7B593235307D7B66317D7B7256305A51636D6C764C6A4575556D566E4D673D3D7D7B4C363435337DFEFE&userIpAddr=171.243.113.145&userUA=Mozilla%2F5.0+%28Windows+NT+6.1%3B+Win64%3B+x64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0&playerVersion=3.0.0&fpl=-1&debugInformation=WFPrio.1.Reg2&isWePassGdpr=1&csuuid=5defa7c018d6a&debugInfo=11237534_WFPrio.1.Reg2&sta=11237534&showLogo=0&clkUrl=&plMult=-1&schedule=eyJwcmVfcm9sbCI6MSwibWlkX3JvbGwiOltdLCJnYXAiOiJhdXRvIn0%3D&content=plembed12b3ytonphis&secondaryContent=&x=300&y=250&pubUrl=http%3A%2F%2Flive.demoguru99.com%2F&contentNum=1&flow_closeBtn=1&flowCloseTimeout=0&flow_direction=bl&flow_horizontalOffset=10&flow_bottomOffset=10&impGap=2&flow_width=315&flow_height=243&videoType=flow&gdpr=0&gdprConsent=&contentFeedId=&geoLati=11.899999618530273&geoLong=109.1500015258789&vpTemplate=6453&flowMode=both&isRealPreroll=0&playerApiId=&isApp=, line 89: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+JavaScript error: chrome://global/content/bindings/popup.xml, line 328: TypeError: can't access dead object
+JavaScript warning: https://live.sekindo.com/live/liveVideo.php?vpaidManager=sekindo&s=58057&ri=6C69766553746174737C736B317B54307D7B64323031392D31322D31335F30357D7B7331313233373533347D7B433238347D7B5362476C325A53356B5A5731765A33567964546B354C6D4E7662513D3D7D7B6266697265666F787D7B716465736B746F707D7B6F77696E646F77737D7B583330307D7B593235307D7B66317D7B4C363435337DFEFE&userIpAddr=171.225.248.253&userUA=Mozilla%2F5.0+%28Windows+NT+6.1%3B+Win64%3B+x64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0&playerVersion=3.0.0&fpl=-1&debugInformation=&isWePassGdpr=1&csuuid=5df3033ddab55&debugInfo=11237534_&sta=11237534&showLogo=0&clkUrl=&plMult=-1&schedule=eyJwcmVfcm9sbCI6MSwibWlkX3JvbGwiOltdLCJnYXAiOiJhdXRvIn0%3D&content=plembed12b3ytonphis&secondaryContent=&x=300&y=250&pubUrl=http%3A%2F%2Flive.demoguru99.com%2F&contentNum=1&flow_closeBtn=1&flowCloseTimeout=0&flow_direction=bl&flow_horizontalOffset=10&flow_bottomOffset=10&impGap=2&flow_width=315&flow_height=243&videoType=flow&gdpr=0&gdprConsent=&contentFeedId=&geoLati=12.25&geoLong=109.18329620361328&vpTemplate=6453&flowMode=both&isRealPreroll=0&playerApiId=&isApp=, line 129: unreachable code after return statement
+JavaScript warning: https://live.sekindo.com/live/liveVideo.php?vpaidManager=sekindo&s=58057&ri=6C69766553746174737C736B317B54307D7B64323031392D31322D31335F30357D7B7331313233373533347D7B433238347D7B5362476C325A53356B5A5731765A33567964546B354C6D4E7662513D3D7D7B6266697265666F787D7B716465736B746F707D7B6F77696E646F77737D7B583330307D7B593235307D7B66317D7B4C363435337DFEFE&userIpAddr=171.225.248.253&userUA=Mozilla%2F5.0+%28Windows+NT+6.1%3B+Win64%3B+x64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0&playerVersion=3.0.0&fpl=-1&debugInformation=&isWePassGdpr=1&csuuid=5df3033ddab55&debugInfo=11237534_&sta=11237534&showLogo=0&clkUrl=&plMult=-1&schedule=eyJwcmVfcm9sbCI6MSwibWlkX3JvbGwiOltdLCJnYXAiOiJhdXRvIn0%3D&content=plembed12b3ytonphis&secondaryContent=&x=300&y=250&pubUrl=http%3A%2F%2Flive.demoguru99.com%2F&contentNum=1&flow_closeBtn=1&flowCloseTimeout=0&flow_direction=bl&flow_horizontalOffset=10&flow_bottomOffset=10&impGap=2&flow_width=315&flow_height=243&videoType=flow&gdpr=0&gdprConsent=&contentFeedId=&geoLati=12.25&geoLong=109.18329620361328&vpTemplate=6453&flowMode=both&isRealPreroll=0&playerApiId=&isApp=, line 89: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
 JavaScript warning: https://imasdk.googleapis.com/js/sdkloader/ima3.js, line 4: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
-JavaScript warning: http://imasdk.googleapis.com/js/core/bridge3.355.1_en.html#goog_812616268, line 8: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+JavaScript warning: http://imasdk.googleapis.com/js/core/bridge3.355.3_en.html#goog_2135113360, line 8: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
 JavaScript warning: http://live.demoguru99.com/js/varien/product.js, line 485: unreachable code after return statement
 JavaScript warning: http://live.demoguru99.com/js/varien/configurable.js, line 291: unreachable code after return statement
 JavaScript error: http://live.demoguru99.com/skin/frontend/rwd/default/js/app.js, line 1194: TypeError: image.elevateZoom is not a function
-1575987167990	addons.productaddons	INFO	sending request to: https://aus5.mozilla.org/update/3/GMP/47.0.2/20161031133903/WINNT_x86_64-msvc-x64/en-US/release/Windows_NT%206.1.1.0%20(x64)/default/default/update.xml
-1575987168160	addons.productaddons	INFO	Completed downloading document
 JavaScript warning: http://live.demoguru99.com/js/varien/product.js, line 485: unreachable code after return statement
 JavaScript warning: http://live.demoguru99.com/js/varien/configurable.js, line 291: unreachable code after return statement
 JavaScript error: http://live.demoguru99.com/skin/frontend/rwd/default/js/app.js, line 1194: TypeError: image.elevateZoom is not a function
 JavaScript warning: http://live.demoguru99.com/js/calendar/calendar.js, line 138: unreachable code after return statement
 JavaScript warning: http://live.demoguru99.com/js/calendar/calendar.js, line 138: unreachable code after return statement
-JavaScript warning: http://live.demoguru99.com/js/calendar/calendar.js, line 138: unreachable code after return statement
-JavaScript warning: http://live.demoguru99.com/js/calendar/calendar.js, line 138: unreachable code after return statement
-JavaScript warning: http://live.demoguru99.com/js/calendar/calendar.js, line 138: unreachable code after return statement
-JavaScript warning: http://live.demoguru99.com/js/calendar/calendar.js, line 138: unreachable code after return statement
-JavaScript warning: http://live.demoguru99.com/js/calendar/calendar.js, line 138: unreachable code after return statement
-JavaScript warning: http://live.demoguru99.com/js/calendar/calendar.js, line 138: unreachable code after return statement
-JavaScript warning: http://live.demoguru99.com/js/calendar/calendar.js, line 138: unreachable code after return statement
-JavaScript warning: http://live.demoguru99.com/js/calendar/calendar.js, line 138: unreachable code after return statement
-JavaScript warning: https://live.sekindo.com/live/liveVideo.php?vpaidManager=sekindo&s=58057&ri=6C69766553746174737C736B317B54307D7B64323031392D31322D31305F31367D7B7331313233373533347D7B433238347D7B5362476C325A53356B5A5731765A33567964546B354C6D4E7662513D3D7D7B6266697265666F787D7B716465736B746F707D7B6F77696E646F77737D7B583330307D7B593235307D7B66347D7B7256305A51636D6C764C6A4575556D566E7D7B4C363435337DFEFE&userIpAddr=171.243.113.145&userUA=Mozilla%2F5.0+%28Windows+NT+6.1%3B+Win64%3B+x64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0&playerVersion=3.0.0&fpl=-1&debugInformation=WFPrio.1.Reg&isWePassGdpr=1&csuuid=5defa7c018d6a&debugInfo=11237534_WFPrio.1.Reg&sta=11237534&showLogo=0&clkUrl=&plMult=-1&schedule=eyJwcmVfcm9sbCI6MSwibWlkX3JvbGwiOltdLCJnYXAiOiJhdXRvIn0%3D&content=plembed12b3ytonphis&secondaryContent=&x=300&y=250&pubUrl=http%3A%2F%2Flive.demoguru99.com%2F&contentNum=1&flow_closeBtn=1&flowCloseTimeout=0&flow_direction=bl&flow_horizontalOffset=10&flow_bottomOffset=10&impGap=2&flow_width=315&flow_height=243&videoType=flow&gdpr=0&gdprConsent=&contentFeedId=&geoLati=11.899999618530273&geoLong=109.1500015258789&vpTemplate=6453&flowMode=both&isRealPreroll=0&playerApiId=&isApp=, line 129: unreachable code after return statement
-JavaScript warning: https://live.sekindo.com/live/liveVideo.php?vpaidManager=sekindo&s=58057&ri=6C69766553746174737C736B317B54307D7B64323031392D31322D31305F31367D7B7331313233373533347D7B433238347D7B5362476C325A53356B5A5731765A33567964546B354C6D4E7662513D3D7D7B6266697265666F787D7B716465736B746F707D7B6F77696E646F77737D7B583330307D7B593235307D7B66347D7B7256305A51636D6C764C6A4575556D566E7D7B4C363435337DFEFE&userIpAddr=171.243.113.145&userUA=Mozilla%2F5.0+%28Windows+NT+6.1%3B+Win64%3B+x64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0&playerVersion=3.0.0&fpl=-1&debugInformation=WFPrio.1.Reg&isWePassGdpr=1&csuuid=5defa7c018d6a&debugInfo=11237534_WFPrio.1.Reg&sta=11237534&showLogo=0&clkUrl=&plMult=-1&schedule=eyJwcmVfcm9sbCI6MSwibWlkX3JvbGwiOltdLCJnYXAiOiJhdXRvIn0%3D&content=plembed12b3ytonphis&secondaryContent=&x=300&y=250&pubUrl=http%3A%2F%2Flive.demoguru99.com%2F&contentNum=1&flow_closeBtn=1&flowCloseTimeout=0&flow_direction=bl&flow_horizontalOffset=10&flow_bottomOffset=10&impGap=2&flow_width=315&flow_height=243&videoType=flow&gdpr=0&gdprConsent=&contentFeedId=&geoLati=11.899999618530273&geoLong=109.1500015258789&vpTemplate=6453&flowMode=both&isRealPreroll=0&playerApiId=&isApp=, line 89: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
-JavaScript warning: https://imasdk.googleapis.com/js/sdkloader/ima3.js, line 4: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
-JavaScript warning: http://imasdk.googleapis.com/js/core/bridge3.355.1_en.html#goog_812916737, line 8: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
-JavaScript warning: https://imasdk.googleapis.com/js/sdkloader/ima3.js, line 4: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
-JavaScript warning: http://imasdk.googleapis.com/js/core/bridge3.355.1_en.html#goog_747265720, line 8: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
-JavaScript error: https://s0.2mdn.net/instream/video/client.js, line 32: NS_ERROR_NOT_INITIALIZED: 
-JavaScript error: https://s0.2mdn.net/instream/video/client.js, line 32: NS_ERROR_NOT_INITIALIZED: 
-JavaScript error: https://s0.2mdn.net/instream/video/client.js, line 32: NS_ERROR_NOT_INITIALIZED: 
-JavaScript error: https://s0.2mdn.net/instream/video/client.js, line 32: NS_ERROR_NOT_INITIALIZED: 
-JavaScript warning: http://live.demoguru99.com/js/varien/product.js, line 485: unreachable code after return statement
-JavaScript warning: http://live.demoguru99.com/js/varien/configurable.js, line 291: unreachable code after return statement
-JavaScript warning: http://live.demoguru99.com/js/calendar/calendar.js, line 138: unreachable code after return statement
-JavaScript warning: http://live.demoguru99.com/js/calendar/calendar.js, line 138: unreachable code after return statement
-JavaScript warning: https://live.sekindo.com/live/liveVideo.php?vpaidManager=sekindo&s=58057&ri=6C69766553746174737C736B317B54307D7B64323031392D31322D31305F31367D7B7331313233373533347D7B433238347D7B5362476C325A53356B5A5731765A33567964546B354C6D4E7662513D3D7D7B6266697265666F787D7B716465736B746F707D7B6F77696E646F77737D7B583330307D7B593235307D7B66367D7B7256305A51636D6C764C6A4575556D566E7D7B4C363435337DFEFE&userIpAddr=171.243.113.145&userUA=Mozilla%2F5.0+%28Windows+NT+6.1%3B+Win64%3B+x64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0&playerVersion=3.0.0&fpl=-1&debugInformation=WFPrio.1.Reg&isWePassGdpr=1&csuuid=5defa7c018d6a&debugInfo=11237534_WFPrio.1.Reg&sta=11237534&showLogo=0&clkUrl=&plMult=-1&schedule=eyJwcmVfcm9sbCI6MSwibWlkX3JvbGwiOltdLCJnYXAiOiJhdXRvIn0%3D&content=plembed12b3ytonphis&secondaryContent=&x=300&y=250&pubUrl=http%3A%2F%2Flive.demoguru99.com%2Findex.php%2Fmobile%2Fsony-xperia.html&contentNum=1&flow_closeBtn=1&flowCloseTimeout=0&flow_direction=bl&flow_horizontalOffset=10&flow_bottomOffset=10&impGap=2&flow_width=315&flow_height=243&videoType=flow&gdpr=0&gdprConsent=&contentFeedId=&geoLati=11.899999618530273&geoLong=109.1500015258789&vpTemplate=6453&flowMode=both&isRealPreroll=0&playerApiId=&isApp=, line 129: unreachable code after return statement
-JavaScript warning: https://live.sekindo.com/live/liveVideo.php?vpaidManager=sekindo&s=58057&ri=6C69766553746174737C736B317B54307D7B64323031392D31322D31305F31367D7B7331313233373533347D7B433238347D7B5362476C325A53356B5A5731765A33567964546B354C6D4E7662513D3D7D7B6266697265666F787D7B716465736B746F707D7B6F77696E646F77737D7B583330307D7B593235307D7B66367D7B7256305A51636D6C764C6A4575556D566E7D7B4C363435337DFEFE&userIpAddr=171.243.113.145&userUA=Mozilla%2F5.0+%28Windows+NT+6.1%3B+Win64%3B+x64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0&playerVersion=3.0.0&fpl=-1&debugInformation=WFPrio.1.Reg&isWePassGdpr=1&csuuid=5defa7c018d6a&debugInfo=11237534_WFPrio.1.Reg&sta=11237534&showLogo=0&clkUrl=&plMult=-1&schedule=eyJwcmVfcm9sbCI6MSwibWlkX3JvbGwiOltdLCJnYXAiOiJhdXRvIn0%3D&content=plembed12b3ytonphis&secondaryContent=&x=300&y=250&pubUrl=http%3A%2F%2Flive.demoguru99.com%2Findex.php%2Fmobile%2Fsony-xperia.html&contentNum=1&flow_closeBtn=1&flowCloseTimeout=0&flow_direction=bl&flow_horizontalOffset=10&flow_bottomOffset=10&impGap=2&flow_width=315&flow_height=243&videoType=flow&gdpr=0&gdprConsent=&contentFeedId=&geoLati=11.899999618530273&geoLong=109.1500015258789&vpTemplate=6453&flowMode=both&isRealPreroll=0&playerApiId=&isApp=, line 89: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
-JavaScript warning: https://imasdk.googleapis.com/js/sdkloader/ima3.js, line 4: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
-JavaScript warning: http://imasdk.googleapis.com/js/core/bridge3.355.1_en.html#goog_1356730001, line 8: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
-JavaScript warning: https://imasdk.googleapis.com/js/sdkloader/ima3.js, line 4: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
-JavaScript warning: http://imasdk.googleapis.com/js/core/bridge3.355.1_en.html#goog_648703769, line 8: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
