@@ -3,8 +3,10 @@ package pageObjectsLiveGuru;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import com.liveguru.testdata.DataAdmin;
 
@@ -39,7 +41,7 @@ public class BackEndHomePageObject extends AbstractPage {
 		waitForElementVisible(driver, AbstractPageUI.NEXT_PAGE_ARROW_LINK);
 		clickToElement(driver, AbstractPageUI.NEXT_PAGE_ARROW_LINK);
 		waitForElementInvisible(driver, AbstractPageUI.LOADING_ICON);
-		sleepInSecond(driver, 3);
+		sleepInSecond(driver, 5);
 	}
 	
 	public boolean isCountRecordsPassed(int countRecords, int totalRecords) {
@@ -79,6 +81,7 @@ public class BackEndHomePageObject extends AbstractPage {
 
 		clearElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX, "customerGrid_filter_entity_id_from");
 		clearElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX, "customerGrid_filter_entity_id_to");
+		
 		return isCountRecordsPassed(countRecords, totalRecords);
 	}
 
@@ -112,6 +115,7 @@ public class BackEndHomePageObject extends AbstractPage {
 		}
 
 		clearElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX, "customerGrid_filter_name");
+		
 		return isCountRecordsPassed(countRecords, totalRecords);
 	}
 
@@ -143,6 +147,7 @@ public class BackEndHomePageObject extends AbstractPage {
 		}
 
 		clearElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX, "customerGrid_filter_email");
+		
 		return isCountRecordsPassed(countRecords, totalRecords);
 	}
 	
@@ -174,6 +179,7 @@ public class BackEndHomePageObject extends AbstractPage {
 		}
 
 		clearElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX, "customerGrid_filter_Telephone");
+		
 		return isCountRecordsPassed(countRecords, totalRecords);
 	}
 	
@@ -205,6 +211,7 @@ public class BackEndHomePageObject extends AbstractPage {
 		}
 
 		clearElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX, "customerGrid_filter_billing_postcode");
+		
 		return isCountRecordsPassed(countRecords, totalRecords);
 	}
 	
@@ -217,35 +224,51 @@ public class BackEndHomePageObject extends AbstractPage {
 	
 	public boolean isCountryListResult(WebDriver driver) {
 		int countRecords = 0;
-		String country = DataAdmin.BackEndHomePage.COUNTRY;
-
+		String country = DataAdmin.BackEndHomePage.COUNTRY;		
+		
 		selectCountryDropdownList(driver, DataAdmin.BackEndHomePage.COUNTRY);
+		
 		int pages = getPages(driver);
 		int totalRecords = getTotalRecords(driver, BackEndHomePageUI.RECORD);
 		for (int page = 1; page <= pages; page++) {
 			List<WebElement> elements = driver.findElements(By.xpath(BackEndHomePageUI.COUNTRY_LIST));
+			System.out.println("Element size of page " + page + " is: " + elements.size());
 			for (WebElement element : elements) {
 				String elementStr = element.getText().trim();
 				if (elementStr.contains(country) || elementStr.equalsIgnoreCase(country))
 					countRecords += 1;
 			}
-			if (page > 1 && page < pages) {
+			if (page < pages) {
 				clickToNextArrow(driver);
-				refreshToPage(driver);
-				sleepInSecond(driver, 5);
 			}
 		}
 
 		selectAllCountryOptionInDropdownList(driver);
+		
 		return isCountRecordsPassed(countRecords, totalRecords);
 	}
 	
-
 	public void selectCountryDropdownList(WebDriver driver, String countryName) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_DROPDOWN, "customerGrid_filter_billing_country_id");
 		selectItemInDropdown(driver, AbstractPageUI.DYNAMIC_DROPDOWN, countryName, "customerGrid_filter_billing_country_id");
+
+		if(driver.toString().contains("firefox")) {
+			scrollToDisplaySearchButton(driver);
+		}
+		
 		clickOnDynamicLinkOrButton(driver, "Search");
 		waitForElementInvisible(driver, AbstractPageUI.LOADING_ICON);
+	}
+	
+	public void scrollToDisplaySearchButton(WebDriver driver) {			
+		// Way_01
+		//String scrollToHeadPage = Keys.chord(Keys.CONTROL, Keys.HOME);
+		//driver.findElement(By.xpath("//span[contains(text(),'Country')]")).sendKeys(scrollToHeadPage);;
+		
+		// Way_02
+		scrollToElement(driver, "//img[@class='logo']");
+		
+		waitForElementVisible(driver, "//button[@title='Search']");
 	}
 	
 	public void selectAllCountryOptionInDropdownList(WebDriver driver) {

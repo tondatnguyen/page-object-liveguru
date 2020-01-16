@@ -39,7 +39,7 @@ public class BackEndFunction extends AbstractTest {
 		backEndLoginPage = PageGeneratorManager.getBackEndLoginPage(driver);
 	}
 
-	@Test
+	//@Test
 	public void BackEndFunction_01_VerifyPrintedInvoice() throws Exception {
 		log.info("BackEndFunction_01 - STEP_01: Go to BackEnd_URL");
 		backEndLoginPage.openLiveGuru99BackEnd(driver);
@@ -96,7 +96,7 @@ public class BackEndFunction extends AbstractTest {
 		AbstractPage.DownloadAndDeleteFileContainName(driver, DataAdmin.TYPEOF_FILE);
 	}
 
-	@Test
+	//@Test
 	public void BackEndFunction_02_VerifyProductReviewMechanism() {
 		log.info("BackEndFunction_02 - STEP_01: Go to FrontEnd_URL");
 		homePage = (HomePageObject) ordersPage.openLiveGuru99(driver);
@@ -166,7 +166,8 @@ public class BackEndFunction extends AbstractTest {
 	@Test
 	public void BackEndFunction_03_VerifySortIsWorkingCorrectly() {
 		log.info("BackEndFunction_03 - STEP_01: Go to BackEnd_URL");
-		backEndLoginPage = (BackEndLoginPageObject) detailPage.openLiveGuru99BackEndByLogout(driver);
+		//backEndLoginPage = (BackEndLoginPageObject) detailPage.openLiveGuru99BackEndByLogout(driver);
+		backEndLoginPage.openLiveGuru99BackEnd(driver);
 		verifyEquals(backEndLoginPage.getBackEndLoginPageTitle(driver), DataAdmin.BackEndLoginPage.PAGE_TITLE);
 
 		log.info("BackEndFunction_03 - STEP_02: Login BackEnd");
@@ -186,13 +187,13 @@ public class BackEndFunction extends AbstractTest {
 		invoicesPage.clickToColumnTitle(driver, "Invoice #");
 		verifyTrue(invoicesPage.isInvoiceIDSortDESC());
 
-		log.info("BackEndFunction_03 - STEP_06: Sort 'Invoice Date' in ASC");
-		invoicesPage.clickToColumnTitle(driver, "Invoice Date");
-		verifyTrue(invoicesPage.isInvoiceDateSortASC());
-
-		log.info("BackEndFunction_03 - STEP_07: Sort 'Invoice Date' in DESC");
-		invoicesPage.clickToColumnTitle(driver, "Invoice Date");
-		verifyTrue(invoicesPage.isInvoiceDateSortDESC());
+//		log.info("BackEndFunction_03 - STEP_06: Sort 'Invoice Date' in ASC");
+//		invoicesPage.clickToColumnTitle(driver, "Invoice Date");
+//		verifyTrue(invoicesPage.isInvoiceDateSortASC());
+//
+//		log.info("BackEndFunction_03 - STEP_07: Sort 'Invoice Date' in DESC");
+//		invoicesPage.clickToColumnTitle(driver, "Invoice Date");
+//		verifyTrue(invoicesPage.isInvoiceDateSortDESC());
 
 		log.info("BackEndFunction_03 - STEP_08: Sort 'Order #' in ASC");
 		invoicesPage.clickToColumnTitle(driver, "Order #");
@@ -202,13 +203,13 @@ public class BackEndFunction extends AbstractTest {
 		invoicesPage.clickToColumnTitle(driver, "Order #");
 		verifyTrue(invoicesPage.isOrderIDSortDESC());
 
-		log.info("BackEndFunction_03 - STEP_10: Sort 'Order Date' in ASC");
-		invoicesPage.clickToColumnTitle(driver, "Order Date");
-		verifyTrue(invoicesPage.isOrderDateSortASC());
-
-		log.info("BackEndFunction_03 - STEP_11: Sort 'Order Date' in DESC");
-		invoicesPage.clickToColumnTitle(driver, "Order Date");
-		verifyTrue(invoicesPage.isOrderDateSortDESC());
+//		log.info("BackEndFunction_03 - STEP_10: Sort 'Order Date' in ASC");
+//		invoicesPage.clickToColumnTitle(driver, "Order Date");
+//		verifyTrue(invoicesPage.isOrderDateSortASC());
+//
+//		log.info("BackEndFunction_03 - STEP_11: Sort 'Order Date' in DESC");
+//		invoicesPage.clickToColumnTitle(driver, "Order Date");
+//		verifyTrue(invoicesPage.isOrderDateSortDESC());
 
 		log.info("BackEndFunction_03 - STEP_12: Sort 'Bill to Name' in ASC");
 		invoicesPage.clickToColumnTitle(driver, "Bill to Name");
@@ -227,7 +228,7 @@ public class BackEndFunction extends AbstractTest {
 		verifyTrue(invoicesPage.isAmountSortDESC());
 	}
 
-	@Test
+	//@Test
 	public void BackEndFunction_04_VerifyPaginationFunctionality() {
 		log.info("BackEndFunction_04 - STEP_01: Go to BackEnd_URL");
 		backEndLoginPage.openLiveGuru99BackEndByLogout(driver);
@@ -263,10 +264,11 @@ public class BackEndFunction extends AbstractTest {
 		verifyEquals(ordersPage.getPaginationSize(driver), 200);
 	}
 
-	@Test
+	//@Test
 	public void BackEndFunction_05_VerifySearchFunctionality() {
 		log.info("BackEndFunction_05 - STEP_01: Go to BackEnd_URL");
 		backEndLoginPage.openLiveGuru99BackEndByLogout(driver);
+		backEndLoginPage.openLiveGuru99BackEnd(driver);
 		verifyEquals(backEndLoginPage.getBackEndLoginPageTitle(driver), DataAdmin.BackEndLoginPage.PAGE_TITLE);
 
 		log.info("BackEndFunction_05 - STEP_02: Login BackEnd");
@@ -300,7 +302,7 @@ public class BackEndFunction extends AbstractTest {
 		verifyTrue(backEndHomePage.isStateProvinceListResult(driver));
 	}
 	
-	@Test
+	//@Test
 	public void BackEndFunction_06_VerifySelectCheckboxFunctionality() {
 		log.info("BackEndFunction_06 - STEP_01: Go to BackEnd_URL");
 		backEndLoginPage.openLiveGuru99BackEndByLogout(driver);

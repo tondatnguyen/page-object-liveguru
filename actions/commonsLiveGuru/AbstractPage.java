@@ -409,6 +409,11 @@ public class AbstractPage {
 		javascriptExecutor = (JavascriptExecutor) driver;
 		javascriptExecutor.executeScript("arguments[0].setAttribute('value', '" + value + "')", element);
 	}
+	
+	public Object scrollToTopPage(WebDriver driver) {
+		javascriptExecutor = (JavascriptExecutor) driver;
+		return javascriptExecutor.executeScript("window.scrollTo(document.body.scrollHeight,0)");
+	}
 
 	public void scrollToBottomPage(WebDriver driver) {
 		javascriptExecutor = (JavascriptExecutor) driver;
@@ -698,11 +703,10 @@ public class AbstractPage {
 	public static void DownloadAndDeleteFileContainName(WebDriver driver, String fileType) throws Exception {
 		deleteAllFileInFolder();
 
-//		if (driver.toString().toLowerCase().contains("chrome") || driver.toString().toLowerCase().contains("chromeheadless")) {
+//		if (driver.toString().equalsIgnoreCase("chrome") || driver.toString().equalsIgnoreCase("chromeheadless")) {
 //			waitForPartFileTypeInvisible(DataAdmin.CHROME_DOWNLOAD);
 //		} else
 //			waitForPartFileTypeInvisible(DataAdmin.FIREFOX_DOWNLOAD);
-
 		Thread.sleep(15000);
 		
 		int countFileAfterDownload = countFilesInDirectory();

@@ -1,27 +1,22 @@
-2019-12-13 10:18:57,408 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_01: Go to BackEnd_URL
-2019-12-13 10:18:59,787 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2019-12-13 10:18:59,789 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_02: Login BackEnd
-2019-12-13 10:19:03,782 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2019-12-13 10:19:03,782 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_03: Open Orders page
-2019-12-13 10:19:04,930 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_04a: In the Status field, select 'Cancel'
-2019-12-13 10:19:05,103 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_04b: Click Search
-2019-12-13 10:19:10,132 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_05: Select the checkbox that's next to first order
-2019-12-13 10:19:10,264 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_06a: In the Action field, select 'Print Invoices'
-2019-12-13 10:19:10,441 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_06b: Click Submit
-2019-12-13 10:19:11,743 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_07: Verify the Error message
-2019-12-13 10:19:11,802 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2019-12-13 10:19:11,802 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_08a: In the Status field, select 'Complete'
-2019-12-13 10:19:11,965 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_08b: Click Search
-2019-12-13 10:19:16,989 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_09: Select the checkbox that's next to first order
-2019-12-13 10:19:17,161 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_10a: In the Action field, select 'Print Invoices'
-2019-12-13 10:19:17,373 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_10b: Click Submit
-2019-12-13 10:19:17,409 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_01 - STEP_11: Verify Invoice is downloaded
-2019-12-13 10:19:32,416 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_02 - STEP_01: Go to FrontEnd_URL
-2019-12-13 10:19:41,364 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2019-12-13 10:19:41,587 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2019-12-13 10:19:41,587 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_02 - STEP_02: Open XPeria review link
-2019-12-13 10:19:44,150 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2019-12-13 10:19:44,150 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_02 - STEP_03a: Fill the required review
-2019-12-13 10:19:44,480 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_02 - STEP_03b: Submit
-2019-12-13 10:19:46,718 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2019-12-13 10:19:46,718 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_02 - STEP_04: Go to BackEnd_URL by Logout
+2020-01-16 14:30:19,976 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_01: Go to BackEnd_URL
+2020-01-16 14:30:22,369 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2020-01-16 14:30:22,371 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_02: Login BackEnd
+2020-01-16 14:30:26,187 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2020-01-16 14:30:26,187 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_03: Open Invoices page
+2020-01-16 14:30:27,072 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2020-01-16 14:30:27,072 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_04: Sort 'Invoice #' in ASC
+2020-01-16 14:30:27,924 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2020-01-16 14:30:27,924 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_05: Sort 'Invoice #' in DESC
+2020-01-16 14:30:28,717 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2020-01-16 14:30:28,717 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_08: Sort 'Order #' in ASC
+2020-01-16 14:30:29,539 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2020-01-16 14:30:29,540 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_09: Sort 'Order #' in DESC
+2020-01-16 14:30:30,321 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2020-01-16 14:30:30,321 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_12: Sort 'Bill to Name' in ASC
+2020-01-16 14:30:31,129 INFO  com.liveguru.backend.BackEndFunction - ==================FAILED==================
+2020-01-16 14:30:31,130 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_13: Sort 'Bill to Name' in DESC
+2020-01-16 14:30:31,916 INFO  com.liveguru.backend.BackEndFunction - ==================FAILED==================
+2020-01-16 14:30:31,916 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_14: Sort 'Amount' in ASC
+2020-01-16 14:30:32,735 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2020-01-16 14:30:32,736 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_15: Sort 'Amount' in DESC
+2020-01-16 14:30:33,590 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
