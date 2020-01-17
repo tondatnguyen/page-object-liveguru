@@ -1,14 +1,21 @@
 package pageObjectsLiveGuru;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import com.relevantcodes.extentreports.model.Test;
 
 import commonsLiveGuru.AbstractPage;
 import pageUIsLiveGuru.AbstractPageUI;
@@ -59,7 +66,7 @@ public class InvoicesPageObject extends AbstractPage {
 		return isIntegerBackEndDataSortedDescending(driver, InvoicesPageUI.ORDER_NO);
 	}
 	
-	public boolean isInvoiceDateSortASC() {
+	public boolean isInvoiceDateSortASC() throws Exception {
 		return isDateBackEndDataSortedAscending(driver, InvoicesPageUI.INVOICE_DATE);
 	}
 	
@@ -67,7 +74,7 @@ public class InvoicesPageObject extends AbstractPage {
 		return isDateBackEndDataSortedDescending(driver, InvoicesPageUI.INVOICE_DATE);
 	}
 	
-	public boolean isOrderDateSortASC() {
+	public boolean isOrderDateSortASC() throws Exception {
 		return isDateBackEndDataSortedAscending(driver, InvoicesPageUI.ORDER_DATE);
 	}
 	
@@ -107,9 +114,7 @@ public class InvoicesPageObject extends AbstractPage {
 	
 	// Sort DESC INTEGER
 	public boolean isIntegerBackEndDataSortedDescending(WebDriver driver, String locator) {
-
-		ArrayList<Integer> arrayList = new ArrayList<>();
-		
+		ArrayList<Integer> arrayList = new ArrayList<>();		
 		List<WebElement> elementList = driver.findElements(By.xpath(locator));
 
 		for (WebElement element : elementList) {
@@ -137,62 +142,56 @@ public class InvoicesPageObject extends AbstractPage {
 	}
 	
 	// Sort ASC DATE
-	public boolean isDateBackEndDataSortedAscending(WebDriver driver, String locator) {
-
-		ArrayList<LocalDateTime> originalDateList = new ArrayList<>();
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM dd yyyy HH:mm:ss a");
+	public boolean isDateBackEndDataSortedAscending(WebDriver driver, String locator) throws Exception{
+		ArrayList<String> originalDateList = new ArrayList<>();
+		ArrayList<String> sortedDateList = new ArrayList<>();
+		List<WebElement> elementDateList = driver.findElements(By.xpath(locator));
 		
-		List<WebElement> elementList = driver.findElements(By.xpath(locator));
-		
-		for (WebElement element : elementList) {
-			originalDateList.add(LocalDateTime.parse(element.getText().replace(",", "").trim(), formatter));
+		for (WebElement elementDate : elementDateList) {
+			originalDateList.add(elementDate.getText().trim());
 		}
 
 		System.out.println("---------------------Data displayed on UI:---------------------");
-		for (LocalDateTime originalDate : originalDateList) {
+		for (String originalDate : originalDateList) {
 			System.out.println(originalDate);
 		}
 
-		ArrayList<LocalDateTime> sortedDateList = new ArrayList<>();
-		for (LocalDateTime copyOriginalDate : originalDateList) {
-			sortedDateList.add(copyOriginalDate);
+		for (String originalDate : originalDateList) {
+			sortedDateList.add(originalDate);
 		}
-
-		Collections.sort(sortedDateList);
+		sortDates(sortedDateList);
 
 		System.out.println("------------Data had been SORT ASC:---------------");
-		for (LocalDateTime sortDate : sortedDateList)
-			System.out.println(sortDate);
+		for (String sortedDate : sortedDateList)
+			System.out.println(sortedDate);
 
 		return sortedDateList.equals(originalDateList);
+	}
+	
+	private static void sortDates(List<String> dateList) {
+
+		Collections.sort(dateList, new Comparator<String>() {
+			DateFormat dateFormat = new SimpleDateFormat("MMM dd, yyyy HH:mm:ss a");
+			@Override
+			public int compare(String DATE_1, String DATE_2) {
+				try {
+					return dateFormat.parse(DATE_1).compareTo(dateFormat.parse(DATE_2));
+				} catch (ParseException e) {
+					e.printStackTrace();
+				}	
+				return null;
+			}
+		});
 	}
 	
 	// Sort DESC DATE
 	public boolean isDateBackEndDataSortedDescending(WebDriver driver, String locator) {
 		
-		ArrayList<LocalDateTime> originalDateList = new ArrayList<>();
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM dd yyyy HH:mm:ss a");
-	
-		List<WebElement> elementList = driver.findElements(By.xpath(locator));
-		for (WebElement element : elementList) {	
-			originalDateList.add(LocalDateTime.parse(element.getText().replace(",", "").trim(), formatter));
-		}
-
-		System.out.println("---------------------Data displayed on UI:---------------------");
-		for (LocalDateTime originalDate : originalDateList) {
-			System.out.println(originalDate);
-		}
-
-		ArrayList<LocalDateTime> sortedDateList = new ArrayList<>();
-		for (LocalDateTime copyOriginalDate : originalDateList) {
-			sortedDateList.add(copyOriginalDate);
-		}
 		
-		Collections.sort(sortedDateList);
 		Collections.reverse(sortedDateList);
 
-		System.out.println("------------Data had been SORT ASC:---------------");
-		for (LocalDateTime sortDate : sortedDateList)
+		System.out.println("------------Data had been SORT DESC:---------------");
+		for (Date sortDate : sortedDateList)
 			System.out.println(sortDate);
 
 		return sortedDateList.equals(originalDateList);

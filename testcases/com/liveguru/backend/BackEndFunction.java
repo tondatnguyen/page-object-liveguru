@@ -164,7 +164,7 @@ public class BackEndFunction extends AbstractTest {
 	}
 
 	@Test
-	public void BackEndFunction_03_VerifySortIsWorkingCorrectly() {
+	public void BackEndFunction_03_VerifySortIsWorkingCorrectly() throws Exception {
 		log.info("BackEndFunction_03 - STEP_01: Go to BackEnd_URL");
 		//backEndLoginPage = (BackEndLoginPageObject) detailPage.openLiveGuru99BackEndByLogout(driver);
 		backEndLoginPage.openLiveGuru99BackEnd(driver);
@@ -179,53 +179,53 @@ public class BackEndFunction extends AbstractTest {
 		invoicesPage = (InvoicesPageObject) backEndHomePage.openDynamicPageOnSalesMenu(driver, "Invoices");
 		verifyEquals(invoicesPage.getBackEndPageTitle(driver), DataAdmin.InvoicesPage.PAGE_TITLE);
 
-		log.info("BackEndFunction_03 - STEP_04: Sort 'Invoice #' in ASC");
-		invoicesPage.clickToColumnTitle(driver, "Invoice #");
-		verifyTrue(invoicesPage.isInvoiceIDSortASC());
-
-		log.info("BackEndFunction_03 - STEP_05: Sort 'Invoice #' in DESC");
-		invoicesPage.clickToColumnTitle(driver, "Invoice #");
-		verifyTrue(invoicesPage.isInvoiceIDSortDESC());
-
-//		log.info("BackEndFunction_03 - STEP_06: Sort 'Invoice Date' in ASC");
-//		invoicesPage.clickToColumnTitle(driver, "Invoice Date");
-//		verifyTrue(invoicesPage.isInvoiceDateSortASC());
+//		log.info("BackEndFunction_03 - STEP_04: Sort 'Invoice #' in ASC");
+//		invoicesPage.clickToColumnTitle(driver, "Invoice #");
+//		verifyTrue(invoicesPage.isInvoiceIDSortASC());
 //
-//		log.info("BackEndFunction_03 - STEP_07: Sort 'Invoice Date' in DESC");
-//		invoicesPage.clickToColumnTitle(driver, "Invoice Date");
-//		verifyTrue(invoicesPage.isInvoiceDateSortDESC());
+//		log.info("BackEndFunction_03 - STEP_05: Sort 'Invoice #' in DESC");
+//		invoicesPage.clickToColumnTitle(driver, "Invoice #");
+//		verifyTrue(invoicesPage.isInvoiceIDSortDESC());
 
-		log.info("BackEndFunction_03 - STEP_08: Sort 'Order #' in ASC");
-		invoicesPage.clickToColumnTitle(driver, "Order #");
-		verifyTrue(invoicesPage.isOrderIDSortASC());
+		log.info("BackEndFunction_03 - STEP_06: Sort 'Invoice Date' in ASC");
+		invoicesPage.clickToColumnTitle(driver, "Invoice Date");
+		verifyTrue(invoicesPage.isInvoiceDateSortASC());
 
-		log.info("BackEndFunction_03 - STEP_09: Sort 'Order #' in DESC");
-		invoicesPage.clickToColumnTitle(driver, "Order #");
-		verifyTrue(invoicesPage.isOrderIDSortDESC());
+		log.info("BackEndFunction_03 - STEP_07: Sort 'Invoice Date' in DESC");
+		invoicesPage.clickToColumnTitle(driver, "Invoice Date");
+		verifyTrue(invoicesPage.isInvoiceDateSortDESC());
 
-//		log.info("BackEndFunction_03 - STEP_10: Sort 'Order Date' in ASC");
-//		invoicesPage.clickToColumnTitle(driver, "Order Date");
-//		verifyTrue(invoicesPage.isOrderDateSortASC());
+//		log.info("BackEndFunction_03 - STEP_08: Sort 'Order #' in ASC");
+//		invoicesPage.clickToColumnTitle(driver, "Order #");
+//		verifyTrue(invoicesPage.isOrderIDSortASC());
 //
-//		log.info("BackEndFunction_03 - STEP_11: Sort 'Order Date' in DESC");
-//		invoicesPage.clickToColumnTitle(driver, "Order Date");
-//		verifyTrue(invoicesPage.isOrderDateSortDESC());
+//		log.info("BackEndFunction_03 - STEP_09: Sort 'Order #' in DESC");
+//		invoicesPage.clickToColumnTitle(driver, "Order #");
+//		verifyTrue(invoicesPage.isOrderIDSortDESC());
 
-		log.info("BackEndFunction_03 - STEP_12: Sort 'Bill to Name' in ASC");
-		invoicesPage.clickToColumnTitle(driver, "Bill to Name");
-		verifyTrue(invoicesPage.isBillNameSortASC());
+		log.info("BackEndFunction_03 - STEP_10: Sort 'Order Date' in ASC");
+		invoicesPage.clickToColumnTitle(driver, "Order Date");
+		verifyTrue(invoicesPage.isOrderDateSortASC());
 
-		log.info("BackEndFunction_03 - STEP_13: Sort 'Bill to Name' in DESC");
-		invoicesPage.clickToColumnTitle(driver, "Bill to Name");
-		verifyTrue(invoicesPage.isBillNameSortDESC());
+		log.info("BackEndFunction_03 - STEP_11: Sort 'Order Date' in DESC");
+		invoicesPage.clickToColumnTitle(driver, "Order Date");
+		verifyTrue(invoicesPage.isOrderDateSortDESC());
 
-		log.info("BackEndFunction_03 - STEP_14: Sort 'Amount' in ASC");
-		invoicesPage.clickToColumnTitle(driver, "Amount");
-		verifyTrue(invoicesPage.isAmountSortASC());
-
-		log.info("BackEndFunction_03 - STEP_15: Sort 'Amount' in DESC");
-		invoicesPage.clickToColumnTitle(driver, "Amount");
-		verifyTrue(invoicesPage.isAmountSortDESC());
+//		log.info("BackEndFunction_03 - STEP_12: Sort 'Bill to Name' in ASC");
+//		invoicesPage.clickToColumnTitle(driver, "Bill to Name");
+//		verifyTrue(invoicesPage.isBillNameSortASC());
+//
+//		log.info("BackEndFunction_03 - STEP_13: Sort 'Bill to Name' in DESC");
+//		invoicesPage.clickToColumnTitle(driver, "Bill to Name");
+//		verifyTrue(invoicesPage.isBillNameSortDESC());
+//
+//		log.info("BackEndFunction_03 - STEP_14: Sort 'Amount' in ASC");
+//		invoicesPage.clickToColumnTitle(driver, "Amount");
+//		verifyTrue(invoicesPage.isAmountSortASC());
+//
+//		log.info("BackEndFunction_03 - STEP_15: Sort 'Amount' in DESC");
+//		invoicesPage.clickToColumnTitle(driver, "Amount");
+//		verifyTrue(invoicesPage.isAmountSortDESC());
 	}
 
 	//@Test
