@@ -66,7 +66,7 @@ public class InvoicesPageObject extends AbstractPage {
 		return isIntegerBackEndDataSortedDescending(driver, InvoicesPageUI.ORDER_NO);
 	}
 	
-	public boolean isInvoiceDateSortASC() throws Exception {
+	public boolean isInvoiceDateSortASC() {
 		return isDateBackEndDataSortedAscending(driver, InvoicesPageUI.INVOICE_DATE);
 	}
 	
@@ -74,15 +74,14 @@ public class InvoicesPageObject extends AbstractPage {
 		return isDateBackEndDataSortedDescending(driver, InvoicesPageUI.INVOICE_DATE);
 	}
 	
-	public boolean isOrderDateSortASC() throws Exception {
+	public boolean isOrderDateSortASC() {
 		return isDateBackEndDataSortedAscending(driver, InvoicesPageUI.ORDER_DATE);
 	}
 	
 	public boolean isOrderDateSortDESC() {
 		return isDateBackEndDataSortedDescending(driver, InvoicesPageUI.ORDER_DATE);
 	}
-	
-	// Sort ASC INTEGER
+
 	public boolean isIntegerBackEndDataSortedAscending(WebDriver driver, String locator) {
 
 		ArrayList<Integer> arrayList = new ArrayList<>();
@@ -112,7 +111,6 @@ public class InvoicesPageObject extends AbstractPage {
 		return sortedList.equals(arrayList);
 	}
 	
-	// Sort DESC INTEGER
 	public boolean isIntegerBackEndDataSortedDescending(WebDriver driver, String locator) {
 		ArrayList<Integer> arrayList = new ArrayList<>();		
 		List<WebElement> elementList = driver.findElements(By.xpath(locator));
@@ -141,8 +139,7 @@ public class InvoicesPageObject extends AbstractPage {
 		return sortedList.equals(arrayList);
 	}
 	
-	// Sort ASC DATE
-	public boolean isDateBackEndDataSortedAscending(WebDriver driver, String locator) throws Exception{
+	public boolean isDateBackEndDataSortedAscending(WebDriver driver, String locator) {
 		ArrayList<String> originalDateList = new ArrayList<>();
 		ArrayList<String> sortedDateList = new ArrayList<>();
 		List<WebElement> elementDateList = driver.findElements(By.xpath(locator));
@@ -150,6 +147,7 @@ public class InvoicesPageObject extends AbstractPage {
 		for (WebElement elementDate : elementDateList) {
 			originalDateList.add(elementDate.getText().trim());
 		}
+		
 
 		System.out.println("---------------------Data displayed on UI:---------------------");
 		for (String originalDate : originalDateList) {
@@ -179,19 +177,34 @@ public class InvoicesPageObject extends AbstractPage {
 				} catch (ParseException e) {
 					e.printStackTrace();
 				}	
-				return null;
+				return (Integer) null;
 			}
 		});
 	}
 	
-	// Sort DESC DATE
 	public boolean isDateBackEndDataSortedDescending(WebDriver driver, String locator) {
+		ArrayList<String> originalDateList = new ArrayList<>();
+		ArrayList<String> sortedDateList = new ArrayList<>();
+		List<WebElement> elementDateList = driver.findElements(By.xpath(locator));
 		
+		for (WebElement elementDate : elementDateList) {
+			originalDateList.add(elementDate.getText().trim());
+		}
 		
+
+		System.out.println("---------------------Data displayed on UI:---------------------");
+		for (String originalDate : originalDateList) {
+			System.out.println(originalDate);
+		}
+
+		for (String originalDate : originalDateList) {
+			sortedDateList.add(originalDate);
+		}
+		sortDates(sortedDateList);
 		Collections.reverse(sortedDateList);
 
 		System.out.println("------------Data had been SORT DESC:---------------");
-		for (Date sortDate : sortedDateList)
+		for (String sortDate : sortedDateList)
 			System.out.println(sortDate);
 
 		return sortedDateList.equals(originalDateList);
