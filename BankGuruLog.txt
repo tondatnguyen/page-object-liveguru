@@ -1,22 +1,7 @@
-2020-01-16 14:30:19,976 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_01: Go to BackEnd_URL
-2020-01-16 14:30:22,369 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2020-01-16 14:30:22,371 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_02: Login BackEnd
-2020-01-16 14:30:26,187 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2020-01-16 14:30:26,187 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_03: Open Invoices page
-2020-01-16 14:30:27,072 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2020-01-16 14:30:27,072 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_04: Sort 'Invoice #' in ASC
-2020-01-16 14:30:27,924 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2020-01-16 14:30:27,924 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_05: Sort 'Invoice #' in DESC
-2020-01-16 14:30:28,717 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2020-01-16 14:30:28,717 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_08: Sort 'Order #' in ASC
-2020-01-16 14:30:29,539 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2020-01-16 14:30:29,540 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_09: Sort 'Order #' in DESC
-2020-01-16 14:30:30,321 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2020-01-16 14:30:30,321 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_12: Sort 'Bill to Name' in ASC
-2020-01-16 14:30:31,129 INFO  com.liveguru.backend.BackEndFunction - ==================FAILED==================
-2020-01-16 14:30:31,130 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_13: Sort 'Bill to Name' in DESC
-2020-01-16 14:30:31,916 INFO  com.liveguru.backend.BackEndFunction - ==================FAILED==================
-2020-01-16 14:30:31,916 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_14: Sort 'Amount' in ASC
-2020-01-16 14:30:32,735 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
-2020-01-16 14:30:32,736 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_15: Sort 'Amount' in DESC
-2020-01-16 14:30:33,590 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2020-01-22 23:17:00,380 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_01: Go to BackEnd_URL
+2020-01-22 23:17:03,193 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2020-01-22 23:17:03,194 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_02: Login BackEnd
+2020-01-22 23:17:09,671 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2020-01-22 23:17:09,671 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_03: Open Invoices page
+2020-01-22 23:17:10,866 INFO  com.liveguru.backend.BackEndFunction - ==================PASSED==================
+2020-01-22 23:17:10,866 INFO  com.liveguru.backend.BackEndFunction - BackEndFunction_03 - STEP_06: Sort 'Invoice Date' in ASC

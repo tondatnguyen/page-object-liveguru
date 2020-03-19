@@ -52,10 +52,10 @@ public class AbstractTest {
 //		} 
 		else if (browserName.equalsIgnoreCase("chrome")) {
 			//	System.setProperty("webdriver.chrome.driver", rootFolder + "\\resources\\chromedriver.exe");
-			WebDriverManager.chromedriver().setup();
+			WebDriverManager.chromedriver().version("76.0.3809.87").setup();
 			driver = new ChromeDriver();
 		} else if (browserName.equalsIgnoreCase("chromeheadless")) {
-			WebDriverManager.chromedriver().setup();
+			WebDriverManager.chromedriver().version("76.0.3809.87").setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("headless");
 			options.addArguments("window-size=" + Constants.HEADLESS_RESOLUTION);

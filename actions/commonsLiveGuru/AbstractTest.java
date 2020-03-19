@@ -82,7 +82,7 @@ public class AbstractTest {
 			
 			// Way_01: System.setProperty("webdriver.chrome.driver", rootFolder + "\\resources\\chromedriver.exe");
 			// Way_02
-			WebDriverManager.chromedriver().setup();
+			WebDriverManager.chromedriver().version("76.0.3809.87").setup();
 			
 			/* Set file save to directory. */
 			Map<String, Object> chromePreferences = new Hashtable<String, Object>();		
@@ -100,7 +100,7 @@ public class AbstractTest {
 			
 		} else if (browserName.equalsIgnoreCase("chromeheadless")) {
 			
-			WebDriverManager.chromedriver().setup();
+			WebDriverManager.chromedriver().version("76.0.3809.87").setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("headless");
 			options.addArguments("window-size=" + Constants.HEADLESS_RESOLUTION);
@@ -132,13 +132,13 @@ public class AbstractTest {
 			
 			// Way_01: System.setProperty("webdriver.chrome.driver", rootFolder + "\\resources\\chromedriver.exe");
 			// Way_02
-			WebDriverManager.chromedriver().setup();
+			WebDriverManager.chromedriver().version("76.0.3809.87").setup();
 			  
 			driver = new ChromeDriver();
 			
 		} else if (browserName.equalsIgnoreCase("chromeheadless")) {
 			
-			WebDriverManager.chromedriver().setup();
+			WebDriverManager.chromedriver().version("76.0.3809.87").setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("headless");
 			options.addArguments("window-size=" + Constants.HEADLESS_RESOLUTION);
@@ -280,8 +280,8 @@ public class AbstractTest {
 		DateTime nowUTC = new DateTime(DateTimeZone.UTC);
 		int day = nowUTC.getDayOfMonth();
 		if (day < 10) {
-			String dayValue = "0" + day;
-			return dayValue;
+			String dayLessThanTen = "0" + day;
+			return dayLessThanTen + "";
 		}
 		return day + "";
 	}
@@ -290,8 +290,8 @@ public class AbstractTest {
 		DateTime now = new DateTime(DateTimeZone.UTC);
 		int month = now.getMonthOfYear();
 		if (month < 10) {
-			String monthValue = "0" + month;
-			return monthValue;
+			String monthLessThanTen = "0" + month;
+			return monthLessThanTen + "";
 		}
 		return month + "";
 	}

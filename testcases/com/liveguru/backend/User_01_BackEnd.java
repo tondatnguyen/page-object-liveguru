@@ -29,7 +29,7 @@ import pageUIsLiveGuru.HomePageUI;
 import pageUIsLiveGuru.ProductPageUI;
 import pageUIsLiveGuru.ReviewPageUI;
 
-public class BackEndFunction extends AbstractTest {
+public class User_01_BackEnd extends AbstractTest {
 
 	@Parameters("browser")
 	@BeforeClass

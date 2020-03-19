@@ -43,7 +43,7 @@ import pageUIsLiveGuru.ShoppingCartPageUI;
 import pageUIsLiveGuru.SuccessOrderPageUI;
 import pageUIsLiveGuru.WishListSharingPageUI;
 
-public class FrontEndFunction extends AbstractTest {
+public class User_01_FrontEnd extends AbstractTest {
 	
 	@Parameters("browser")
 	@BeforeClass 
